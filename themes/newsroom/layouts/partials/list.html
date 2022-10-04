@@ -16,13 +16,16 @@
     {{- $scratch := newScratch }}
     {{- range $index, $value := $pages }}
     {{ if isset .Params "image" }}
-    {{ $scratch.Set "image" .Params.image }}
+        {{ $scratch.Set "image" .Params.image }}
+        {{ $scratch.Set "author" .Params.author_image }}
     {{ else }}
-    {{ $scratch.Set "image" "thumbnail.svg" }}
+        {{ $scratch.Set "image" "thumbnail.svg" }}
     {{ end }}
     {{ $image := $scratch.Get "image" }}
+    {{ $author := $scratch.Get "author" }}
     {{ $url := $value.Permalink }}
     {{ $bg := (printf "%s/images/%s" $url $image) }}
+    {{ $author := (printf "%s/images/%s" $url $author) }}
     {{- if in $image "https://" }}
     {{- $bg = $image }}
     {{- end }}
@@ -43,9 +46,9 @@
                 <p class="article__excerpt"></p>
                 <div class="article__meta">
                     <div class="article__author">
-                        <a href="/about/" class="article__author-image"
-                            style="background-image: url('https://aditu-hugo.netlify.app/images/15.jpg')"
-                            aria-label="{{ .Params.Author }}'s Picture"></a> <a href="/about/"
+                        <a href="/authors/{{ .Params.Author }}" class="article__author-image"
+                            style="background-image: url('{{ $author }}')"
+                            aria-label="{{ .Params.Author }}'s Picture"></a> <a href="/authors/{{ .Params.Author }}"
                             class="article__author-link">{{ .Params.Author }}</a>
                     </div>
                     <time class="article__date" datetime="2018-11-13T15:01:35+03:00">

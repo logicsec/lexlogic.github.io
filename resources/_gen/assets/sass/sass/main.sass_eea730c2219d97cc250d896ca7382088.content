@@ -687,7 +687,6 @@ aside h3 {
   position: relative;
   height: 100%;
   max-width: 1024px;
-  margin: 0 230px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1073,7 +1072,7 @@ aside h3 {
 
 .wrap {
   max-width: 1400px;
-  padding-left: 80px;
+  padding: 10px;
 }
 
 .wrap, .wrap {
@@ -1192,8 +1191,8 @@ aside h3 {
   }
   .nav-menu a {
     display: block;
-    margin-left: auto;
     margin-right: auto;
+    padding: 20px;
   }
   .nav_logo {
     max-width: 100%;
@@ -1745,12 +1744,6 @@ aside h3 {
 
 .article:hover {
   transform: translateY(-5px);
-}
-
-@media only screen and (max-width: 576px) {
-  .article {
-    min-height: 280px;
-  }
 }
 
 .article__inner {

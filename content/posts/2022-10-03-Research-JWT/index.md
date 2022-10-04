@@ -1,5 +1,6 @@
 ---
 author: logic
+author_image: author/author.jpg
 date: 2022-10-03
 title: "Exploring the JWT Attacks Landscape"
 description: ""

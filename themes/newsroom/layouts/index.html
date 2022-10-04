@@ -3,9 +3,14 @@
 <style>
   .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 300px);
     grid-gap: 10px;
-}
+    width: 100%
+  }
+  @media (max-width: 600px) {
+    .grid-container { grid-template-columns: repeat(1, 1fr); }
+  }
 </style>
 
   {{- partial "slider" . }}

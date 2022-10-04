@@ -1,5 +1,6 @@
 ---
 author: logic
+author_image: author/author.jpg
 date: 2022-10-02
 title: "VAmPI the vulnerable API for security testing"
 description: ""
