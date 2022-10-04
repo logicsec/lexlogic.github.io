@@ -1,0 +1,59 @@
+{{ $group := .group }}
+{{ $category := .category }}
+{{- $pages := where site.RegularPages "Type" $group }}
+<div class="d-flex align-items-center">
+    <div class="title-bar mr-20">
+        <div class="bar "></div>
+        <div class="bar bar-2"></div>
+        <div class="bar bar-3"></div>
+    </div>                
+        <h4>{{ upper $group }} {{ upper $category }}</h4>
+</div>
+
+<div class='article_showcase'>
+    {{- $paginator := .page.Paginate $pages -}}
+    {{- $size := $paginator.PageSize }}
+    {{- $scratch := newScratch }}
+    {{- range $index, $value := $pages }}
+    {{ if isset .Params "image" }}
+    {{ $scratch.Set "image" .Params.image }}
+    {{ else }}
+    {{ $scratch.Set "image" "thumbnail.svg" }}
+    {{ end }}
+    {{ $image := $scratch.Get "image" }}
+    {{ $url := $value.Permalink }}
+    {{ $bg := (printf "%s/images/%s" $url $image) }}
+    {{- if in $image "https://" }}
+    {{- $bg = $image }}
+    {{- end }}
+    <div class="article grid__post animate">
+        <div class="article__inner">
+            <a class="article__image" href="{{ $value.Permalink }}">
+                <img src="{{ $bg }}" alt="post-image">
+            </a>
+            <div class="article__content">
+                <div class="article__bottom">
+                    <div class="article-tags__box">
+                        <a href="{{ $value.Permalink }}" class="article__tag">{{ upper .Params.Category }}</a>
+                    </div>
+                </div>
+                <h2 class="article__title">
+                    <a href="{{ $value.Permalink }}">{{ $value.Title }}</a>
+                </h2>
+                <p class="article__excerpt"></p>
+                <div class="article__meta">
+                    <div class="article__author">
+                        <a href="/about/" class="article__author-image"
+                            style="background-image: url('https://aditu-hugo.netlify.app/images/15.jpg')"
+                            aria-label="{{ .Params.Author }}'s Picture"></a> <a href="/about/"
+                            class="article__author-link">{{ .Params.Author }}</a>
+                    </div>
+                    <time class="article__date" datetime="2018-11-13T15:01:35+03:00">
+                        {{ dateFormat "January 02, 2006" $value.Date }}
+                    </time>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{- end }}
+</div>

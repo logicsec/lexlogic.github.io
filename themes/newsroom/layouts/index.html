@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+</style>
+
+  {{- partial "slider" . }}
+  {{- partial "categories" . }}
+
+  <div class='wrap'>
+    <div class="grid-container">
+      <div class="grid-child">
+        {{ partial "list" (dict "page" . "group" "htb" "category" "write-ups" ) }}
+      </div>
+      <div class="grid-child">
+        {{ partial "list" (dict "page" . "group" "news" "category" "" ) }}
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="wrap">
+    {{- partial "pager" . }}
+  </div>
+{{ end }}

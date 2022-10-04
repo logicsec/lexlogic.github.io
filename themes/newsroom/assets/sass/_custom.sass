@@ -1,0 +1,228 @@
+.d-flex
+    display: flex !important;
+
+.align-items-center
+    align-items: center
+
+.slideshow .slide
+  &:after
+    content: ""
+    position: absolute
+    display: block
+    left: 0
+    width: 100%
+    height: 50%
+    bottom: 0
+    background: #141d2b
+    background: -moz-linear-gradient(180deg, rgba(20, 29, 43, 0) 0, rgba(20, 29, 43, 0.959821) 50%)
+    background: -webkit-linear-gradient(180deg, rgba(20, 29, 43, 0), rgba(20, 29, 43, 0.959821) 50%)
+    background: linear-gradient(180deg, rgba(20, 29, 43, 0), rgba(20, 29, 43, 0.959821) 50%)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#141d2b", endColorstr="#141d2b", GradientType=1)
+    z-index: 1
+
+  .caption
+    z-index: 2
+
+.slideshow
+  overflow: hidden
+  position: relative
+  width: 100%
+  height: 380px
+  z-index: 1
+  border-radius: 10px
+
+  .slideshow-inner
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+  .slides
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+
+  .slide
+    display: none
+    overflow: hidden
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+    opacity: 0
+    transition: opacity 0.3s ease
+    border-radius: 10px
+    
+    &.is-active
+      display: flex
+      justify-content: left
+      align-items: end
+
+    &.is-loaded
+      opacity: 1
+
+    .caption
+      padding: 1.5rem 
+      z-index: 2
+
+    .reading-time
+        line-height: 1.875
+
+        &.reading-time::before
+            content: ""
+            margin-right: .5rem
+            height: 15px
+            border: 1px solid
+
+    .badge-bg-color-blue-nav-active, 
+    .badge-htb-hollow
+        color: #a4b1cd;
+        font-weight: 500;
+        font-size: 13px;
+        padding: 6px;
+
+    .badge-bg-color-blue-nav-active
+        background-color: #1a2332;
+        line-height: 24px;
+        border-radius: 2px;
+
+        
+
+    .image-container
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-position: center
+      z-index: 1
+      background-size: cover
+      image-rendering: optimizeQuality
+
+
+
+      &::before
+        content: ""
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+      
+      &:hover
+        transition: all .5s;
+        transform: scale(1.05)
+
+    .image
+      width: 100%
+      width: 100%
+      object-fit: cover
+      height: 100%
+      border-radius: 10px
+
+
+  .slide-content
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    z-index: 2
+    color: #fff
+    text-align: left
+    
+
+  .slide
+    .title
+      margin: 0 0 15px
+      max-width: 1000px
+      font: 600 32px "Oswald", sans-serif
+      letter-spacing: .2px;
+
+    .date
+      font-size: 13px
+      margin-left: 1rem
+      padding-top: .25rem !important
+      margin-bottom: 0 !important
+      line-height: 1.4
+
+    .btn
+      margin: 15px 0 0
+      border-color: #fff
+
+      &::before
+        background: #fff
+
+
+  .pagination
+    position: absolute
+    bottom: 35px
+    left: 0
+    width: 100%
+    height: 12px
+    cursor: default
+    z-index: 2
+    text-align: center
+
+    .item
+      display: inline-block
+      padding: 15px 5px
+      position: relative
+      width: 46px
+      height: 32px
+      cursor: pointer
+      text-indent: -999em
+      z-index: 1
+
+      + .page
+        margin-left: -2px
+
+      &::before
+        content: ""
+        display: block
+        position: absolute
+        top: 15px
+        left: 5px
+        width: 36px
+        height: 2px
+        background: rgba(255, 255, 255, 0.5)
+        transition: background 0.2s ease
+
+      &::after
+        width: 0
+        background: #fff
+        z-index: 2
+        transition: width 0.2s ease
+
+      &:hover::before, &.is-active::before
+        background-color: #fff
+
+.title-bar .bar
+  height: 2px
+  width: 45px
+  background-color: var(--accent)
+  margin-bottom: 5px
+
+  &.bar-2
+    width: 30px
+
+  &.bar-3
+    width: 20px
+
+.section-title h4
+  color: var(--light)
+  line-height: 1
+  text-transform: uppercase
+  margin: 0 !important
+
+.mr-20
+  margin-right: 20px
+
+.ml-90
+  margin-left: 90px
