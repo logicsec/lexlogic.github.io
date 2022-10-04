@@ -8,6 +8,7 @@ image: "banner.png"
 category: security
 tags: ['news', 'security']
 type: news
+featured: true
 ---
 
 ## What is JWT ?

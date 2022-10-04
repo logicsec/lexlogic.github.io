@@ -1,10 +1,11 @@
 .article
   align-items: stretch
   flex-grow: 1
-  margin-bottom: 30px
+  min-height: 340px
+  transition: transform .2s ease
 
-  &:hover
-    transform: translateY(-5px)
+.widget__head
+  padding-top: 150px
 
 .article__inner
   position: relative
@@ -16,40 +17,13 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
   background-color: #0a0a12
 
-  .featured-post
-    position: absolute
-    top: 0
-    right: 0
-    z-index: 10
-    width: 35px
-    height: 35px
-    display: flex
-    justify-content: center
-    align-items: center
-    font-size: 18px
-    color: rgba(255, 255, 255, 0.8)
-    user-select: none
-
-    &::before
-      content: ""
-      position: absolute
-      top: 0
-      right: 0
-      width: 100%
-      height: 100%
-      border-color: #323a96 #323a96 transparent transparent
-      border-style: solid
-      border-width: 29px
-
-    i
-      position: relative
-
 .article__title
-  margin: 10px 0 15px
-  font-size: 21px
+  margin: 12px 0 12px;
+  font-size: 28px;
+  line-height: 1;
 
   a
-    color: #fff
+    color: #eee
 
 @media only screen and (max-width: 576px)
   .article__title
@@ -57,9 +31,10 @@
     font-size: 18px
 
 .article__excerpt
-  margin-bottom: 15px
-  font-size: 15px
-  color: rgba(255, 255, 255, 0.6)
+  margin-bottom: 12px
+  font-size: 14px
+  line-height: 17px
+  color: #aaa
 
 @media only screen and (max-width: 576px)
   .article__excerpt
@@ -114,16 +89,7 @@
     padding: 20px
 
 .article__meta
-  display: flex
-  align-items: center
-  flex-wrap: wrap
-  justify-content: flex-start
-  color: #fff
-
-.article-tags
-  display: flex
-  flex-wrap: wrap
-  align-items: center
+  line-height: 12px;
 
 .article-tags__box
   position: relative
@@ -158,27 +124,45 @@
     line-height: 20px
 
 .article__date
-  font-size: 14px
-  color: #fff
+  font-size: 12px
+  color: #aaa
 
-  &::before
-    content: ""
-    position: relative
-    bottom: .2rem
-    display: inline-block
-    height: 3px
-    width: 3px
-    margin: 0 .5rem
-    border-radius: 50%
-    background-color: rgba(255, 255, 255, 0.8)
+.article__minutes
+  font-size: 12px
+  line-height: 1
+  font-weight: 500
+
+.article__tag
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 2px 0;
+  font-size: 12px;
+  line-height: 10px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 24px;
+  color: #aaa;
+
+  &:hover
+    color: #fff
+    border-color: #ff7b7b
 
 @media only screen and (max-width: 576px)
   .article__date
     display: none
 
 .article__author
-  display: flex
-  align-items: center
+  float: left
+  flex-shrink: 0
+
+.article__bottom
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #fff;
 
 .article__author-image
   display: inline-block
@@ -192,9 +176,20 @@
   background-repeat: no-repeat
   background-color: #0a0a12
 
+.article__inner .featured-post
+  position: absolute
+  top: 20px
+  right: 32px
+  z-index: 10
+  padding: 2px 4px
+  font-size: 20px
+  border-radius: 4px
+  color: #aaa
+  background: rgba(255, 255, 255, 0.08)
+  pointer-events: none
+
 .article__author-link
-  font-size: 14px
-  text-decoration: underline
+  font-size: 12px
   color: #fff
 
   &:hover
@@ -203,4 +198,22 @@
 .article__author span
   color: rgba(255, 255, 255, 0.8)
 
-  
+@media only screen and (max-width: 576px)
+  .article__inner .featured-post
+    right: 20px
+
+@media only screen and (max-width: 576px)
+  .article__title
+    font-size: 24px
+
+@media only screen and (max-width: 576px)
+  .article__excerpt
+    font-size: 13px
+
+@media only screen and (max-width: 576px)
+  .article__content
+    padding: 20px
+
+@media only screen and (max-width: 576px)
+  .article
+    min-height: 280px

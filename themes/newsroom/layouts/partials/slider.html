@@ -5,8 +5,7 @@
                 <div class="slideshow-inner">
                     <div class="slides">
                         {{- $scratch := newScratch }}
-                        {{- $count := 5 }}
-                        {{- range $index, $value := first $count (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+                        {{ range $index, $value := first 3 (where (where .Site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "=" true) }}
                             {{ if isset .Params "image" }}
                                 {{ $scratch.Set "image" .Params.image }}
                             {{ else }}
@@ -41,7 +40,7 @@
                         {{ end }}
                     </div>
                     <div class="pagination">
-                        {{- range $index, $value := first $count (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+                        {{ range $index, $value := first 3 (where (where .Site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "=" true) }}
                             {{ if eq $index 0 }}<div class="item is-active">{{ else }}<div class="item">{{ end }}
                                     <span class="icon">{{ $index }}</span>
                             </div>

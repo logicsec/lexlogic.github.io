@@ -18,16 +18,8 @@
   {{- partial "slider" . }}
   {{- partial "categories" . }}
 
-  <div class='wrap'>
-    <div class="grid-container">
-      <div class="grid-child">
-        {{ partial "list" (dict "page" . "group" "htb" "category" "write-ups" ) }}
-      </div>
-      <div class="grid-child">
-        {{ partial "list" (dict "page" . "group" "news" "category" "" ) }}
-      </div>
-    </div>
-  </div>
+  {{ partial "list" (dict "page" . "group" "htb" "category" "write-ups" ) }}
+  {{ partial "list" (dict "page" . "group" "news" "category" "" ) }}
 
 
 

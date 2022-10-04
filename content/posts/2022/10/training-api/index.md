@@ -8,6 +8,7 @@ image: "banner.png"
 category: security
 tags: ['news', 'security']
 type: news
+featured: true
 ---
 
 Well it was one of this times where in an attempt to "fix a light bulb" a series of events lead you to do something else first. For those who do not know what I am talking about, go ahead and spend 40 seconds to watch this video.

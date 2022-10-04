@@ -1,62 +1,69 @@
 {{ $group := .group }}
-{{ $category := .category }}
-{{- $pages := where site.RegularPages "Type" $group }}
-<div class="d-flex align-items-center">
-    <div class="title-bar mr-20">
-        <div class="bar "></div>
-        <div class="bar bar-2"></div>
-        <div class="bar bar-3"></div>
-    </div>                
-        <h4>{{ upper $group }} {{ upper $category }}</h4>
-</div>
+<div class='wrap'>
+    {{ $category := .category }}
+    {{- $pages := where site.RegularPages "Type" $group }}
 
-<div class='article_showcase'>
-    {{- $paginator := .page.Paginate $pages -}}
-    {{- $size := $paginator.PageSize }}
-    {{- $scratch := newScratch }}
-    {{- range $index, $value := $pages }}
-    {{ if isset .Params "image" }}
+    <div class="widget__head">
+        <h3 class="widget__title">{{ upper $group }} {{ upper $category }}</h3>
+    </div>
+    
+    <div class='grid-4'>
+        {{- $paginator := .page.Paginate $pages -}}
+        {{- $size := $paginator.PageSize }}
+        {{- $scratch := newScratch }}
+        {{- range $index, $value := $pages }}
+        {{ if isset .Params "image" }}
         {{ $scratch.Set "image" .Params.image }}
         {{ $scratch.Set "author" .Params.author_image }}
-    {{ else }}
+        {{ else }}
         {{ $scratch.Set "image" "thumbnail.svg" }}
-    {{ end }}
-    {{ $image := $scratch.Get "image" }}
-    {{ $author := $scratch.Get "author" }}
-    {{ $url := $value.Permalink }}
-    {{ $bg := (printf "%s/images/%s" $url $image) }}
-    {{ $author := (printf "%s/images/%s" $url $author) }}
-    {{- if in $image "https://" }}
-    {{- $bg = $image }}
-    {{- end }}
-    <div class="article grid__post animate">
-        <div class="article__inner">
-            <a class="article__image" href="{{ $value.Permalink }}">
-                <img src="{{ $bg }}" alt="post-image">
-            </a>
-            <div class="article__content">
-                <div class="article__bottom">
-                    <div class="article-tags__box">
-                        <a href="{{ $value.Permalink }}" class="article__tag">{{ upper .Params.Category }}</a>
+        {{ end }}
+        {{ $image := $scratch.Get "image" }}
+        {{ $author := $scratch.Get "author" }}
+        {{ $url := $value.Permalink }}
+        {{ $bg := (printf "%s/images/%s" $url $image) }}
+        {{ $author := (printf "%s/images/%s" $url $author) }}
+        {{- if in $image "https://" }}
+        {{- $bg = $image }}
+        {{- end }}
+        <div class="article col col-4 col-d-6 col-t-12 animate">
+            <div class="article__inner">
+                {{- if (eq .Params.Featured true)  }}<ion-icon class="featured-post" name="star-outline"></ion-icon>{{ end }}
+
+                <a class="article__image" href="/2018/11/05/Believe-and-act-as-if-it-were-impossible-to-fail/">
+                    <img class="lazy loaded" alt="Believe and act as if it were impossible to fail" data-ll-status="loaded"
+                        src="{{ $bg }}">
+                </a>
+                <div class="article__content">
+                    <div class="article__meta">
+                        <span class="article__minutes">
+                            2 min read
+                        </span>
+                        <time class="article__date" datetime="2018-11-05T12:01:35+00:00">{{ dateFormat "January 02, 2006" $value.Date }}</time>
                     </div>
-                </div>
-                <h2 class="article__title">
-                    <a href="{{ $value.Permalink }}">{{ $value.Title }}</a>
-                </h2>
-                <p class="article__excerpt"></p>
-                <div class="article__meta">
-                    <div class="article__author">
-                        <a href="/authors/{{ .Params.Author }}" class="article__author-image"
-                            style="background-image: url('{{ $author }}')"
-                            aria-label="{{ .Params.Author }}'s Picture"></a> <a href="/authors/{{ .Params.Author }}"
-                            class="article__author-link">{{ .Params.Author }}</a>
+                    <h2 class="article__title">
+                        <a href="{{ $value.Permalink }}">{{ $value.Title }}</a>
+                    </h2>
+                    <p class="article__excerpt">
+                        Sin tantum modo ad indicia veteris memoriae cognoscenda, curiosorum. Haec et tu ita posuisti, et
+                        verba vestra sunt. Idemne potest esse dies...
+                    </p>
+                    <div class="article__bottom">
+                        <div class="article__author">
+                            <a href="/about/" aria-label="Robert Wilson"><img class="article__author-image lazy loaded"
+                                    alt="{{ .Params.Author }}'s Picture" data-ll-status="loaded" src="{{ $author }}"></a>
+                        </div>
+                        <div class="article__bottom-meta">
+                            <a href="/about/" class="article__author-link">{{ .Params.Author }}</a>
+                            <span>in</span>
+                            <span class="article-tags">
+                                <a href="{{ $value.Permalink }}" class="article__tag">{{ upper .Params.Category }}</a>
+                            </span>
+                        </div>
                     </div>
-                    <time class="article__date" datetime="2018-11-13T15:01:35+03:00">
-                        {{ dateFormat "January 02, 2006" $value.Date }}
-                    </time>
                 </div>
             </div>
         </div>
+        {{- end }}
     </div>
-    {{- end }}
 </div>

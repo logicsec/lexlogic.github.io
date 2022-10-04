@@ -14,5 +14,6 @@
 
 {{ $scriptPath := "js/index.js" }}
 {{ $scripts := resources.Get $scriptPath | resources.ExecuteAsTemplate $scriptPath . | resources.Minify | resources.Fingerprint "sha512" }}
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 <script src='js/slideshow.js'></script>
 <script src="{{ $scripts.Permalink }}"></script>

@@ -8,6 +8,7 @@ image: "ready_logo.png"
 category: write-up
 tags: ['htb', 'security']
 type: htb
+featured: false
 ---
 
 
