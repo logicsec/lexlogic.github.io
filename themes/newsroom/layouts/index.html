@@ -2,14 +2,16 @@
 
 <style>
   .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 300px);
-    grid-gap: 10px;
+    display: flex;
+    flex-direction: row;
     width: 100%
   }
+  .grid-child {
+    width: 100%;
+  }
+  
   @media (max-width: 600px) {
-    .grid-container { grid-template-columns: repeat(1, 1fr); }
+    .grid-container { flex-direction: column; }
   }
 </style>
 
