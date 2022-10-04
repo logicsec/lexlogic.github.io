@@ -2,7 +2,7 @@
 author: logic
 author_image: author/author.jpg
 date: 2021-12-05
-title: "2020 12 05 Htb Writeup Unbalanced"
+title: "HTB Writeup - Unbalanced"
 description: ""
 image: "unbalanced_logo.png"
 category: write-up
