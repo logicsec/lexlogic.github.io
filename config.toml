@@ -69,8 +69,8 @@ paginate = 6
 [params]
   relativeURLs = true
   # locale = "en_US"
-  ga_analytics = "G-QMP5T9WRBD" # google analytics ID e.g UA-116386578-1
-  ga_verify = "G-QMP5T9WRBD"
+  ga_analytics = "G-065FWV8040" # google analytics ID e.g UA-116386578-1
+  #ga_verify = "G-QMP5T9WRBD"
   # twitter = "" # twitter handle e.g @weru
   mainSections = ["news", "htb"]
   # uncomment the line below will disable darkmode by default.
