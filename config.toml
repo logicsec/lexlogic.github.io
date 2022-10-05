@@ -69,7 +69,7 @@ paginate = 6
 [params]
   relativeURLs = true
   # locale = "en_US"
-  ga_analytics = "" # google analytics ID e.g UA-116386578-1
+  ga_analytics = "G-QMP5T9WRBD" # google analytics ID e.g UA-116386578-1
   ga_verify = "G-QMP5T9WRBD"
   # twitter = "" # twitter handle e.g @weru
   mainSections = ["news", "htb"]
