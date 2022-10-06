@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <div class="wrap mt">
+  <div class="wrap-post mt">
     <div>
       {{- $date := (dateFormat "02. January 2006" .Date) -}}
       <p class="post_date">{{ upper .Params.Category }} | {{ $date }}</p>

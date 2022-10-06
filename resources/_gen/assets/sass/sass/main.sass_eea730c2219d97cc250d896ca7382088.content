@@ -971,6 +971,15 @@ aside h3 {
   margin: 0 auto;
 }
 
+.wrap-post {
+  max-width: 1200px;
+  padding: 0 30px;
+}
+
+.wrap-post, .wrap-post {
+  margin: 0 auto;
+}
+
 .pt-1 {
   padding-top: 1.5rem;
 }
@@ -1095,6 +1104,7 @@ aside h3 {
 .highlight {
   padding: 30px 0;
   max-width: 100%;
+  font-size: 12px;
 }
 
 .bg {
