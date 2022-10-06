@@ -661,7 +661,7 @@ aside h3 {
 }
 
 .post_body img {
-  width: 100%;
+  width: 50%;
   max-width: 100%;
 }
 

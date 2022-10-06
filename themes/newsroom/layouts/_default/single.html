@@ -7,11 +7,13 @@
       <div class="post_body">
         <div class="post_inner">
         {{ with .Params.image }}
-          {{- $image := printf "images/%s" . }}
-          {{ if in . "https://" }}
-            {{- $image = . }}
-          {{ end }}
-          <img src="{{ $image }}" alt="{{ . }}" class="post_thumbnail">
+          <div class="center">
+            {{- $image := printf "images/%s" . }}
+            {{ if in . "https://" }}
+              {{- $image = . }}
+            {{ end }}
+            <img src="{{ $image }}" alt="{{ . }}" class="post_thumbnail center">
+          </div>
         {{ end }}
           {{ .Content }}
         </div>

