@@ -31,7 +31,7 @@
                 {{- if (eq .Params.Featured true)  }}<ion-icon class="featured-post" name="star-outline"></ion-icon>{{ end }}
 
                 <a class="article__image" href="/2018/11/05/Believe-and-act-as-if-it-were-impossible-to-fail/">
-                    <img class="lazy loaded" alt="Believe and act as if it were impossible to fail" data-ll-status="loaded"
+                    <img class="lazy loaded" alt="Background" data-ll-status="loaded"
                         src="{{ $bg }}">
                 </a>
                 <div class="article__content">
@@ -45,8 +45,7 @@
                         <a href="{{ $value.Permalink }}">{{ $value.Title }}</a>
                     </h2>
                     <p class="article__excerpt">
-                        Sin tantum modo ad indicia veteris memoriae cognoscenda, curiosorum. Haec et tu ita posuisti, et
-                        verba vestra sunt. Idemne potest esse dies...
+                        {{ .Summary }}
                     </p>
                     <div class="article__bottom">
                         <div class="article__author">

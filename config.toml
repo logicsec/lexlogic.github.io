@@ -5,6 +5,9 @@ author = "Weru"
 copyright = "Copyright © 2019, Weru and the Hugo Authors; all rights reserved."
 canonifyurls = true
 paginate = 6
+summaryLength = 5
+disqusShortname = 'lexlogic'
+
 
 [taxonomies]
   category = "category"
