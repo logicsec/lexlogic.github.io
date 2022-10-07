@@ -7,7 +7,7 @@
         <h3 class="widget__title">{{ upper $group }} {{ upper $category }}</h3>
     </div>
     
-    <div class='grid-4'>
+    <div class='grid-3'>
         {{- $paginator := .page.Paginate $pages -}}
         {{- $size := $paginator.PageSize }}
         {{- $scratch := newScratch }}

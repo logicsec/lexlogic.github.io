@@ -1643,6 +1643,7 @@ aside h3 {
   flex-grow: 1;
   min-height: 340px;
   transition: transform .2s ease;
+  padding-bottom: 30px;
 }
 
 .widget__head {
@@ -1689,6 +1690,7 @@ aside h3 {
   overflow: hidden;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   background-color: #0a0a12;
+  min-height: 340px;
 }
 
 .article__title {
