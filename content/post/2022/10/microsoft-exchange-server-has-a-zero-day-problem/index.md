@@ -5,9 +5,10 @@ description: "" # Description used for search engine.
 featured: true # Sets if post is a featured post, making it appear on the sidebar. A featured post won't be listed on the sidebar if it's the current page
 toc: true
 usePageBundles: true # Set to true to group assets like images in the same folder as this post.
+
 featureImage: "images/thumbnail.png" # Sets featured image on blog post.
-thumbnail: "images/thumbnail.png" # Sets thumbnail image appearing inside card on homepage.
-shareImage: "images/thumbnail.png" # Designate a separate image for social media sharing.
+thumbnail:    "images/thumbnail.png" # Sets thumbnail image appearing inside card on homepage.
+shareImage:   "images/thumbnail.png" # Designate a separate image for social media sharing.
 
 categories:
   - Security
