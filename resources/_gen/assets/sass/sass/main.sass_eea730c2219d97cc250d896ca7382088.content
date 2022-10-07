@@ -1985,4 +1985,69 @@ aside h3 {
   }
 }
 
+@media (min-width: 768px) {
+  .sidebar.sticky {
+    position: sticky;
+  }
+}
+
+.left-sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-self: stretch;
+  gap: var(--sidebar-element-separation);
+  max-width: none;
+  width: 100%;
+  position: relative;
+  --sidebar-avatar-size:100px {}
+  --sidebar-element-separation:20px {}
+  --emoji-size:40px {}
+  --emoji-font-size:20px {}
+
+  &.sticky {
+    top: 0; }
+
+  &.compact {
+    --sidebar-avatar-size:80px {}
+    --emoji-size:30px {}
+    --emoji-font-size:15px {}
+
+    header {
+      .site-meta {
+        gap: 5px; }
+
+      .site-name, .site-description {
+        font-size: 1.4rem; } } } ;
+}
+
+@media (min-width: 768px) {
+  .left-sidebar {
+    width: auto;
+    padding-top: var(--main-top-padding);
+    padding-bottom: var(--main-top-padding);
+    max-height: 100vh;
+  }
+}
+
+@media (min-width: 1536px) {
+  .left-sidebar {
+    --sidebar-avatar-size:120px {}
+    --sidebar-element-separation:25px {}
+    --emoji-size:40px {} ;
+  }
+}
+
+@media (min-width: 1024px) {
+  .left-sidebar.compact header {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1536px) {
+  .left-sidebar.compact header .site-name {
+    font-size: 1.75rem;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

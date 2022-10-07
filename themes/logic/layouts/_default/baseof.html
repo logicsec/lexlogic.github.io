@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{{- $params := .Site.Params }}
+<html lang="{{ .Lang }}" {{ if $params.disableDarkMode }}class="nodarkmode"{{ end }}>
+  {{ partial "head" . }}
+  <style>
+    .flex-container {
+      display: flex;
+    }
+    
+    .flex-child:last-child {
+        margin-right: 20px;
+        width: 20%;
+        background-color: #fff;
+        border-radius: 10px;
+        margin-top: 100px;
+    } 
+  </style>
+  <body>
+    {{ partialCached "nav" . }}
+    <div class="flex-container">
+      <div class="flex-child">
+        <main>
+          {{ block "main" . }}{{ end }}
+        </main>
+      </div>
+      <div class="flex-child">
+        {{ partialCached "sidebar" . }}
+      </div>
+    </div>
+    {{ partialCached "footer" . }}
+    {{ partialCached "sprites" . }}
+  </body>
+</html>
