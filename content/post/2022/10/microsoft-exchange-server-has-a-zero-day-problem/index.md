@@ -4,14 +4,13 @@ date: 2022-10-07T14:19:16-04:00 # Date of post creation.
 description: "" # Description used for search engine.
 featured: true # Sets if post is a featured post, making it appear on the sidebar. A featured post won't be listed on the sidebar if it's the current page
 draft: false # Sets whether to render this page. Draft of true will not be rendered.
-toc: true # Controls if a table of contents should be generated for first-level links automatically.
+toc: false # Controls if a table of contents should be generated for first-level links automatically.
 # menu: main
 usePageBundles: true # Set to true to group assets like images in the same folder as this post.
 featureImage: "images/thumbnail.png" # Sets featured image on blog post.
-featureImageAlt: 'Description of image' # Alternative text for featured image.
-featureImageCap: 'Illustration: Sylverarts/Getty Images' # Caption (optional).
 thumbnail: "images/thumbnail.png" # Sets thumbnail image appearing inside card on homepage.
 shareImage: "images/thumbnail.png" # Designate a separate image for social media sharing.
+
 codeMaxLines: 10 # Override global value for how many lines within a code block before auto-collapsing.
 codeLineNumbers: true # Override global value for showing of line numbers within code block.
 figurePositionShow: true # Override global value for showing the figure label.
@@ -34,6 +33,8 @@ Fortunately, Microsoft has released several mitigations against this attack unti
 
 The current Exchange Server mitigation is to add a blocking rule in “IIS Manager -> Default Web Site -> URL Rewrite -> Actions” to block the known attack patterns. Exchange Server customers should review and use one of these options.
 
-Option 1: For customers who have the Exchange Emergency Mitigation Service (EEMS) enabled, Microsoft released the URL Rewrite mitigation for Exchange Server 2016 and Exchange Server 2019. The mitigation is enabled automatically and is updated to include the URL Rewrite rule improvements. Please see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/new-security-feature-in-september-2021-cumulative-update-for/ba-p/2783155) for more information on this service and how to check active mitigations.
+`Option 1`: For customers who have the Exchange Emergency Mitigation Service (EEMS) enabled, Microsoft released the URL Rewrite mitigation for Exchange Server 2016 and Exchange Server 2019. The mitigation is enabled automatically and is updated to include the URL Rewrite rule improvements. Please see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/new-security-feature-in-september-2021-cumulative-update-for/ba-p/2783155) for more information on this service and how to check active mitigations.
 
-Option 2: Microsoft created the EOMTv2 script for the URL Rewrite mitigation steps and updated it to include the URL Rewrite rule improvements. EOMTv2 script will auto-update on Internet connected machines and the updated version will show as 22.10.06.0840. The script should be re-run on any Exchange Server without EEMS enabled. [https://aka.ms/EOMTv2](https://aka.ms/EOMTv2 )
+`Option 2`: Microsoft created the EOMTv2 script for the URL Rewrite mitigation steps and updated it to include the URL Rewrite rule improvements. EOMTv2 script will auto-update on Internet connected machines and the updated version will show as 22.10.06.0840. The script should be re-run on any Exchange Server without EEMS enabled. [https://aka.ms/EOMTv2](https://aka.ms/EOMTv2)
+
+Both options should provide a mitigation until a patch can be provided. 
