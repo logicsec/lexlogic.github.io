@@ -1,4 +1,5 @@
-baseurl = "https://lexlogic.github.io"  # Include trailing slash
+#baseurl = "https://lexlogic.github.io"  # Include trailing slash
+baseurl = "http://localhost:1313"  # Include trailing slash
 title = "Newsroom"
 theme = "newsroom"
 author = "Weru"
@@ -11,7 +12,7 @@ disqusShortname = 'lexlogic'
 
 [taxonomies]
   category = "category"
-  tags = "tags"
+  tag = "tags"
 
 
 

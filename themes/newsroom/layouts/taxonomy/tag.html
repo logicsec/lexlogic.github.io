@@ -1,15 +1,13 @@
-{{ $group := .group }}
-{{ $type := .type }}
+{{ define "main" }}
 <div class='wrap'>
-    {{ $category := .category }}
-    {{- $pages := where site.RegularPages "Type" $group }}
+    {{- $pages := site.RegularPages.RelatedTo ( keyVals "tags" .Title ) }}
 
     <div class="widget__head">
-        <h3 class="widget__title">{{ upper $group }} {{ upper $category }}</h3>
+        <h3 class="widget__title">{{ upper .Title }}</h3>
     </div>
     
     <div class='grid-3'>
-        {{- $paginator := .page.Paginate $pages -}}
+        {{- $paginator := .Paginate $pages -}}
         {{- $size := $paginator.PageSize }}
         {{- $scratch := newScratch }}
         {{- range $index, $value := $pages }}
@@ -69,3 +67,4 @@
         {{- end }}
     </div>
 </div>
+{{ end }}

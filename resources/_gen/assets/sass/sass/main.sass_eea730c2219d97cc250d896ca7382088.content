@@ -825,7 +825,7 @@ aside h3 {
 }
 
 .post_thumbnail {
-  width: 100%;
+  width: 100% !important;
   margin: 0;
 }
 

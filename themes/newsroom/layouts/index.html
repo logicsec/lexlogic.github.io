@@ -17,11 +17,8 @@
 
   {{- partial "slider" . }}
   {{- partial "categories" . }}
-
-  {{ partial "list" (dict "page" . "group" "news" "category" "" ) }}
-  {{ partial "list" (dict "page" . "group" "htb" "category" "write-ups" ) }}
-
-
+  {{ partial "list" (dict "page" . "group" "news" "category" "" "type" "post_list" ) }}
+  {{ partial "list" (dict "page" . "group" "htb" "category" "write-ups" "type" "post_list" ) }}
 
   <div class="wrap">
     {{- partial "pager" . }}
