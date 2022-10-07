@@ -1,4 +1,4 @@
-<li class="post_item">
+{{/*  <li class="post_item">
   <div class="excerpt">
     <div class="excerpt_header">
       <h3 class="post_link">
@@ -30,6 +30,61 @@
           {{- $r := T "read_more" }}
           <a href="{{ .Permalink }}" title="{{ $r }}" class="excerpt_more button">{{ $r }}</a>
         </div>
+      </div>
+    </div>
+  </li>  */}}
+
+  {{- $params := .Site.Params }}
+
+  <li class="post_item">
+    <div class="article col col-4 col-d-6 col-t-12 animate">
+      <div class="article__inner">
+          {{/*  {{- if (eq .Featured true)  }}<ion-icon class="featured-post" name="star-outline"></ion-icon>{{ end }}  */}}
+
+          <a class="article__image" href="{{ .Permalink }}">
+            {{- with .Params.thumbnail }}
+            {{- partial "image" (dict "file" . "alt" $.Title "type" "thumbnail" "Page" $.Page ) }}
+            {{- end }}
+          </a>
+          <div class="article__content">
+              <div class="article__meta">
+                  <span class="article__minutes">
+                    {{ math.Round (div (countwords .Content) 220.0) }} min read | 
+                  </span>
+                  <time class="article__date" datetime="2018-11-05T12:01:35+00:00">{{ dateFormat "January 02, 2006" .Date }}</time>
+              </div>
+              <h2 class="article__title">
+                  <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </h2>
+              <p class="article__excerpt">
+                {{- $summary := truncate 320 .Summary }}
+                {{- if .Params.summary }}
+                  {{- $summary = .Params.summary }}
+                {{- else if .Params.abstract }}
+                  {{ $summary = .Params.abstract }}
+                {{- end }}
+                {{ if not ( strings.Contains $summary "<p>" ) }}
+                  {{ $summary | markdownify }}
+                {{ else }}
+                  {{ $summary | markdownify }}
+                {{ end }}
+              </p>
+              <div class="article__bottom">
+                  <div class="article__author">
+                      <a href="/about" aria-label="Logic"><img class="article__author-image lazy loaded"
+                              alt="{{ .Author }}'s Picture" data-ll-status="loaded" src="{{ $params.author.photo }}"></a>
+                  </div>
+                  <div class="article__bottom-meta">
+                      <a href="/about" class="article__author-link">{{ $params.author.name }}</a>
+                      <span>in</span>
+                      <span class="article-tags">
+                          {{ range $index, $name := .Params.tags -}}
+                              <a href="{{ (printf "/tags/%s/" $name) | urlize }}" class="article__tag">{{ upper $name }}</a>
+                          {{- end }}
+                      </span>
+                  </div>
+              </div>
+          </div>
       </div>
     </div>
   </li>
