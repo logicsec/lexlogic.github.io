@@ -5,7 +5,6 @@ summary: ""
 date: '2021-05-22'
 aliases:
   - Delivery
-author: 'logic'
 usePageBundles: true
 
 featureImage: 'images/delivery_logo.png' # Top image on post.

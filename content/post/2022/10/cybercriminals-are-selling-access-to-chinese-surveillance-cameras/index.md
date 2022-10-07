@@ -5,8 +5,8 @@ summary: 'Tens of thousands of cameras have failed to patch a critical, 11-month
 date: '2022-10-04T14:43:57-04:00'
 aliases:
   - chineese-cameras
-author: 'logic'
 usePageBundles: true
+featured: true
 
 featureImage: 'images/banner.jpg' # Top image on post.
 thumbnail: 'images/banner.jpg' # Image in lists of posts.

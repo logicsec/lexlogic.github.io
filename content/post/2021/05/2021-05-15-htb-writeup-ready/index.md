@@ -5,7 +5,6 @@ summary: ""
 date: '2021-05-22'
 aliases:
   - Ready
-author: 'logic'
 usePageBundles: true
 
 featureImage: 'images/ready_logo.png' # Top image on post.

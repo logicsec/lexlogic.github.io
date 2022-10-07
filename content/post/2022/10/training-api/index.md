@@ -5,7 +5,6 @@ summary: ''
 date: '2022-10-02'
 aliases:
   - vampi
-author: 'logic'
 usePageBundles: true
 
 featureImage: 'images/banner.png' # Top image on post.

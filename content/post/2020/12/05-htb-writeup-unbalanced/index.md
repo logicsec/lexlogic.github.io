@@ -5,7 +5,6 @@ summary: ""
 date: '2021-12-05'
 aliases:
   - unbalanced
-author: 'logic'
 toc: true
 usePageBundles: true
 

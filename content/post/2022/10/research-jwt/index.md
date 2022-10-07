@@ -5,8 +5,8 @@ summary: ''
 date: '2022-10-03'
 aliases:
   - chineese-cameras
-author: 'logic'
 usePageBundles: true
+featured: true
 
 featureImage: 'images/banner.png' # Top image on post.
 thumbnail: 'images/banner.png' # Image in lists of posts.
