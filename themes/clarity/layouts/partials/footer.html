@@ -3,7 +3,7 @@
 {{- if or .Params.enableMathNotation $s.enableMathNotation }}
   {{ partialCached "math" . }}
 {{- end }}
-{{- $defaultFooterLogo := printf "%s" "logo-dark.png"}}
+{{- $defaultFooterLogo := printf "%s" "logos/logo-dark.png"}}
 <footer class="footer">
   <div class="footer_inner wrap pale">
     <img src='{{ absURL (default $defaultFooterLogo $s.footerLogo) }}' class="" alt="{{ $t }}">
