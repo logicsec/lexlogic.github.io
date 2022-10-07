@@ -6,7 +6,7 @@ title: "Exploring the JWT Attacks Landscape"
 description: ""
 image: "banner.png"
 category: security
-tags: ['news', 'security']
+tags: ['news', 'apis']
 type: news
 featured: true
 ---

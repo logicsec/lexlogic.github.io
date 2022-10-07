@@ -6,7 +6,7 @@ title: "HTB Writeup - Ready"
 description: ""
 image: "ready_logo.png"
 category: write-up
-tags: ['htb', 'security']
+tags: ['htb', 'write-up', 'linux']
 type: htb
 featured: false
 ---

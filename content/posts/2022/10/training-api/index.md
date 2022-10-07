@@ -6,7 +6,7 @@ title: "VAmPI the vulnerable API for security testing"
 description: ""
 image: "banner.png"
 category: security
-tags: ['news', 'security']
+tags: ['news', 'apis']
 type: news
 featured: true
 ---

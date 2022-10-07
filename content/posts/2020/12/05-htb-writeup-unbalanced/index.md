@@ -6,7 +6,7 @@ title: "HTB Writeup - Unbalanced"
 description: ""
 image: "unbalanced_logo.png"
 category: write-up
-tags: ['htb', 'security']
+tags: ['htb', 'write-up', 'linux']
 type: htb
 featured: false
 ---

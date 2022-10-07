@@ -56,7 +56,9 @@
                             <a href="/about/" class="article__author-link">{{ .Params.Author }}</a>
                             <span>in</span>
                             <span class="article-tags">
-                                <a href="{{ $value.Permalink }}" class="article__tag">{{ upper .Params.Category }}</a>
+                                {{ range $index, $name := .Params.tags -}}
+                                    <a href="{{ $value.Permalink }}" class="article__tag">{{ upper $name }}</a>
+                                {{- end }}
                             </span>
                         </div>
                     </div>

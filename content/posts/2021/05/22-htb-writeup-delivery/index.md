@@ -6,7 +6,7 @@ title: "HTB Writeup - Delivery"
 description: ""
 image: "delivery_logo.png"
 category: write-up
-tags: ['htb', 'security']
+tags: ['htb', 'write-up', 'linux']
 type: htb
 featured: false
 ---
