@@ -1646,6 +1646,11 @@ aside h3 {
   padding-bottom: 30px;
 }
 
+.article:hover {
+  transition: all .5s ease;
+  transform: scale(1.03);
+}
+
 .widget__head {
   padding-top: 150px;
 }
