@@ -6,6 +6,7 @@ date: '2022-10-03'
 aliases:
   - chineese-cameras
 usePageBundles: true
+toc: true
 featured: true
 
 featureImage: 'images/banner.png' # Top image on post.

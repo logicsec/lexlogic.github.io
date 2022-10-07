@@ -6,6 +6,7 @@ date: '2022-10-02'
 aliases:
   - vampi
 usePageBundles: true
+toc: true
 
 featureImage: 'images/banner.png' # Top image on post.
 thumbnail: 'images/banner.png' # Image in lists of posts.

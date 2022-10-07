@@ -6,6 +6,7 @@ date: '2021-05-22'
 aliases:
   - Delivery
 usePageBundles: true
+toc: true
 
 featureImage: 'images/delivery_logo.png' # Top image on post.
 thumbnail: 'images/delivery_logo.png' # Image in lists of posts.

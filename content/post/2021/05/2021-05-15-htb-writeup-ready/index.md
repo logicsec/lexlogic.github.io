@@ -6,6 +6,7 @@ date: '2021-05-22'
 aliases:
   - Ready
 usePageBundles: true
+toc: true
 
 featureImage: 'images/ready_logo.png' # Top image on post.
 thumbnail: 'images/ready_logo.png' # Image in lists of posts.
