@@ -10,9 +10,9 @@ usePageBundles: true
 toc: true
 featured: true
 
-featureImage: 'images/banner.jpg' # Top image on post.
-thumbnail: 'images/banner.jpg' # Image in lists of posts.
-shareImage: 'images/banner.jpg' # For SEO and social media snippets.
+featureImage: 'images/banner.jpg'
+thumbnail: 'images/banner.jpg'
+shareImage: 'images/banner.jpg'
 
 categories:
   - security
