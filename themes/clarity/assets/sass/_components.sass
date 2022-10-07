@@ -11,8 +11,9 @@
   justify-content: space-between
   @include content
   &_active
-    background-color: rgba($light, 0.05)
-    border-radius: 0.25rem
+    // background-color: rgba($light, 0.05)
+    // border-radius: 0.25rem
+    border-bottom: 1px solid $htb;
   &, &_body
   &_icon
     width: 0.7rem
@@ -29,7 +30,7 @@
     width: 100%
     z-index: 99
     left: 0
-    border-bottom: 1px solid $htb
+    // border-bottom: 1px solid $htb
   &_item
     padding: 0.5rem 1rem
     display: inline-flex
@@ -57,7 +58,7 @@
     display: flex
     align-items: center
     margin: 0.25rem 0
-    border-radius: 0.5rem
+    // border-radius: 0.5rem
 
   &_open + &_sub &_child
     padding-top: 0.5rem
