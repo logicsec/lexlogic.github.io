@@ -19,7 +19,11 @@
       {{- if $showAuthorPhoto }}
         <div class="">
         {{/*  <div class="author_header">  */}}
-          <h2>{{  $author.name }}</h2>
+          <h4 class="widget-title title medium bordered">
+            <span>{{  $author.name }}</span>
+            <span class="border"></span>
+          </h4>
+          
           <img src="{{ absURL $author.photo }}" alt="{{ $author.name }} photo">
         </div>
       {{- else }}
@@ -61,7 +65,10 @@
     {{- $featured := default 8 $s.numberOfFeaturedPosts }}
     {{- $featuredPosts := first $featured (where $posts "Params.featured" true)}}
     {{- with $featuredPosts }}
-    <h2 class="mt-4">{{ T "featured_posts" }}</h2>
+    <h4 class="widget-title title medium bordered">
+      <span class="mt-4">{{ T "featured_posts" }}</span>
+      <span class="border"></span>
+    </h4>
     <ul>
       {{- range . }}
       <li>
@@ -70,7 +77,10 @@
       {{- end }}
     </ul>
     {{- end }}
-    <h2 class="mt-4">{{ T "recent_posts" }}</h2>
+    <h4 class="widget-title title medium bordered">
+      <span class="mt-4">{{ T "recent_posts" }}</span>
+      <span class="border"></span>
+    </h4>
     <ul class="flex-column">
       {{- $recent := default 8 $s.numberOfRecentPosts }}
       {{- range first $recent $posts | symdiff $featuredPosts }}
@@ -83,7 +93,11 @@
     {{- range $key, $value := .Site.Taxonomies }}
     {{- if gt $value 0 }}
     <div>
-      <h2 class="mt-4 taxonomy" id="{{ $key }}-section">{{ T $key }}</h2>
+      <h4 class="widget-title title medium bordered">
+        <span class="mt-4 taxonomy" id="{{ $key }}-section">{{ T $key }}</span>
+        <span class="border"></span>
+      </h4>
+      
       <nav class="tags_nav">
         {{- $onPageTags := $.Page.Params.tags }}
         {{- $slicedTags := ($value.ByCount | first $tagsLimit) }}
