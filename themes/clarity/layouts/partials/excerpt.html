@@ -43,7 +43,7 @@
                       <span>in</span>
                       <span class="article-tags">
                           {{ range $index, $name := .Params.categories -}}
-                              <a href="{{ (printf "/tags/%s/" $name) | urlize }}" class="article__tag">{{ upper $name }}</a>
+                              <a href="{{ (printf "/categories/%s/" $name) | urlize }}" class="article__tag">{{ upper $name }}</a>
                           {{- end }}
                       </span>
                   </div>
