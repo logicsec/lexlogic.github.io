@@ -18,7 +18,8 @@
 {{ $custom := resources.Get $customScriptPath | resources.ExecuteAsTemplate $customScriptPath . }}
 
 {{ $mainScriptPath := "js/index.js" }}
-{{ $main := resources.Get $mainScriptPath | resources.ExecuteAsTemplate $mainScriptPath . }}
+{{ $main := resources.Get $mainScriptPath | resources.ExecuteAsTemplate $mainScriptPath . | js.Build (dict "params" .Site.Params) }}
+
 
 {{ $bundlePath := (printf "%s/js/bundle.js" .Lang ) }}
 {{ $bundle := slice $highlight $variables $functions $code $main $custom | resources.Concat $bundlePath | resources.Fingerprint "sha512" }}

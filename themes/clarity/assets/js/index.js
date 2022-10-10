@@ -1,10 +1,12 @@
+import * as params from '@params';
+
 (function toggleColorModes(){
   const base_url = window.location.origin;
   const light = 'lit';
   const dark = 'dim';
   const logo = document.getElementById('footer-logo')
-  const dark_logo = base_url + '/logos/logo.png'
-  const light_logo = base_url + '/logos/logo-dark.png'
+  const light_logo = base_url + '/' + params.logo
+  const dark_logo = base_url + '/' + params.dark_logo
   const storageKey = 'colorMode';
   const storageImageKey = 'imageMode';
   const key = '--color-mode';
@@ -27,14 +29,14 @@
   function changeMode(isDarkMode) {
     if(isDarkMode) {
       bank.setItem(storageKey, light);
-      bank.setItem(storageImageKey, light_logo);
+      bank.setItem(storageImageKey, dark_logo);
       elemAttribute(doc, data, light);
-      elemAttribute(logo, src, light_logo);
+      elemAttribute(logo, src, dark_logo);
     } else {
       bank.setItem(storageKey, dark);
-      bank.setItem(storageImageKey, dark_logo);
+      bank.setItem(storageImageKey, light_logo);
       elemAttribute(doc, data, dark);
-      elemAttribute(logo, src, dark_logo);
+      elemAttribute(logo, src, light_logo);
     }
   }
 

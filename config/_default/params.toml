@@ -21,8 +21,9 @@ fontsDir = "fonts/" # without a leading forward slash
 
 fallBackOgImage = "images/thumbnail.png"
 
-# Logo image
+# Logo images
 logo = "logos/logo.png"
+dark_logo = "logos/logo-dark.png"
 
 # center logo on navbar
 centerLogo = false # Set to "true" for centering or "false" for left aligned.
