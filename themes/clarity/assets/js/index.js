@@ -1,9 +1,15 @@
 (function toggleColorModes(){
+  const base_url = window.location.origin;
   const light = 'lit';
   const dark = 'dim';
+  const logo = document.getElementById('footer-logo')
+  const dark_logo = base_url + '/logos/logo.png'
+  const light_logo = base_url + '/logos/logo-dark.png'
   const storageKey = 'colorMode';
+  const storageImageKey = 'imageMode';
   const key = '--color-mode';
   const data = 'data-mode';
+  const src = 'src'
   const bank = window.localStorage;
 
   function currentMode() {
@@ -20,22 +26,28 @@
 
   function changeMode(isDarkMode) {
     if(isDarkMode) {
-      bank.setItem(storageKey, light)
+      bank.setItem(storageKey, light);
+      bank.setItem(storageImageKey, light_logo);
       elemAttribute(doc, data, light);
+      elemAttribute(logo, src, light_logo);
     } else {
       bank.setItem(storageKey, dark);
+      bank.setItem(storageImageKey, dark_logo);
       elemAttribute(doc, data, dark);
+      elemAttribute(logo, src, dark_logo);
     }
   }
 
   function setUserColorMode(mode = false) {
     const isDarkMode = currentMode() == dark;
     const storedMode = bank.getItem(storageKey);
+    const storageImageMode = bank.getItem(storageImageKey);
     if(storedMode) {
       if(mode) {
         changeMode(isDarkMode);
       } else {
         elemAttribute(doc, data, storedMode);
+        elemAttribute(logo, src, storageImageMode);
       }
     } else {
       if(mode === true) {
