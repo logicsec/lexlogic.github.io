@@ -29,7 +29,7 @@ collections:
       - { label: 'Show Figure Label', name: 'figurePositionShow', widget: 'boolean' }
       - { label: 'Show Related Articles', name: 'showRelatedInArticle', widget: 'boolean' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - label: "Categories"
+      - {label: "Categories"
         name: "categories"
         widget: "list"
         summary: '{{fields.quote}} - {{fields.author.name}}'
@@ -39,7 +39,8 @@ collections:
             name: author
             widget: object
             default: ["security"]
-      - label: "Tags"
+        }
+      - {label: "Tags"
         name: "categories"
         widget: "list"
         summary: '{{fields.quote}} - {{fields.author.name}}'
@@ -49,3 +50,4 @@ collections:
             name: author
             widget: object
             default: ["tag1", "tag2", "tag3"]
+        }
