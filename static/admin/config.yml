@@ -10,7 +10,7 @@ collections:
     folder: 'content/post'
     nested:
       depth: 3
-      summary: '{{year}}{{month}}'
+      summary: '{{title}}'
     create: true
     slug: '{{slug}}'
     editor:
