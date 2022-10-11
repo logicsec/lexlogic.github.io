@@ -14,7 +14,7 @@ collections:
       summary: '{{title}}'
     create: true
     editor:
-      preview: true
+      preview: false
     fields:
       - label: Draft
         name: draft
@@ -37,7 +37,6 @@ collections:
         name: featured
         widget: boolean
         required: false
-
 
       - label: Show Table of Contents
         name: toc
@@ -102,6 +101,9 @@ collections:
       - label: "Categories"
         name: "categories"
         widget: "list"
+        create: true
+        fields:
+          - {label: "Category", name: "category_name", widget: "string"}
 
       - label: "Tags"
         name: "tags"
