@@ -102,8 +102,9 @@ collections:
 
       - label: "Categories"
         name: "categories"
-        widget: "list"
+        widget: "relation"
         create: true
+        multiple: true
         fields:
           - {label: "Category", name: "category_name", widget: "string"}
 
