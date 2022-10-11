@@ -12,8 +12,8 @@ collections:
       depth: 3
       summary: '{{title}}'
     create: true
-    slug: '{{slug}}'
-    path: '{{year}}/{{month}}/{{slug}}/index.md'
+    slug: '{{year}}/{{month}}/{{slug}}/'
+    path: '{{year}}/{{month}}/{{slug}}/'
     editor:
       preview: false
     fields:
