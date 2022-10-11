@@ -34,7 +34,6 @@ collections:
         widget: "list"
         allow_add: true
         default: ["news"]
-        }
       - label: "Tags"
         name: "tags"
         widget: "list"
