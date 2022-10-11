@@ -13,6 +13,11 @@ collections:
     editor:
       preview: false
     fields:
+      - label: Draft
+        name: draft
+        widget: boolean
+        default: true
+
       - label: Title
         name: title
         widget: string
@@ -30,10 +35,6 @@ collections:
         widget: boolean
         required: false
 
-      - label: Draft
-        name: draft
-        widget: boolean
-        required: false
 
       - label: Show Table of Contents
         name: toc
