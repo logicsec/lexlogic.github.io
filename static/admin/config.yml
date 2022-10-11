@@ -100,13 +100,14 @@ collections:
         name: body
         widget: markdown
 
-      - label: "Categories"
-        name: "categories"
-        widget: "relation"
-        create: true
+      - label: 'Categories'
+        name: 'categories'
+        widget: 'relation'
+        collection: 'categories'
+        value_field: '{{slug}}'
+        display_fields: [title]
+        search_fields: [title]
         multiple: true
-        fields:
-          - {label: "Category", name: "category_name", widget: "string"}
 
       - label: "Tags"
         name: "tags"
