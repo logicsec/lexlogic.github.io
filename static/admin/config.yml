@@ -41,7 +41,7 @@ collections:
             default: ["security"]
         }
       - {label: "Tags"
-        name: "categories"
+        name: "tags"
         widget: "list"
         summary: '{{fields.quote}} - {{fields.author.name}}'
         fields:
