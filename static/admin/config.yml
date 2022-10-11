@@ -12,7 +12,7 @@ collections:
       depth: 3
       summary: '{{title}}'
     create: true
-    slug: '{{year}}/{{month}}/{{slug}}'
+    slug: '{{slug}}/{{slug}}'
     path: '{{year}}/{{month}}/{{slug}}'
     editor:
       preview: false
