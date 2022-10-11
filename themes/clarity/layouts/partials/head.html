@@ -34,6 +34,7 @@
 {{ $bundle := partialCached "func/getJavascriptBundle" . }}
 <link rel="preload" href="{{ $bundle.Permalink }}" as="script" integrity=
 "{{ $bundle.Data.Integrity }}" crossorigin="anonymous">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 <!-- link main css file -->
 <link rel="stylesheet" type="text/css" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">
