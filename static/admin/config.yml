@@ -13,7 +13,7 @@ collections:
       summary: '{{title}}'
     create: true
     slug: '{{year}}/{{month}}/{{slug}}/'
-    path: '{{year}}/{{month}}/{{slug}}/'
+    path: '{{year}}/{{month}}/{{slug}}/_index'
     editor:
       preview: false
     fields:
