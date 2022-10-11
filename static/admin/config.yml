@@ -29,25 +29,14 @@ collections:
       - { label: 'Show Figure Label', name: 'figurePositionShow', widget: 'boolean' }
       - { label: 'Show Related Articles', name: 'showRelatedInArticle', widget: 'boolean' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - {label: "Categories"
+      - label: "Categories"
         name: "categories"
         widget: "list"
-        summary: '{{fields.quote}} - {{fields.author.name}}'
-        fields:
-          - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
-          - label: Author
-            name: author
-            widget: object
-            default: ["security"]
+        allow_add: true
+        default: ["news"]
         }
-      - {label: "Tags"
+      - label: "Tags"
         name: "tags"
         widget: "list"
-        summary: '{{fields.quote}} - {{fields.author.name}}'
-        fields:
-          - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
-          - label: Author
-            name: author
-            widget: object
-            default: ["tag1", "tag2", "tag3"]
-        }
+        allow_add: true
+        default: ["news"]
