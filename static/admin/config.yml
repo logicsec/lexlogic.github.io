@@ -15,6 +15,7 @@ collections:
     create: true
     editor:
       preview: false
+    show_preview_links: false
     fields:
       - label: Draft
         name: draft
