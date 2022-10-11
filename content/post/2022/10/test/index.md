@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: Test
 date: 2022-10-11T23:35:03.102Z
 description: asdfadf
