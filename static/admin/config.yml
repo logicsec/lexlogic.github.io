@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   repo: lexlogic/lexlogic.github.io
   branch: main # Branch to update (optional; defaults to master)
-  media_folder: "images"
-  public_folder: "images"
+media_folder: "images"
+public_folder: "images"
 collections:
   - name: 'post'
     label: 'Post'
