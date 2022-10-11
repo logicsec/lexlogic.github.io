@@ -8,8 +8,11 @@ collections:
   - name: 'post'
     label: 'Post'
     folder: 'content/post'
+    nested:
+      depth: 3
+      summary: '{{year}}{{month}}'
     create: true
-    slug: '{{year}}{{month}}{{slug}}'
+    slug: '{{slug}}'
     editor:
       preview: false
     fields:
