@@ -1,6 +1,6 @@
 # set `baseurl` to your root domain
 # if you set it to "/" share icons won't work properly on production
-baseurl = "https://lexlogic.io"  # Include trailing slash
+baseurl = "https://logicsec.io"  # Include trailing slash
 # title = "Clarity"
 copyright = "Copyright © 2022, Logic; all rights reserved."
 # canonifyurls = true
