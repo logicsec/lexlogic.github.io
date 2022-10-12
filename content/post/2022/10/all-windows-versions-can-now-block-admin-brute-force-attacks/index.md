@@ -1,6 +1,7 @@
 ---
 draft: false
-author: Paul Knight
+author:
+  - Paul Knight
 title: All Windows versions can now block admin brute-force attacks
 date: 2022-10-12T00:48:28.268Z
 usePageBundles: true

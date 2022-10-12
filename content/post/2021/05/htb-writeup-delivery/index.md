@@ -2,7 +2,8 @@
 title: 'HTB Writeup - Delivery'
 description: ''
 summary: ""
-author: Paul Knight
+author:
+  - Paul Knight
 date: '2021-05-22'
 aliases:
   - Delivery

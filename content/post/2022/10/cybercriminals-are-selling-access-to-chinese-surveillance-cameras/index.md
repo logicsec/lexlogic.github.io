@@ -1,7 +1,8 @@
 ---
 title: 'Cybercriminals Are Selling Access to Chinese Surveillance Cameras'
 description: 'Tens of thousands of cameras have failed to patch a critical, 11-month-old CVE, leaving thousands of organizations exposed.'
-author: Paul Knight
+author:
+  - Paul Knight
 summary: 'Tens of thousands of cameras have failed to patch a critical, 11-month-old CVE, leaving thousands of organizations exposed.'
 date: '2022-10-04T14:43:57-04:00'
 aliases:
