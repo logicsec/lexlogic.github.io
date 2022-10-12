@@ -13,11 +13,6 @@
   name = "HTB"
   url = "series/htb/"
 
-[[main]]
-  name = "About"
-  url = "about/"
-  weight = -107
-
 # social menu links
 
 [[social]]
