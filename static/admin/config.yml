@@ -8,20 +8,20 @@ publish_mode: editorial_workflow
 logo_url: https://logicsec.io/logos/logo-dark.png
 collections:
 
-  - label: "Settings"
-    name: "settings"
-    files:
-      - name: "authors"
-        label: "Authors"
-        file: "content/authors/authors.yml"
-        extension: "yml"
-        fields:
-          - label: "Author"
-            name: "author"
-            widget: "list"
-            fields:
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "About", name: "about", widget: "string"}
+  # - label: "Settings"
+  #   name: "settings"
+  #   files:
+  #     - name: "authors"
+  #       label: "Authors"
+  #       file: "content/authors/authors.yml"
+  #       extension: "yml"
+  #       fields:
+  #         - label: "Author"
+  #           name: "author"
+  #           widget: "list"
+  #           fields:
+  #             - {label: "Name", name: "name", widget: "string"}
+  #             - {label: "About", name: "about", widget: "string"}
 
   - name: 'post'
     label: 'Post'
@@ -43,12 +43,8 @@ collections:
 
       - label: "Author"
         name: "author"
-        widget: "relation"
-        collection: "settings"
-        searchFields: ["authors.author.name"]
-        displayFields: ["authors.author.name"]
-        valueField: "authors.author.name"
-        required: false
+        widget: "select"
+        options: ["Paul Knight", "Osanda Malith"]
 
       - label: Title
         name: title
