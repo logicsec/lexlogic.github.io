@@ -138,6 +138,8 @@ collections:
       - label: Body
         name: body
         widget: markdown
+        media_folder: "images"
+        public_folder: "images"
 
       - label: "Categories"
         name: "categories"
