@@ -23,6 +23,22 @@ collections:
   #             - {label: "Name", name: "name", widget: "string"}
   #             - {label: "About", name: "about", widget: "string"}
 
+  - label: "Authors"
+    name: "authors"
+    files:
+      - name: "authors"
+        label: "Authors"
+        file: "content/authors/authors.yml"
+        extension: "yml"
+        fields:
+          - label: "Name"
+            name: "name"
+            widget: "string"
+            fields:
+              - {label: "First", name: "first", widget: "string"}
+              - {label: "Last", name: "last", widget: "string"}
+          - {label: "About", name: "about", widget: "string"}
+
   - name: 'post'
     label: 'Post'
     folder: 'content/post'
@@ -41,10 +57,13 @@ collections:
         widget: boolean
         default: true
 
-      - label: "Author"
+      - label: "Post Author"
         name: "author"
-        widget: "select"
-        options: ["Paul Knight", "Osanda Malith"]
+        widget: "relation"
+        collection: "authors"
+        search_fields: ["name.first", "name.last"]
+        value_field: "name.first"
+        display_fields: ["name.first", "name.last"]
 
       - label: Title
         name: title
