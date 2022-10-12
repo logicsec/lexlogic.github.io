@@ -30,10 +30,6 @@ collections:
               - label: Email
                 name: email
                 widget: string
-              - label: Photo
-                name: photo
-                widget: image
-                media_folder: images
 
   - name: 'post'
     label: 'Post'
