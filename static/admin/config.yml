@@ -7,6 +7,20 @@ public_folder: "images"
 publish_mode: editorial_workflow
 logo_url: https://logicsec.io/logos/logo-dark.png
 collections:
+  - name: authors
+    label: Authors
+    folder: content/authors/_authors/
+    media_folder: ''
+    public_folder: ''
+    format: json
+    create: true
+    slug: "{{name}}"
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Title, name: title, widget: string }
+      - { label: Email, name: email, widget: string }
+      - { label: Shortbio, name: shortbio, widget: text }
+      - { label: Image, name: authorimage, widget: image }
   - name: 'post'
     label: 'Post'
     folder: 'content/post'
@@ -24,6 +38,12 @@ collections:
         name: draft
         widget: boolean
         default: true
+
+      - label: "Author", name: "author", widget: "relation", 
+        collection: "authors", 
+        value_field: "email", 
+        display_fields: [ "name" ], 
+        search_fields: [ "name", "email" ]
 
       - label: Title
         name: title
