@@ -48,6 +48,7 @@ collections:
         name: draft
         widget: boolean
         default: true
+        required: false
 
       - label: Author
         name: author
