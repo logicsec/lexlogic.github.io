@@ -13,7 +13,7 @@ collections:
     identifier_field: 'author.name'
     slug: 'author-{{name}}'
     folder: data/team
-    fields:
+    files:
       - label: 'Author'
         name: 'author'
         label_singular: 'author'
