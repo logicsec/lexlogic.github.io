@@ -1,7 +1,14 @@
 ---
 draft: false
+author:
+  name: Paul Knight
+  about: I am a security engineer who is passionate about stuff like web
+    technologies and network penetration testing. Few tech that I enjoy working
+    in are Python, Java, Ruby, and PHP. Recently, I have just started doing
+    writeups for Hack the Box! I also moderate the Discord for the Hack the Box
+    Team.
+  email: nickmc01@gmail.com
 title: All Windows versions can now block admin brute-force attacks
-author: Paul Knight
 date: 2022-10-12T00:48:28.268Z
 usePageBundles: true
 featureImage: images/windows.jpg
