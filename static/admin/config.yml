@@ -63,6 +63,7 @@ collections:
       - label: Featured Image Caption
         name: featureImageCap
         widget: string
+        required: false
 
       - label: Thumbnail
         name: thumbnail
