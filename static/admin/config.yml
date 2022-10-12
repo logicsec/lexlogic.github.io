@@ -23,11 +23,11 @@ collections:
   #             - {label: "Name", name: "name", widget: "string"}
   #             - {label: "About", name: "about", widget: "string"}
 
-  - label: "Authors"
-    name: "authors"
+  - label: "Settings"
+    name: "settings"
     files:
-      - name: "author"
-        label: "Author"
+      - name: "authors"
+        label: "Authors"
         file: "content/authors/authors.yml"
         extension: "yml"
         fields:
@@ -60,10 +60,10 @@ collections:
       - label: "Post Author"
         name: "author"
         widget: "relation"
-        collection: "authors"
-        search_fields: ["name.first", "name.last"]
-        value_field: "name.first"
-        display_fields: ["name.first", "name.last"]
+        collection: "settings"
+        search_fields: ["authors.name.first", "authors.name.last"]
+        value_field: "authors.name.first"
+        display_fields: ["authors.name.first", "authors.name.last"]
 
       - label: Title
         name: title
