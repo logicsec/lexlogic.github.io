@@ -3,10 +3,10 @@ draft: false
 title: All Windows versions can now block admin brute-force attacks
 date: 2022-10-12T00:48:28.268Z
 usePageBundles: true
-featureImage: images/windows.webp
+featureImage: images/windows.jpg
 featureImageCap: ""
-thumbnail: images/windows.webp
-shareImage: images/windows.webp
+thumbnail: images/windows.jpg
+shareImage: images/windows.jpg
 codeLineNumbers: true
 codeMaxLines: 10
 figurePositionShow: true
