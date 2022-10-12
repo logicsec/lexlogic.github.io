@@ -22,6 +22,7 @@ collections:
             fields:
               - {label: "Name", name: "name", widget: "string"}
               - {label: "About", name: "about", widget: "string"}
+              - {label: Author Image, name: authorImage, widget: image, media_folder: images}
 
   - name: 'post'
     label: 'Post'
