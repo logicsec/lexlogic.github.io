@@ -25,12 +25,14 @@ collections:
 
   - name: "author"
     label: "Authors"
-    folder: "data/authors"
     identifier_field: "name"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "author"}
-      - {label: "Name", name: "name", widget: string}
-      - {label: "Profile picture", name: "profile_picture", widget: image, allow_multiple: false}
+    files:
+      file: "data/authors.yml"
+      extension: "yml"
+      fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "author"}
+        - {label: "Name", name: "name", widget: string}
+        - {label: "Profile picture", name: "profile_picture", widget: image, allow_multiple: false}
 
   - name: 'post'
     label: 'Post'
