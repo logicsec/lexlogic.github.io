@@ -1,23 +1,24 @@
 ---
-title: 'VAmPI the vulnerable API for security testing'
-description: ''
-author: Paul Knight
-summary: ''
-date: '2022-10-02'
-aliases:
-  - vampi
-usePageBundles: true
+draft: false
+featureImage: images/banner.png
+summary: ""
+author:
+  - Paul Knight
+title: VAmPI the vulnerable API for security testing
+date: 2022-10-02
+description: ""
 toc: true
-
-featureImage: 'images/banner.png' # Top image on post.
-thumbnail: 'images/banner.png' # Image in lists of posts.
-shareImage: 'images/banner.png' # For SEO and social media snippets.
-
+usePageBundles: true
+thumbnail: images/banner.png
+shareImage: images/banner.png
+codeMaxLines: 10
 categories:
   - security
 tags:
   - news
   - apis
+aliases:
+  - vampi
 ---
 
 Well it was one of this times where in an attempt to "fix a light bulb" a series of events lead you to do something else first. For those who do not know what I am talking about, go ahead and spend 40 seconds to watch this video.
