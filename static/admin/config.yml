@@ -14,8 +14,8 @@ collections:
       summary: '{{title}}'
     create: true
     editor:
-      preview: true
-    show_preview_links: false
+      preview: false
+    show_preview_links: true
     fields:
       - label: Draft
         name: draft
