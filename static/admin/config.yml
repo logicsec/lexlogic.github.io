@@ -55,7 +55,7 @@ collections:
         collection: settings
         valueField: authors.*
         searchFields: [authors.*.name]
-        displayFields: [authors.*.name]
+        displayFields: [authors.name]
         file: authors
 
       - label: Title
