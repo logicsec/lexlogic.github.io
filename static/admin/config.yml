@@ -46,9 +46,9 @@ collections:
         name: "author",
         widget: "relation",
         collection: "settings",
-        searchFields: ["authors.authors.name"],
-        displayFields: ["authors.authors.name"],
-        valueField: "authors.authors.name",
+        searchFields: ["authors.author.name"],
+        displayFields: ["authors.author.name"],
+        valueField: "authors.author.name",
         required: false
 
       - label: Title
