@@ -1,6 +1,9 @@
 ---
 draft: false
-author: Paul Knight
+author:
+  name: Paul Knight
+  about: Test bio
+  email: nickmc01@gmail.com
 title: Us Airports Taken Down in Ddos Attacks by Pro Russian Hackers
 date: 2022-10-10T11:47:41-04:00
 description: ""
