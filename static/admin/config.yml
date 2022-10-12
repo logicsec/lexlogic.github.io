@@ -7,9 +7,6 @@ public_folder: "images"
 publish_mode: editorial_workflow
 logo_url: https://logicsec.io/logos/logo-dark.png
 collections:
-  - name: 'settings'
-    label: 'Settings'
-    folder: 'config'
   - name: 'post'
     label: 'Post'
     folder: 'content/post'
