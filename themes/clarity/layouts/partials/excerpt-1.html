@@ -39,7 +39,7 @@
                               alt="{{ $params.author.name }}'s Picture" data-ll-status="loaded" src="{{ absURL $params.author.photo }}"></a>
                   </div>
                   <div class="article__bottom-meta">
-                      <a href="/about" class="article__author-link">{{ $params.author.name }}</a>
+                      <span class="article__author-link">{{ .Params.author }}</span>
                       <span>in</span>
                       <span class="article-tags">
                           {{ range $index, $name := .Params.categories -}}
