@@ -8,20 +8,28 @@ publish_mode: editorial_workflow
 logo_url: https://logicsec.io/logos/logo-dark.png
 collections:
 
-  - name: 'settings'
-    label: 'Settings'
-    identifier_field: 'author.name'
-    slug: 'author-{{name}}'
-    folder: data/team
+  - name: settings
+    label: Settings
+    label_singular: 'Settings'
     files:
-      - label: 'Author'
-        name: 'author'
-        label_singular: 'author'
-        identifier_field: 'email'
-        widget: 'list'
+      - label: Authors
+        name: authors
+        file: data/authors.json
         fields:
-          - { label: 'Name', name: 'name', widget: 'string' }
-          - { label: 'Email', name: 'email', widget: 'string' }
+          - label: Authors
+            name: authors
+            widget: list
+            allow_add: true
+            fields:
+              - label: Name
+                name: name
+                widget: string
+              - label: About
+                name: about
+                widget: string
+              - label: Email
+                name: email
+                widget: string
 
   - name: 'post'
     label: 'Post'
@@ -41,13 +49,14 @@ collections:
         widget: boolean
         default: true
 
-      - label: 'Author'
-        name: 'author'
-        widget: 'relation'
-        collection: 'settings'
-        searchFields: ['author']
-        valueField: 'author.*.email'
-        displayFields: ['author.*.name']
+      - label: Author
+        name: author
+        widget: relation
+        collection: settings
+        valueField: authors.*.id
+        searchFields: [authors.*.name]
+        displayFields: [authors.*.name]
+        file: authors
 
       - label: Title
         name: title
