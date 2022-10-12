@@ -1,13 +1,6 @@
 ---
 draft: false
-author:
-  name: Paul Knight
-  about: I am a security engineer who is passionate about stuff like web
-    technologies and network penetration testing. Few tech that I enjoy working
-    in are Python, Java, Ruby, and PHP. Recently, I have just started doing
-    writeups for Hack the Box! I also moderate the Discord for the Hack the Box
-    Team.
-  email: nickmc01@gmail.com
+author: Paul Knight
 title: Us Airports Taken Down in Ddos Attacks by Pro Russian Hackers
 date: 2022-10-10T11:47:41-04:00
 description: ""
