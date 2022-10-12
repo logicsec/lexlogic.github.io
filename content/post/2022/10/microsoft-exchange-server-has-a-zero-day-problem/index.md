@@ -1,6 +1,7 @@
 ---
 title: "Microsoft Exchange Server Has a Zero-Day Problem"
 date: '2022-10-07T14:19:16-04:00'
+author: Paul Knight
 description: "Microsoft confirmed that two unpatched Exchange Server vulnerabilities are actively being exmploited by cybercriminals across the globe"
 summary: 'Microsoft confirmed that two unpatched Exchange Server vulnerabilities are actively being exmploited by cybercriminals across the globe'
 usePageBundles: true

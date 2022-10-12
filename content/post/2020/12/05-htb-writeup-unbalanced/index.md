@@ -1,6 +1,7 @@
 ---
 title: 'HTB Writeup - Unbalanced'
 description: ''
+author: Paul Knight
 summary: ""
 date: '2021-12-05'
 aliases:

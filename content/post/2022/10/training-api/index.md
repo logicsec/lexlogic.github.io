@@ -1,6 +1,7 @@
 ---
 title: 'VAmPI the vulnerable API for security testing'
 description: ''
+author: Paul Knight
 summary: ''
 date: '2022-10-02'
 aliases:

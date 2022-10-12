@@ -1,6 +1,7 @@
 ---
 title: 'Exploring the JWT Attacks Landscape'
 description: ''
+author: Paul Knight
 summary: ''
 date: '2022-10-03'
 aliases:
