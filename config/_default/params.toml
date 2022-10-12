@@ -99,8 +99,8 @@ utterancesRepo = "lexlogic/lexlogic.github.io" # Utterances is enabled when this
 
 # website author
 [author]
-name = "Paul Knight"
-photo = "images/logic.jpg" #include this if you would like to show the author photo on the sidebar
+name = "Blogger"
+photo = "icons/favicon.png" #include this if you would like to show the author photo on the sidebar
 
 [plausible_analytics]
 enable = false # to enable plausible analytics set to true.
