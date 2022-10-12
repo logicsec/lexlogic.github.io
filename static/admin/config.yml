@@ -8,31 +8,21 @@ publish_mode: editorial_workflow
 logo_url: https://logicsec.io/logos/logo-dark.png
 collections:
 
-  # - label: "Settings"
-  #   name: "settings"
-  #   files:
-  #     - name: "authors"
-  #       label: "Authors"
-  #       file: "content/authors/authors.yml"
-  #       extension: "yml"
-  #       fields:
-  #         - label: "Author"
-  #           name: "author"
-  #           widget: "list"
-  #           fields:
-  #             - {label: "Name", name: "name", widget: "string"}
-  #             - {label: "About", name: "about", widget: "string"}
-
-  - name: "author"
-    label: "Authors"
-    identifier_field: "name"
-    files:
-      file: "data/authors.yml"
-      extension: "yml"
-      fields:
-        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "author"}
-        - {label: "Name", name: "name", widget: string}
-        - {label: "Profile picture", name: "profile_picture", widget: image, allow_multiple: false}
+  - name: 'settings'
+    label: 'Settings'
+    identifier_field: 'author.name'
+    slug: 'author-{{name}}'
+    folder: data/team
+    create: true
+    fields:
+      - label: 'Author'
+        name: 'author'
+        label_singular: 'author'
+        identifier_field: 'email'
+        widget: 'list'
+        fields:
+          - { label: 'Name', name: 'name', widget: 'string' }
+          - { label: 'Email', name: 'email', widget: 'string' }
 
   - name: 'post'
     label: 'Post'
@@ -52,13 +42,13 @@ collections:
         widget: boolean
         default: true
 
-      - label: "Author"
-        name: "author"
-        widget: relation
-        collection: "author"
-        displayFields: ["name"]
-        searchFields: ["name"]
-        valueField: "name"
+      - label: 'Author'
+        name: 'author'
+        widget: 'relation'
+        collection: 'settings'
+        searchFields: ['author']
+        valueField: 'author.*.email'
+        displayFields: ['author.*.name']
 
       - label: Title
         name: title
