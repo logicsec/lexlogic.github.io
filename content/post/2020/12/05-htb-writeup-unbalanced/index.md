@@ -1,29 +1,26 @@
 ---
-title: 'HTB Writeup - Unbalanced'
-description: ''
+featureImage: images/unbalanced_logo.png
+summary: ""
 author:
   - Paul Knight
-summary: ""
-date: '2021-12-05'
-aliases:
-  - unbalanced
+date: 2021-12-05
 toc: true
+thumbnail: images/unbalanced_logo.png
+codeMaxLines: 10
+series:
+  - htb
+title: HTB Writeup - Unbalanced
+description: ""
 usePageBundles: true
-
-featureImage: 'images/unbalanced_logo.png' # Top image on post.
-# featureImageAlt: 'Description of image' # Alternative text for featured image.
-# featureImageCap: 'This is the featured image.' # Caption (optional).
-thumbnail: 'images/unbalanced_logo.png' # Image in lists of posts.
-shareImage: 'images/unbalanced_logo.png' # For SEO and social media snippets.
-
+shareImage: images/unbalanced_logo.png
 categories:
   - write-up
 tags:
   - htb
   - write-up
   - linux
-series:
-  - htb
+aliases:
+  - unbalanced
 ---
 
 
