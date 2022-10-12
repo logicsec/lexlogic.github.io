@@ -13,7 +13,7 @@ collections:
     files:
       - name: "authors"
         label: "Authors"
-        file: "data/authors.yml"
+        file: "content/authors/authors.yml"
         extension: "yml"
         fields:
           - label: "Author"
