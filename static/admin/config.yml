@@ -53,7 +53,7 @@ collections:
         name: author
         widget: relation
         collection: settings
-        value_field: authors.*
+        value_field: authors.*.name
         search_fields: [authors.*.name]
         display_fields: [authors.*.name]
         file: authors
