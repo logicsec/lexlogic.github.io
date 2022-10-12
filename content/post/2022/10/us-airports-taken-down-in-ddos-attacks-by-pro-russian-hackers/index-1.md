@@ -1,0 +1,56 @@
+---
+draft: false
+author:
+  - Paul Knight
+title: Us Airports Taken Down in Ddos Attacks by Pro Russian Hackers
+date: 2022-10-12T21:16:34.919Z
+description: ""
+featured: false
+toc: false
+usePageBundles: true
+featureImage: images/thumbnail.jpg
+featureImageCap: Several large US airlines are offline this morning
+thumbnail: images/thumbnail.jpg
+shareImage: images/thumbnail.jpg
+codeLineNumbers: true
+codeMaxLines: 10
+figurePositionShow: true
+showRelatedInArticle: false
+categories:
+  - Security
+tags:
+  - Airlines
+  - ddos
+  - Russia
+---
+Malicious actors are resorting to voice phishing (vishing) tactics to dupe victims into installing Android malware on their devices, new [research](https://www.threatfabric.com/blogs/toad-fraud.html) from ThreatFabric reveals.
+
+The Dutch mobile security company said it identified a network of phishing websites targeting Italian online-banking users that are designed to get hold of their contact details.
+
+Telephone-oriented attack delivery (TOAD), as the social engineering technique is called, involves calling the victims using previously collected information from fraudulent websites.
+
+The caller, who purports to be a support agent for the bank, instructs the individual, on the other hand, to install a security app and grant it extensive permissions, when, in reality, it's malicious software intended to gain remote access or conduct financial fraud.
+
+In this case, it leads to the deployment of an Android malware dubbed [Copybara](https://www.threatfabric.com/blogs/brata-a-tale-of-three-families.html), a mobile trojan first detected in November 2021 and is primarily used to perform on-device fraud via overlay attacks targeting Italian users. Copybara has also been confused with another malware family known as [BRATA](https://thehackernews.com/2022/06/brata-android-malware-gains-advanced.html).
+
+[![Android Banking Malware](https://thehackernews.com/new-images/img/b/R29vZ2xl/AVvXsEgXZ1aanMRVEwVLp21Sdvik8iwBEGeRr-EDGNV5r-NKlh37UAQNfQNZwHrfDtKRopd3fT3bUcxD91AFg1HJfyrtCwlG9Cs2wKENuoV_6hyRMj1ZIniS2gzMzsYTqqsiQaVd39GeuTqIz41FBSc4BFwSHYD4oSoHLTUJNdodEXfXtt9crRJ5Bq6eplKC/s728-e1000/image-3.jpg "Android Banking Malware")](https://thehackernews.com/new-images/img/b/R29vZ2xl/AVvXsEgXZ1aanMRVEwVLp21Sdvik8iwBEGeRr-EDGNV5r-NKlh37UAQNfQNZwHrfDtKRopd3fT3bUcxD91AFg1HJfyrtCwlG9Cs2wKENuoV_6hyRMj1ZIniS2gzMzsYTqqsiQaVd39GeuTqIz41FBSc4BFwSHYD4oSoHLTUJNdodEXfXtt9crRJ5Bq6eplKC/s728-e100/image-3.jpg)
+
+ThreatFabric assessed the TOAD-based campaigns to have commenced around the same time, indicating that the activity has been ongoing for nearly a year.
+
+Like any other Android-based malware, Copybara's RAT capabilities are powered by abusing the operating system's accessibility services API to gather sensitive information and even uninstall the downloader app to reduce its forensic footprint.
+
+[![Android Banking Malware](https://thehackernews.com/new-images/img/b/R29vZ2xl/AVvXsEhMoG3nsSIZVenJUJYPjASKGE91WsrYG0_yaSVQKN1VUX0KEXA-LB15GFAdqPkNApJMMvFLtYPfDa4naKQSxCG51BfhWcqYHZhLG4lSGs02D6XpX9MHgyd3FKVB7XxyaKmWvNNmigN2PbbspDKs0q8aHdCe9R8dIc_v-NPTfK2nStarnPO7BN6hx0EZ/s728-e1000/image-1.jpg "Android Banking Malware")](https://thehackernews.com/new-images/img/b/R29vZ2xl/AVvXsEhMoG3nsSIZVenJUJYPjASKGE91WsrYG0_yaSVQKN1VUX0KEXA-LB15GFAdqPkNApJMMvFLtYPfDa4naKQSxCG51BfhWcqYHZhLG4lSGs02D6XpX9MHgyd3FKVB7XxyaKmWvNNmigN2PbbspDKs0q8aHdCe9R8dIc_v-NPTfK2nStarnPO7BN6hx0EZ/s728-e100/image-1.jpg)
+
+What's more, the infrastructure utilized by the threat actor has been found to deliver a second malware named SMS Spy that enables the adversary to gain access to all incoming SMS messages and intercept one-time passwords (OTPs) sent by banks.
+
+The new wave of hybrid fraud attacks presents a new dimension for scammers to mount convincing Android malware campaigns that have otherwise relied on traditional methods such as Google Play Store droppers, rogue ads, and smishing.
+
+"Such attacks require more resources on \[threat actors'] side and are more sophisticated to perform and maintain," ThreatFabric's Mobile Threat Intelligence (MTI) team told The Hacker News.
+
+[![Android Banking Malware](https://thehackernews.com/new-images/img/b/R29vZ2xl/AVvXsEhCV81X_QH5WmQACA8Ja83YXTuKJ9l4yeDGExdB0pKXgqu_ICO36jK_ywcmITJH75X2cK5S8wHidp-sM5HvXEcUp_P-gFz_L0slzVBwb7J3AURIIzxG0xeN_HzfQW3BwVdNXQyzy-pWUzJv5qBXvqsUFznN4cTU0Jk4jm5q_BvJ92YGROwzT1BuWKjn/s728-e1000/image-2.jpg "Android Banking Malware")](https://thehackernews.com/new-images/img/b/R29vZ2xl/AVvXsEhCV81X_QH5WmQACA8Ja83YXTuKJ9l4yeDGExdB0pKXgqu_ICO36jK_ywcmITJH75X2cK5S8wHidp-sM5HvXEcUp_P-gFz_L0slzVBwb7J3AURIIzxG0xeN_HzfQW3BwVdNXQyzy-pWUzJv5qBXvqsUFznN4cTU0Jk4jm5q_BvJ92YGROwzT1BuWKjn/s728-e100/image-2.jpg)
+
+"We also like to point out that targeted attacks from a fraud success perspective are unfortunately more successful, at least in this specific campaign."
+
+This is not the first time TOAD tactics are being employed to orchestrate banking malware campaigns. Last month, the MalwareHunterTeam [detailed](https://twitter.com/malwrhunterteam/status/1566173265625767937) a similar attack aimed at users of the Indian bank Axis Bank in a bid to install an info-stealer that impersonates a credit card rewards app.
+
+"Any suspicious call should be double checked by calling your financial organization," the MTI team said, adding "financial organizations should provide their customers with knowledge about ongoing campaigns and enhance the client apps with mechanisms to detect suspicious activity."
