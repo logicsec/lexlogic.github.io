@@ -44,10 +44,10 @@ collections:
       - label: "Author" 
         name: "author" 
         widget: "relation" 
-        collection: "settings.authors" 
+        collection: "settings" 
         value_field: "name" 
-        display_fields: [ "name" ]
-        search_fields: [ "name", "email" ]
+        display_fields: [ "authors.name" ]
+        search_fields: [ "authors.name" ]
 
       - label: Title
         name: title
