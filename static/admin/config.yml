@@ -7,20 +7,22 @@ public_folder: "images"
 publish_mode: editorial_workflow
 logo_url: https://logicsec.io/logos/logo-dark.png
 collections:
-  - name: authors
-    label: Authors
-    folder: content/authors/_authors/
-    media_folder: ''
-    public_folder: ''
-    format: json
-    create: true
-    slug: "{{name}}"
-    fields:
-      - { label: Name, name: name, widget: string }
-      - { label: Title, name: title, widget: string }
-      - { label: Email, name: email, widget: string }
-      - { label: Shortbio, name: shortbio, widget: text }
-      - { label: Image, name: authorimage, widget: image }
+
+  - label: "Settings"
+    name: "settings"
+    files:
+      - name: "authors"
+        label: "Authors"
+        file: "data/authors.yml"
+        extension: "yml"
+        fields:
+          - label: "Author"
+            name: "author"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "About", name: "about", widget: "string"}
+
   - name: 'post'
     label: 'Post'
     folder: 'content/post'
@@ -43,7 +45,7 @@ collections:
         name: "author" 
         widget: "relation" 
         collection: "authors" 
-        value_field: "*" 
+        value_field: "name" 
         display_fields: [ "name" ]
         search_fields: [ "name", "email" ]
 
