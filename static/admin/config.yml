@@ -26,8 +26,8 @@ collections:
   - label: "Authors"
     name: "authors"
     files:
-      - name: "authors"
-        label: "Authors"
+      - name: "author"
+        label: "Author"
         file: "content/authors/authors.yml"
         extension: "yml"
         fields:
