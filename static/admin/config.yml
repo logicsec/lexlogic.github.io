@@ -23,21 +23,14 @@ collections:
   #             - {label: "Name", name: "name", widget: "string"}
   #             - {label: "About", name: "about", widget: "string"}
 
-  - label: "Settings"
-    name: "settings"
-    files:
-      - name: "authors"
-        label: "Authors"
-        file: "content/authors/authors.yml"
-        extension: "yml"
-        fields:
-          - label: "Name"
-            name: "name"
-            widget: "string"
-            fields:
-              - {label: "First", name: "first", widget: "string"}
-              - {label: "Last", name: "last", widget: "string"}
-          - {label: "About", name: "about", widget: "string"}
+  - name: "author"
+    label: "Authors"
+    folder: "data/authors"
+    identifier_field: "name"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "author"}
+      - {label: "Name", name: "name", widget: string}
+      - {label: "Profile picture", name: "profile_picture", widget: image, allow_multiple: false}
 
   - name: 'post'
     label: 'Post'
@@ -57,13 +50,13 @@ collections:
         widget: boolean
         default: true
 
-      - label: "Post Author"
+      - label: "Author"
         name: "author"
-        widget: "relation"
-        collection: "settings"
-        search_fields: ["authors.name.first", "authors.name.last"]
-        value_field: "authors.name.first"
-        display_fields: ["authors.name.first", "authors.name.last"]
+        widget: relation
+        collection: "author"
+        displayFields: ["name"]
+        searchFields: ["name"]
+        valueField: "name"
 
       - label: Title
         name: title
