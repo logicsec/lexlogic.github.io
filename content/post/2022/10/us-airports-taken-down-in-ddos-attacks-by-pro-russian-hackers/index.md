@@ -1,6 +1,6 @@
 ---
 draft: false
-author: nickmc01@gmail.com
+author: Paul Knight
 title: Us Airports Taken Down in Ddos Attacks by Pro Russian Hackers
 date: 2022-10-10T11:47:41-04:00
 description: ""
