@@ -53,9 +53,9 @@ collections:
         name: author
         widget: relation
         collection: settings
-        valueField: authors.*
-        searchFields: [authors.*.name]
-        displayFields: [authors.name]
+        value_field: authors.*
+        search_fields: [authors.*.name]
+        display_fields: [authors.*.name]
         file: authors
 
       - label: Title
