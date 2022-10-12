@@ -2,7 +2,6 @@
 draft: false
 author:
   - Paul Knight
-  - Osanda Malith
 title: Us Airports Taken Down in Ddos Attacks by Pro Russian Hackers
 date: 2022-10-10T11:47:41-04:00
 description: ""
