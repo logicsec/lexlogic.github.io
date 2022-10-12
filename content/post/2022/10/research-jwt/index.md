@@ -1,24 +1,25 @@
 ---
-title: 'Exploring the JWT Attacks Landscape'
-description: ''
-author: Paul Knight
-summary: ''
-date: '2022-10-03'
-aliases:
-  - chineese-cameras
-usePageBundles: true
-toc: true
+draft: false
+featureImage: images/banner.png
+summary: ""
+author:
+  - Paul Knight
+title: Exploring the JWT Attacks Landscape
+date: 2022-10-03
+description: ""
 featured: true
-
-featureImage: 'images/banner.png' # Top image on post.
-thumbnail: 'images/banner.png' # Image in lists of posts.
-shareImage: 'images/banner.png' # For SEO and social media snippets.
-
+toc: true
+usePageBundles: true
+thumbnail: images/banner.png
+shareImage: images/banner.png
+codeMaxLines: 10
 categories:
   - security
 tags:
   - news
   - apis
+aliases:
+  - chineese-cameras
 ---
 
 ## What is JWT ?
