@@ -41,13 +41,13 @@ collections:
         widget: boolean
         default: true
 
-      - label: "Author",
-        name: "author",
-        widget: "relation",
-        collection: "settings",
-        searchFields: ["authors.author.name"],
-        displayFields: ["authors.author.name"],
-        valueField: "authors.author.name",
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "settings"
+        searchFields: ["authors.author.name"]
+        displayFields: ["authors.author.name"]
+        valueField: "authors.author.name"
         required: false
 
       - label: Title
