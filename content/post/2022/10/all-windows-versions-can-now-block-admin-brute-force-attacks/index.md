@@ -34,7 +34,7 @@ Nearly three months after Weston's announcement, Microsoft declared today that a
 
 "Beginning with the October 11, 2022, or later Windows cumulative updates, a local policy will be available to enable local administrator account lockouts."
 
-![Windows 11 Account Lockout Policy](https://www.bleepstatic.com/images/news/u/1109292/2022/Windows%2011%20Account%20Lockout%20Policy.png)
+![Windows 11 Account Lockout Policy](images/lockout.png)
 
 Admins who want to enable this additional defense against brute force attacks can find the "Allow Administrator account lockout" policy under *Local Computer Policy\Computer Configuration\Windows Settings\Security Settings\Account Policies\Account Lockout Policies*.
 
