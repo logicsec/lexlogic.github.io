@@ -36,7 +36,6 @@
     display: inline-flex
     align-items: center
     color: #fff 
-    letter-spacing: .234em;
 
     &:hover
       color: #a4b1cd
@@ -46,7 +45,6 @@
     left: 0
     position: absolute
     z-index: 20
-    border-radius: 0 0 0.5rem 0.5rem
     top: 3rem
     transition: height 0.3s ease-in-out
     height: 0
@@ -61,48 +59,50 @@
     margin: 0.25rem 0
     // border-radius: 0.5rem
 
+  &_open
+    background-color: #115fb3
+
   &_open + &_sub &_child
-    padding-top: 0.5rem
+    padding-top: 0px
     padding-bottom: 0.5rem
     z-index: 3
+    color: var(--text)
     & + a
       @media screen and (min-width: $mobile-menu-breakpoint)
         padding-top: 0
     &:not(:first-child)
       position: relative
-    &:first-child::before
-      position: absolute
-      content: ""
-      @extend %upcaret
-      border-bottom: 0.5rem solid var(--translucent-light)
-      z-index: 2
+
   &_open + &_sub
     height: initial
     z-index: 999
     overflow: initial
-    border-radius: 0.5rem
     padding-bottom: 0.5rem
     @media screen and (min-width: $mobile-menu-breakpoint)
       color: var(--text)
-    &::before, &::after
-      content: ""
-      position: absolute
-    &::before
-      @extend %upcaret
-      z-index: 1
-      @media screen and (min-width: $mobile-menu-breakpoint)
-        border-bottom: 0.5rem solid var(--choice-bg)
+      top: calc(100% - 4px)
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-top: .5rem solid #115fb3;
+      border-left: 1px solid rgba(0,0,0,.15);
+      border-right: 1px solid rgba(0,0,0,.15);
+      border-bottom: 1px solid rgba(0,0,0,.15);
+      margin-top: 0;
+      padding: 2rem 2rem;
+      width: 100%;
+      
+    
     &::after
       top: 0
       left: 0
       right: 0
       bottom: 0
       background: var(--translucent-light)
-      border-radius: 0.5rem
       box-shadow: 0 1rem 3rem rgba(0,0,0,0.25)
     @media screen and (min-width: $mobile-menu-breakpoint)
-      background: var(--choice-bg)
+      background: #fff
       width: auto
+      min-width: 40rem !important
       white-space: nowrap;
   &_open &_icon
     transform: rotate(180deg)
@@ -111,9 +111,6 @@
     &:not(.nav_child)
       position: relative
     z-index: 5
-    display: block
-    padding-top: 0.75rem
-    padding-bottom: 0.75rem
     transition: background 0.3s ease-out
     margin: 0
 

@@ -5,13 +5,25 @@
 
 # Submenus are done this way: parent -> identifier
 [[main]]
-  name = "Series"
+  name = "Categories"
   identifier = "Series"
   weight = -108
 [[main]]
   parent = "Series"
-  name = "HTB"
-  url = "series/htb/"
+  name = "Security"
+  url = "categories/security/"
+[[main]]
+  parent = "Series"
+  name = "Write-Up"
+  url = "categories/security/"
+[[main]]
+  parent = "Series"
+  name = "Microsoft"
+  url = "categories/security/"
+[[main]]
+  parent = "Series"
+  name = "Technology"
+  url = "categories/security/"
 
 # social menu links
 
