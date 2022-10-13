@@ -19,7 +19,7 @@
       {{- if $centerLogo }}
         {{- partial "logo" (dict "logo" $logo "class" "nav_center") }}
       {{- end }}
-      {{- partialCached "follow" . }}
+      {{ partial "search/widget" . }}
     </div>
   </nav>
 </header>

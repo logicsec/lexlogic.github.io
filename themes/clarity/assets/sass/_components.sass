@@ -154,13 +154,12 @@
   @include content
 
 .footer
-  // border-top: 1px solid $xhaze
-  background: var(--footer-bg)
+  border-top: 1px solid $xhaze
+  background: linear-gradient(to right, #115fb3, #115fb3 18%, #0e82cf 56%, #0e82cf 60%, #0e82cf 63%, #1563b6 79.8%, #115fb3);
   margin-top: 2rem
   font-size: 0.9rem
   &_inner
     @include content
-    display: grid
     grid-template-columns: 4rem 1fr
     align-items: center
     position: relative
@@ -706,8 +705,8 @@ figcaption
     padding: 0.5rem 1rem
     width: 100%
     outline: none
-    color: var(--text)
-    background: var(--post-bg)
+    color: var(--light)
+    background: var(--search-input)
     border: 1px solid var(--border)
     border-radius: 8px
     font-size: 1rem
