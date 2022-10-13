@@ -3,7 +3,7 @@
         <div class="slideshow-inner">
             <div class="slides">
                 {{- $scratch := newScratch }}
-                {{ range $index, $value := first 3 (where (where .Site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "=" true) }}
+                {{ range $index, $value := first 5 (where (where .Site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "=" true) }}
                     {{ $scratch.Set "image" .Params.featureImage }}
                     {{ $image := $scratch.Get "image" }}
                     {{ $url := $value.Permalink }}
@@ -36,7 +36,7 @@
                 {{ end }}
             </div>
             <div class="pagination">
-                {{ range $index, $value := first 3 (where (where .Site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "=" true) }}
+                {{ range $index, $value := first 5 (where (where .Site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "=" true) }}
                     {{ if eq $index 0 }}<div class="item is-active">{{ else }}<div class="item">{{ end }}
                             <span class="icon">{{ $index }}</span>
                     </div>
