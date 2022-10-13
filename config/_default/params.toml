@@ -48,8 +48,8 @@ figurePositionLabel = "Figure" # the text before image number e.g Figure 1.0
 # Set the collapsed mobile navigation to either appear from the left or the right
 mobileNavigation = "left" # if you prefer right change to 'right'
 
-# enforceLightMode = true
-enforceDarkMode = true
+enforceLightMode = true
+#enforceDarkMode = true
 
 # customize footer icon. see issue https://github.com/chipzoller/hugo-clarity/issues/77
 # footerLogo = "icons/favicon.png"

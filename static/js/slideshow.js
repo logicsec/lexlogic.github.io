@@ -5,7 +5,7 @@ function slideshowSwitch(slideshow, index, auto) {
     if (slideshow.data('wait')) return;
 
     var slides = slideshow.find('.slide');
-    var pages = slideshow.find('.pagination');
+    var pages = slideshow.find('.sp');
     var activeSlide = slides.filter('.is-active');
     var activeSlideImage = activeSlide.find('.image-container');
     var newSlide = slides.eq(index);
@@ -40,7 +40,7 @@ function slideshowSwitch(slideshow, index, auto) {
                 newSlideImage.css({
                     opacity: ''
                 });
-                slideshow.find('.pagination').trigger('check');
+                slideshow.find('.sp').trigger('check');
                 slideshow.data('wait', false);
                 if (auto) {
                     timeout = setTimeout(function () {
@@ -156,7 +156,7 @@ function slideshowSwitch(slideshow, index, auto) {
                 left: ''
             });
 
-            slideshow.find('.pagination').trigger('check');
+            slideshow.find('.sp').trigger('check');
             slideshow.data('wait', false);
             if (auto) {
                 timeout = setTimeout(function () {
@@ -206,11 +206,11 @@ $(document).ready(function () {
         slideshowNext($(this).closest('.slideshow'), $(this).hasClass('prev'));
     });
 
-    $('.slideshow .pagination .item').on('click', function () {
+    $('.slideshow .sp .item').on('click', function () {
         slideshowSwitch($(this).closest('.slideshow'), $(this).index());
     });
 
-    $('.slideshow .pagination').on('check', function () {
+    $('.slideshow .sp').on('check', function () {
         var slideshow = $(this).closest('.slideshow');
         var pages = $(this).find('.item');
         var index = slideshow.find('.slides .is-active').index();

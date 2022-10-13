@@ -9,9 +9,12 @@
   {{ $normalPosts := $pages | symdiff $featuredPosts }}
   {{ $pages = $featuredPosts | append $normalPosts }}
 {{ end }}
+<div class="grid-1 wrap content"> 
+  {{ partial "slider" . }}
+</div>
 <div class="grid-inverse wrap content">
   <div>
-    <ul class="posts" id="posts">
+    <ul class="grid-2 posts" id="posts">
       {{- range (.Paginate $pages).Pages }}
         {{ partial "excerpt-1" . }}
         {{/*  {{ partial "excerpt-2" . }}  */}}
