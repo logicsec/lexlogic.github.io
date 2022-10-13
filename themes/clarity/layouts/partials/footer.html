@@ -4,6 +4,8 @@
   {{ partialCached "math" . }}
 {{- end }}
 {{- $defaultFooterLogo := printf "%s" "logos/logo.png"}}
+
+
 <footer class="footer">
   <div class="footer_inner wrap pale">
     <img src='{{ absURL (default $defaultFooterLogo $s.footerLogo) }}' id="footer-logo" class="footer_image" alt="{{ $t }}">
