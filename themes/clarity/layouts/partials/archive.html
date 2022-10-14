@@ -6,12 +6,26 @@
   </div>
 {{ end }}
 
+{{ if eq .IsHome false }}
+  <div class="grid-1 wrap content-hero"> 
+    <div class="taxonomy-title">
+      <span class="mt-4 taxonomy">{{ humanize .Data.Term }}</span>
+    </div>
+  </div>
+{{ end }}
+
+{{/*  {{ if .Kind }}
+ Test
+{{ end }}  */}}
+
 {{ if eq site.Params.pinFeatured true }}
   {{ $featured := default 8 site.Params.numberOfPinnedPosts }}
   {{ $featuredPosts := first $featured (where $pages "Params.featured" true)}}
   {{ $normalPosts := $pages | symdiff $featuredPosts }}
   {{ $pages = $featuredPosts | append $normalPosts }}
 {{ end }}
+
+
 <div class="grid-inverse wrap content">
   <div>
     <ul class="grid-2 posts" id="posts">
