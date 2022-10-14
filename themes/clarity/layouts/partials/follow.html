@@ -4,6 +4,7 @@
 {{- with $social }}
   {{- $items = . }}
 {{- end }}
+<div class='follow'>
     {{- range $items }}
       {{- $url := .URL }}
       {{- $label := lower .Name }}
@@ -17,3 +18,4 @@
       <a href="{{ $url }}">{{ partial "sprite" (dict "icon" $label) }}</a>
     {{- end }}
   {{/*  {{- partialCached "mode" . }}  */}}
+</div>
