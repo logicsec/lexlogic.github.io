@@ -72,12 +72,10 @@
     display: block
     left: 0
     width: 100%
-    height: 50%
+    height: 40%
     bottom: 0
     background: #141d2b
-    background: -moz-linear-gradient(180deg, rgba(20, 29, 43, 0) 0, rgba(20, 29, 43, 0.959821) 50%)
-    background: -webkit-linear-gradient(180deg, rgba(20, 29, 43, 0), rgba(20, 29, 43, 0.959821) 50%)
-    background: linear-gradient(180deg, rgba(20, 29, 43, 0), rgba(20, 29, 43, 0.959821) 50%)
+    background: linear-gradient(to right, rgba(17, 95, 179, 0.8), rgba(17, 95, 179, 0.8) 18%, rgba(14, 130, 207, 0.8) 56%, rgba(14, 130, 207, 0.8) 60%, rgba(14, 130, 207, 0.8) 63%, rgba(21, 99, 182, 0.8) 79.8%, rgba(17, 95, 179, 0.8))
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#141d2b", endColorstr="#141d2b", GradientType=1)
     z-index: 1
 
@@ -176,6 +174,7 @@
         left: 0
         width: 100%
         height: 100%
+        background-image: linear-gradient(to bottom right,rgba(0,0,0,0.5),rgba(0,0,0,0.5));
       
       &:hover
         transition: all .5s;
@@ -187,6 +186,8 @@
       object-fit: cover
       height: 100%
       border-radius: 30px
+      margin: auto auto;
+
 
 
   .slide-content
@@ -221,7 +222,7 @@
         background: #fff
 
 
-  .pagination
+  .sp
     position: absolute
     bottom: 35px
     left: 0

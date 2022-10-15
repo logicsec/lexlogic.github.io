@@ -17,14 +17,21 @@
                                 <div class="caption">
                                     <div class="title">{{ $value.Title }}</div>
                                     <div class="d-flex align-items-center">
-                                        <div class="reading-time color-main badge-bg-color-blue-nav-active">
+                                        {{/*  <div class="reading-time color-main badge-bg-color-blue-nav-active">
                                             <span class="reading-time__minutes ">{{ math.Round (div (countwords
                                                 .Content) 220.0) }}
                                             </span> min read 
                                         </div>
                                         <span class="date">
                                             {{ dateFormat "January 02, 2006" $value.Date }}
-                                        </span>
+                                        </span>  */}}
+                                        <div class="article__meta">
+                                            <span class="article__minutes">
+                                                {{ math.Round (div (countwords
+                                                    .Content) 220.0) }} min read | 
+                                            </span>
+                                            <time class="article__date" datetime="2018-11-05T12:01:35+00:00">{{ dateFormat "January 02, 2006" $value.Date }}</time>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -35,7 +42,7 @@
                     </div>
                 {{ end }}
             </div>
-            <div class="pagination">
+            <div class="sp">
                 {{ range $index, $value := first 5 (where (where .Site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "=" true) }}
                     {{ if eq $index 0 }}<div class="item is-active">{{ else }}<div class="item">{{ end }}
                             <span class="icon">{{ $index }}</span>

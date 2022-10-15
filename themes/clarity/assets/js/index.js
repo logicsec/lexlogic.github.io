@@ -1,13 +1,11 @@
 import * as params from '@params';
 
 (function toggleColorModes(){
-  const base_url = window.location.origin;
   const light = 'lit';
   const dark = 'dim';
   const storageKey = 'colorMode';
   const key = '--color-mode';
   const data = 'data-mode';
-  const src = 'src'
   const bank = window.localStorage;
 
   function currentMode() {
