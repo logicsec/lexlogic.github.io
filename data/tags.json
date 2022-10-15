@@ -1,0 +1,106 @@
+{
+  "tags": [
+    {
+      "name": "Vulnerabilities"
+    },
+    {
+      "name": "Email Security"
+    },
+    {
+      "name": "Virus & Malware"
+    },
+    {
+      "name": "Threat Intelligence"
+    },
+    {
+      "name": "Cyberwarfare"
+    },
+    {
+      "name": "Fraud & Identity Theft"
+    },
+    {
+      "name": "Phishing"
+    },
+    {
+      "name": "Malware"
+    },
+    {
+      "name": "Tracking & Law Enforcement"
+    },
+    {
+      "name": "Mobile Security"
+    },
+    {
+      "name": "Wireless Security"
+    },
+    {
+      "name": "Risk Management"
+    },
+    {
+      "name": "Compliance"
+    },
+    {
+      "name": "Privacy"
+    },
+    {
+      "name": "Supply Chain"
+    },
+    {
+      "name": "Cloud Security"
+    },
+    {
+      "name": "Identity & Access Management"
+    },
+    {
+      "name": "Data Protection"
+    },
+    {
+      "name": "Network Security"
+    },
+    {
+      "name": "Application Security"
+    },
+    {
+      "name": "Disaster Recovery"
+    },
+    {
+      "name": "Incident Response"
+    },
+    {
+      "name": "Microsoft"
+    },
+    {
+      "name": "Apple"
+    },
+    {
+      "name": "Google"
+    },
+    {
+      "name": "Facebook"
+    },
+    {
+      "name": "Office 365"
+    },
+    {
+      "name": "Windows"
+    },
+    {
+      "name": "Android"
+    },
+    {
+      "name": "iOS"
+    },
+    {
+      "name": "MacOS"
+    },
+    {
+      "name": "iPadOS"
+    },
+    {
+      "name": "CTF"
+    },
+    {
+      "name": "HackTheBox"
+    }
+  ]
+}
