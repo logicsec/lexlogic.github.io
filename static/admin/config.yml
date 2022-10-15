@@ -170,12 +170,6 @@ collections:
         media_folder: "images"
         public_folder: "images"
 
-      - label: "Categories"
-        name: "categories"
-        widget: "list"
-        summary: '{{fields.name}}'
-        field: {label: Name, name: name, widget: string}
-
       - label: Tags
         name: tags
         widget: relation
