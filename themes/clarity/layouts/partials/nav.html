@@ -5,7 +5,7 @@
   {{- if gt $cnt 0 }}
     <div class="nav_parent">
       <a href='{{ absLangURL "categories" }}/{{ (replace $name "#" "%23") | urlize }}/' class="nav_item" title="{{ $name }}">
-        {{ upper $name }}
+        {{ humanize $name }}
       </a>
     </div>
   {{- end }}

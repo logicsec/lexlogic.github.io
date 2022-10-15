@@ -9,7 +9,9 @@
       {{- partialCached "logo" (dict "logo" $logo) }}
     {{- end }}
     <div class='nav_body nav_body_{{ default "left" $params.mobileNavigation }}'>
-
+      {{ $context := . }}
+      {{ $menuData := .Site.Taxonomies.categories }}
+      {{ partial "nav" (dict "context" $context "menu" $menuData) }}
       {{- if $centerLogo }}
         {{- partial "logo" (dict "logo" $logo "class" "nav_center") }}
       {{- end }}
@@ -18,7 +20,7 @@
   </nav>
 </header>
 
-<header class="nav_sub">
+{{/*  <header class="nav_sub">
   <nav class="nav">
     <div class='nav_body nav_body_{{ default "left" $params.mobileNavigation }}'>
       {{ $context := . }}
@@ -26,4 +28,4 @@
       {{ partial "nav" (dict "context" $context "menu" $menuData) }}
     </div>
   </nav>
-</header>
+</header>  */}}
