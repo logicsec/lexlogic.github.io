@@ -1,24 +1,26 @@
 ---
-title: "Microsoft Exchange Server Has a Zero-Day Problem"
-date: '2022-10-07T14:19:16-04:00'
+featureImage: images/thumbnail.png
+summary: Microsoft confirmed that two unpatched Exchange Server vulnerabilities
+  are actively being exmploited by cybercriminals across the globe
 author:
   - Paul Knight
-description: "Microsoft confirmed that two unpatched Exchange Server vulnerabilities are actively being exmploited by cybercriminals across the globe"
-summary: 'Microsoft confirmed that two unpatched Exchange Server vulnerabilities are actively being exmploited by cybercriminals across the globe'
-usePageBundles: true
-toc: true
+title: Microsoft Exchange Server Has a Zero-Day Problem
+date: 2022-10-07T14:19:16-04:00
+description: Microsoft confirmed that two unpatched Exchange Server
+  vulnerabilities are actively being exmploited by cybercriminals across the
+  globe
 featured: true
-
-featureImage: "images/thumbnail.png"
-thumbnail:    "images/thumbnail.png" 
-shareImage:   "images/thumbnail.png"
-
-categories:
-  - Security
+toc: true
+usePageBundles: true
+thumbnail: images/thumbnail.png
+shareImage: images/thumbnail.png
+codeMaxLines: 10
 tags:
   - Zero-Day
   - Microsoft
   - Exchange
+categories:
+  - Malware & Threats
 ---
 
 Last week, Microsoft confirmed that two unpatched Exchange Server vulnerabilities are actively being exmploited by cybercriminals across the globe. The vulnerabilities were first discovered by GTSC, a Vietnamese cyber security company, claiming that the vulnerabilites have been in use since August. Both flaws target on-premise Exchange Servers and requires the attacker to be authenticated. Both vulnerabilities can be chained together to create a backdoor back into the server. "The vulnerability turns out to be so critical that it allows the attacker to do RCE [remote code execution] on the compromised system," [the researchers said](https://gteltsc.vn/blog/warning-new-attack-campaign-utilized-a-new-0day-rce-vulnerability-on-microsoft-exchange-server-12715.html). 
