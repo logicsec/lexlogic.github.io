@@ -1,12 +1,13 @@
+{{ $count := 0 }}
+
 {{- $menu := .menu }}
-{{- $tagsLimit := 7 }}
-{{range $name, $taxonomy := $menu}} 
-  {{ $cnt := .Count }}
-  {{- if gt $cnt 0 }}
-    <div class="nav_parent">
-      <a href='{{ absLangURL "categories" }}/{{ (replace $name "#" "%23") | urlize }}/' class="nav_item" title="{{ $name }}">
-        {{ humanize $name }}
-      </a>
-    </div>
-  {{- end }}
+{{range $name, $taxonomy := $menu }}
+      {{ $count = add $count 1 }}
+      {{ if le $count 8 }}
+        <div class="nav_parent">
+          <a href='{{ absLangURL "categories" }}/{{ (replace $name "#" "%23") | urlize }}/' class="nav_item" title="{{ $name }}">
+            {{ humanize $name }}
+          </a>
+        </div>
+      {{- end }}
 {{- end }}
