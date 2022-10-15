@@ -1,28 +1,27 @@
 ---
-title: "Microsoft Is Rolling Out a Fix for Outlook Crashing After Launch" # Title of the blog post.
-date: 2022-10-08T12:32:07-04:00 # Date of post creation.
+draft: false
+showRelatedInArticle: true
+featureImageAlt: Description of image
 author:
   - Paul Knight
-description: "" # Description used for search engine.
-featured: false # Sets if post is a featured post, making it appear on the sidebar. A featured post won't be listed on the sidebar if it's the current page
-draft: false # Sets whether to render this page. Draft of true will not be rendered.
-toc: false # Controls if a table of contents should be generated for first-level links automatically.
-# menu: main
-usePageBundles: true # Set to true to group assets like images in the same folder as this post.
-featureImage: "images/banner.jpg" # Sets featured image on blog post.
-featureImageAlt: 'Description of image' # Alternative text for featured image.
-thumbnail: "images/banner.jpg" # Sets thumbnail image appearing inside card on homepage.
-shareImage: "images/banner.jpg" # Designate a separate image for social media sharing.
-codeMaxLines: 10 # Override global value for how many lines within a code block before auto-collapsing.
-codeLineNumbers: true # Override global value for showing of line numbers within code block.
-figurePositionShow: true # Override global value for showing the figure label.
-showRelatedInArticle: true # Override global value for showing related posts in this series at the end of the content.
-categories:
-  - Technology
+title: Microsoft Is Rolling Out a Fix for Outlook Crashing After Launch
+date: 2022-10-08T12:32:07-04:00
+description: ""
+featured: false
+toc: false
+usePageBundles: true
+featureImage: images/banner.jpg
+thumbnail: images/banner.jpg
+shareImage: images/banner.jpg
+codeLineNumbers: true
+codeMaxLines: 10
+figurePositionShow: true
 tags:
   - microsoft
   - office 365
   - bugs
+categories:
+  - Systems & Technology
 ---
 
 Microsoft has finally been able to push out a fix for a known issue with Outlook causing the application to freeze and crash for Microsoft 365 users immediately after opening. 
