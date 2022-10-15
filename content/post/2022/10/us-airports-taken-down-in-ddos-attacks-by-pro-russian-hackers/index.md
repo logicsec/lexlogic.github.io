@@ -16,12 +16,12 @@ codeLineNumbers: true
 codeMaxLines: 10
 figurePositionShow: true
 showRelatedInArticle: false
-categories:
-  - Security
 tags:
   - Airlines
   - ddos
   - Russia
+categories:
+  - Cybercrime
 ---
 
 A well-known, pro-Russian hacking group called 'KillNet' has claimed that a large-scale, distributed denial-of-service (DDoS) attack is being conducted against several major airports in the US, causing them to be unaccessible. 
