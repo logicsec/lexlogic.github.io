@@ -15,11 +15,10 @@ codeMaxLines: 10
 figurePositionShow: true
 showRelatedInArticle: true
 categories:
-  - Microsoft
+  - NEWS & INDUSTRY
 tags:
-  - Microsoft
-  - Bruteforce
-  - Policy
+  - NEWS & INDUSTRY
+  - Vulnerabilities
 ---
 Microsoft said today that IT administrators may set up group policies to automatically prevent brute force attacks against local administrator accounts on any Windows system that is currently receiving security updates. 
 
