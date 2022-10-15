@@ -1,26 +1,26 @@
 ---
-title: 'Cybercriminals Are Selling Access to Chinese Surveillance Cameras'
-description: 'Tens of thousands of cameras have failed to patch a critical, 11-month-old CVE, leaving thousands of organizations exposed.'
+featureImage: images/banner.jpg
+summary: Tens of thousands of cameras have failed to patch a critical,
+  11-month-old CVE, leaving thousands of organizations exposed.
 author:
   - Paul Knight
-summary: 'Tens of thousands of cameras have failed to patch a critical, 11-month-old CVE, leaving thousands of organizations exposed.'
-date: '2022-10-04T14:43:57-04:00'
-aliases:
-  - chineese-cameras
-  
-usePageBundles: true
-toc: true
+title: Cybercriminals Are Selling Access to Chinese Surveillance Cameras
+date: 2022-10-04T14:43:57-04:00
+description: Tens of thousands of cameras have failed to patch a critical,
+  11-month-old CVE, leaving thousands of organizations exposed.
 featured: true
-
-featureImage: 'images/banner.jpg'
-thumbnail: 'images/banner.jpg'
-shareImage: 'images/banner.jpg'
-
-categories:
-  - security
+toc: true
+usePageBundles: true
+thumbnail: images/banner.jpg
+shareImage: images/banner.jpg
+codeMaxLines: 10
 tags:
   - news
   - cameras
+categories:
+  - Cybercrime
+aliases:
+  - chineese-cameras
 ---
 
 New [research](https://www.cyfirma.com/wp-content/uploads/2022/08/HikvisionSurveillanceCamerasVulnerabilities.pdf) indicates that over 80,000 Hikvision surveillance cameras in the world today are vulnerable to an 11 month-old command injection flaw.
