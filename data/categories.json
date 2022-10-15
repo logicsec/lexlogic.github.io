@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "name": "Malware & Threats"
+    },
+    {
+      "name": "Cybercrime"
+    },
+    {
+      "name": "Mobile & Wireless"
+    },
+    {
+      "name": "Risk & Compliance"
+    },
+    {
+      "name": "Security Architecture"
+    },
+    {
+      "name": "Security Strategy"
+    },
+    {
+      "name": "ICS & OT"
+    },
+    {
+      "name": "IoT Security"
+    }
+  ]
+}
