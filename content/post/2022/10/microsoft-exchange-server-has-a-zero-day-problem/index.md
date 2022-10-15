@@ -16,9 +16,9 @@ thumbnail: images/thumbnail.png
 shareImage: images/thumbnail.png
 codeMaxLines: 10
 tags:
-  - Zero-Day
   - Microsoft
-  - Exchange
+  - Application Security
+  - Vulnerabilities
 categories:
   - Malware & Threats
 ---
