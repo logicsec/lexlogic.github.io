@@ -13,11 +13,11 @@ usePageBundles: true
 thumbnail: images/banner.png
 shareImage: images/banner.png
 codeMaxLines: 10
-categories:
-  - security
 tags:
   - news
   - apis
+categories:
+  - Education & Training
 aliases:
   - chineese-cameras
 ---
