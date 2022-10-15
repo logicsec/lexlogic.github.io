@@ -1,39 +1,9 @@
 {{- $menu := .menu }}
-{{ $menuData := .context.Site.Data.menu }}
-{{- $link := .context.Permalink }}
-{{- $url := "" }}
-{{- $name := "" }}
-{{- $forwardSlash := "/" }}
-{{- $children := false }}
-{{- range $menu }}
-  {{- if eq $menu $menuData }}
-    {{- $children = .submenu }}
-    {{- $name = .name }}
-    {{- $url = absURL .link }}
-  {{- else }}
-    {{- $children = .Children }}
-    {{- $name = .Name }}
-    {{- $url = absLangURL .URL }}
-  {{- end }}
+{{- range $key, $value := $menu }}
 
-  <div class="nav_parent{{ if (and (not .Children) (eq (trim $url $forwardSlash) (trim $link $forwardSlash))) }} nav_active{{ end}}">
-    <a href="{{ $url }}" class="nav_item" title="{{ $name }}">{{ $name }} {{ with $children }}<img src='{{ absURL "icons/caret-icon.svg" }}' alt="icon" class="nav_icon">{{ end }}</a>
-    
-    {{- with $children }}
-    <div class="grid-1 nav_sub">
-      {{- range . }}
-        {{- if eq $menu $menuData }}
-          {{- $name = .name }}
-          {{- $url = absURL .link }}
-          
-        {{- else }}
-          {{- $name = .Name }}
-          {{- $url = absLangURL .URL }}
-        {{- end }}
-        <a href="{{ $url }}" class="nav_child nav_item" title="{{ $name }}">{{ $name }}</a>
-      {{- end }}
-    </div>
-
-    {{- end }}
+  <div class="nav_parent">
+    <a href='{{ absLangURL "categories" }}/{{ (replace .name "#" "%23") | urlize }}/' class="nav_item" title="{{ .name }}">
+      {{ upper .name }}
+    </a>
   </div>
 {{- end }}

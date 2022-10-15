@@ -14,10 +14,6 @@
   </div>
 {{ end }}
 
-{{/*  {{ if .Kind }}
- Test
-{{ end }}  */}}
-
 {{ if eq site.Params.pinFeatured true }}
   {{ $featured := default 8 site.Params.numberOfPinnedPosts }}
   {{ $featuredPosts := first $featured (where $pages "Params.featured" true)}}
