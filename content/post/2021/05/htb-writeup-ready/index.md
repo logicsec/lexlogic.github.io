@@ -1,27 +1,26 @@
 ---
-title: 'HTB Writeup - Ready'
-description: ''
+featureImage: images/ready_logo.png
 summary: ""
 author:
   - Paul Knight
-date: '2021-05-22'
-aliases:
-  - Ready
-usePageBundles: true
+date: 2021-05-22
 toc: true
-
-featureImage: 'images/ready_logo.png' # Top image on post.
-thumbnail: 'images/ready_logo.png' # Image in lists of posts.
-shareImage: 'images/ready_logo.png' # For SEO and social media snippets.
-
-categories:
-  - write-up
+thumbnail: images/ready_logo.png
+codeMaxLines: 10
+series:
+  - htb
+title: HTB Writeup - Ready
+description: ""
+usePageBundles: true
+shareImage: images/ready_logo.png
 tags:
   - htb
   - write-up
   - linux
-series:
-  - htb
+categories:
+  - Education & Training
+aliases:
+  - Ready
 ---
 
 
