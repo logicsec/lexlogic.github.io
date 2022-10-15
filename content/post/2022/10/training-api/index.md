@@ -13,8 +13,9 @@ thumbnail: images/banner.png
 shareImage: images/banner.png
 codeMaxLines: 10
 tags:
-  - news
-  - apis
+  - Application Security
+  - Vulnerabilities
+  - Identity & Access Management
 categories:
   - Education & Training
 aliases:
