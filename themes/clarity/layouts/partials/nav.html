@@ -1,9 +1,12 @@
 {{- $menu := .menu }}
-{{- range $key, $value := $menu }}
-
-  <div class="nav_parent">
-    <a href='{{ absLangURL "categories" }}/{{ (replace .name "#" "%23") | urlize }}/' class="nav_item" title="{{ .name }}">
-      {{ upper .name }}
-    </a>
-  </div>
+{{- $tagsLimit := 7 }}
+{{range $name, $taxonomy := $menu}} 
+  {{ $cnt := .Count }}
+  {{- if gt $cnt 0 }}
+    <div class="nav_parent">
+      <a href='{{ absLangURL "categories" }}/{{ (replace $name "#" "%23") | urlize }}/' class="nav_item" title="{{ $name }}">
+        {{ upper $name }}
+      </a>
+    </div>
+  {{- end }}
 {{- end }}

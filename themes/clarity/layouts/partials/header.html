@@ -22,7 +22,7 @@
   <nav class="nav">
     <div class='nav_body nav_body_{{ default "left" $params.mobileNavigation }}'>
       {{ $context := . }}
-      {{ $menuData := .Site.Data.categories.categories }}
+      {{ $menuData := .Site.Taxonomies.categories }}
       {{ partial "nav" (dict "context" $context "menu" $menuData) }}
     </div>
   </nav>
