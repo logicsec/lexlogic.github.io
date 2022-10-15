@@ -17,9 +17,8 @@ codeLineNumbers: true
 codeMaxLines: 10
 figurePositionShow: true
 tags:
-  - microsoft
-  - office 365
-  - bugs
+  - Microsoft
+  - Office 365
 categories:
   - Systems & Technology
 ---
