@@ -14,11 +14,11 @@ codeLineNumbers: true
 codeMaxLines: 10
 figurePositionShow: true
 showRelatedInArticle: true
-categories:
-  - NEWS & INDUSTRY
 tags:
   - NEWS & INDUSTRY
   - Vulnerabilities
+categories:
+  - Security Strategy
 ---
 Microsoft said today that IT administrators may set up group policies to automatically prevent brute force attacks against local administrator accounts on any Windows system that is currently receiving security updates. 
 
