@@ -17,9 +17,9 @@ codeMaxLines: 10
 figurePositionShow: true
 showRelatedInArticle: false
 tags:
-  - Airlines
-  - ddos
-  - Russia
+  - Cyberwarfare
+  - Tracking & Law Enforcement
+  - Network Security
 categories:
   - Cybercrime
 ---
