@@ -13,12 +13,12 @@ title: HTB Writeup - Unbalanced
 description: ""
 usePageBundles: true
 shareImage: images/unbalanced_logo.png
-categories:
-  - write-up
 tags:
   - htb
   - write-up
   - linux
+categories:
+  - Education & Training
 aliases:
   - unbalanced
 ---
