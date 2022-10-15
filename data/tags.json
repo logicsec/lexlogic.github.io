@@ -95,6 +95,12 @@
     },
     {
       "name": "iPadOS"
+    },
+    {
+      "name": "CTF"
+    },
+    {
+      "name": "HackTheBox"
     }
   ]
 }
