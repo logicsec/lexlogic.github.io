@@ -15,8 +15,8 @@ thumbnail: images/banner.jpg
 shareImage: images/banner.jpg
 codeMaxLines: 10
 tags:
-  - news
-  - cameras
+  - Vulnerabilities
+  - Application Security
 categories:
   - Cybercrime
 aliases:
