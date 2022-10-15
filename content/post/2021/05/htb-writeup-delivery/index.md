@@ -1,27 +1,26 @@
 ---
-title: 'HTB Writeup - Delivery'
-description: ''
+featureImage: images/delivery_logo.png
 summary: ""
 author:
   - Paul Knight
-date: '2021-05-22'
-aliases:
-  - Delivery
-usePageBundles: true
+date: 2021-05-22
 toc: true
-
-featureImage: 'images/delivery_logo.png' # Top image on post.
-thumbnail: 'images/delivery_logo.png' # Image in lists of posts.
-shareImage: 'images/delivery_logo.png' # For SEO and social media snippets.
-
-categories:
-  - write-up
+thumbnail: images/delivery_logo.png
+codeMaxLines: 10
+series:
+  - htb
+title: HTB Writeup - Delivery
+description: ""
+usePageBundles: true
+shareImage: images/delivery_logo.png
 tags:
   - htb
   - write-up
   - linux
-series:
-  - htb
+categories:
+  - Education & Training
+aliases:
+  - Delivery
 ---
 
 Delivery is a quick and fun easy box where we have to create a MatterMost account and validate it by using automatic email accounts created by the OsTicket application. The admins on this platform have very poor security practices and put plaintext credentials in MatterMost. Once we get the initial shell with the creds from MatterMost we'll poke around MySQL and get a root password bcrypt hash. Using a hint left in the MatterMost channel about the password being a variation of PleaseSubscribe!, we'll use hashcat combined with rules to crack the password then get the root shell.
