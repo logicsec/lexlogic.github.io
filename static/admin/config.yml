@@ -34,6 +34,31 @@ collections:
                 name: image
                 widget: image
                 media_folder: images
+      - label: Tags
+        name: tags
+        file: data/tags.json
+        fields:
+          - label: Tags
+            name: tags
+            widget: list
+            allow_add: true
+            fields:
+              - label: Name
+                name: name
+                widget: string
+
+      - label: Categories
+        name: categories
+        file: data/categories.json
+        fields:
+          - label: Categories
+            name: categories
+            widget: list
+            allow_add: true
+            fields:
+              - label: Name
+                name: name
+                widget: string
 
   - name: 'post'
     label: 'Post'
@@ -151,8 +176,22 @@ collections:
         summary: '{{fields.name}}'
         field: {label: Name, name: name, widget: string}
 
-      - label: "Tags"
-        name: "tags"
-        widget: "list"
-        summary: '{{fields.name}}'
-        field: {label: Name, name: name, widget: string}
+      - label: Tags
+        name: tags
+        widget: relation
+        collection: settings
+        value_field: tags.*.name
+        search_fields: [tags.*.name]
+        display_fields: [tags.*.name]
+        file: tags
+        multiple: true
+
+      - label: Categories
+        name: categories
+        widget: relation
+        collection: settings
+        value_field: categories.*.name
+        search_fields: [categories.*.name]
+        display_fields: [categories.*.name]
+        file: categories
+        multiple: true
