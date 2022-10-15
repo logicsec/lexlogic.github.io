@@ -15,8 +15,8 @@ codeMaxLines: 10
 figurePositionShow: true
 showRelatedInArticle: true
 tags:
-  - NEWS & INDUSTRY
-  - Vulnerabilities
+  - Windows
+  - Identity & Access Management
 categories:
   - Security Strategy
 ---
