@@ -14,9 +14,8 @@ description: ""
 usePageBundles: true
 shareImage: images/ready_logo.png
 tags:
-  - htb
-  - write-up
-  - linux
+  - HackTheBox
+  - CTF
 categories:
   - Education & Training
 aliases:
