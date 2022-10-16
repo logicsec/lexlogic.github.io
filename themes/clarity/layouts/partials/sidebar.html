@@ -66,7 +66,7 @@
     {{- $featuredPosts := first $featured (where $posts "Params.featured" true)}}
     {{- with $featuredPosts }}
     <h4 class="widget-title title medium bordered">
-      <span class="mt-4">{{ T "featured_posts" }}</span>
+      <span class="mt-4"><span class="accent">Featured</span> Posts</span>
       <span class="border"></span>
     </h4>
     <ul>
@@ -78,7 +78,7 @@
     </ul>
     {{- end }}
     <h4 class="widget-title title medium bordered">
-      <span class="mt-4">{{ T "recent_posts" }}</span>
+      <span class="mt-4"><span class="accent">Recent</span> Posts</span>
       <span class="border"></span>
     </h4>
     <ul class="flex-column">
@@ -103,8 +103,8 @@
         {{- $slicedTags := ($value.ByCount | first $tagsLimit) }}
         {{- range $slicedTags }}
         <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/' class="post_tag button button_translucent" title="{{ .Name }}">
-          {{ upper .Name }}
-          <span class="button_tally">{{ .Count }}</span>
+          {{ humanize .Name }}
+          {{/*  <span class="button_tally">{{ .Count }}</span>  */}}
         </a>
         {{ end }}
         {{ if gt (len $value.ByCount) $tagsLimit }}
@@ -116,8 +116,8 @@
             {{- range $value.Alphabetical }}
             {{ $tagsInfo.Add "tagsInfo" (slice .Name .Count)}}
             <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/' class=" post_tag button button_translucent" data-position={{ .Count }} title="{{ .Name }}">
-              {{- upper .Name -}}
-              <span class="button_tally">{{ .Count }}</span>
+              {{- humanize .Name -}}
+              {{/*  <span class="button_tally">{{ .Count }}</span>  */}}
             </a>
             {{ end }}
             <div class="tags_sort"><span title="sort alphabetically">[A~Z]</span><span title="sort by count">[0~9]</span>

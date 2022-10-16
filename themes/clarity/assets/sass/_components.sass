@@ -28,7 +28,7 @@
     width: 100%
     z-index: 99
     left: 0
-    // border-bottom: 1px solid $htb
+    border-bottom: 3px solid $htb
   &_item
     padding: 0.5rem 1rem
     display: inline-flex
@@ -152,8 +152,8 @@
   @include content
 
 .footer
-  border-top: 1px solid $xhaze
-  background: linear-gradient(to right, #115fb3, #115fb3 18%, #0e82cf 56%, #0e82cf 60%, #0e82cf 63%, #1563b6 79.8%, #115fb3);
+  border-top: 3px solid $htb
+  background: rgba(29,40,53,0.95)
   margin-top: 2rem
   font-size: 0.9rem
   &_inner
@@ -167,7 +167,6 @@
   color: $light
   display: inline-flex
   padding: 0.5rem 1.5rem
-  text-transform: uppercase
   border: 1px solid $theme
   border-radius: 0.5rem
   font-size: 0.9rem
@@ -190,8 +189,8 @@
     border: 1px solid darken($theme, 20%)
 
   &_translucent
-    background-color: rgba($theme, 0.15)
-    color: $theme
+    background-color: rgba(29,40,53,0.95)
+    color: #fff
     border: 1px solid transparent
   &_tally
     padding: 0 0.75rem
@@ -236,7 +235,7 @@
     // background: var(--post-bg)
   &_tag
     padding: 0.2rem 0.8rem
-    font-size: 0.8rem
+    font-size: 0.75rem
     &s
       display: none
       &.jswidgetopen
@@ -257,7 +256,7 @@
         margin-left: 0.5rem
         cursor: pointer
   &_tag, &_share
-    margin: 0.5rem
+    margin: 0.2rem
   &_share
     display: inline-flex
   &_meta
