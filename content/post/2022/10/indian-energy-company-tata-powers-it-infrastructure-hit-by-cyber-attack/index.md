@@ -19,7 +19,9 @@ tags:
 categories:
   - Cybercrime
 ---
-India's largest integrated power company, Tata Power Ltd., confirmed on Friday that it had been the target of a cyber attack.
+In what appears to be a new trend for cybercrime groups, India's largest integrated power company, Tata Power Ltd., confirmed on Friday that it had been the target of a cyber attack.
+
+This is the latest in a recent string of attacks against national infrastructure. [Last week](https://logicsec.io/2022/10/us-airports-taken-down-in-ddos-attacks-by-pro-russian-hackers/), we saw US airports being targeted by pro-Russian cybercrime groups, taking several airlines offline for several hours.
 
 In a [filing](https://archives.nseindia.com/corporate/TATAPOWER_14102022190039_SELetter.pdf) to the National Stock Exchange of India (NSE), the company said the IT infrastructure breach affected "part of its IT systems". It further said it had taken steps to retrieve and recover the affected machines, adding that it had put a security fence on its customer-facing portal to prevent unauthorized access. 
 
