@@ -6,14 +6,19 @@
 {{- $children := false }}
 {{- $menu := .menu }}
 
+<div class="nav_parent{{ if eq (trim (absLangURL $url) $forwardSlash) (trim $link $forwardSlash) }} nav_active{{ end}}">
+  <a href='/' class="nav_item" title="{{ $name }}">
+    Home
+  </a>
+</div>
+
 {{range $name, $taxonomy := $menu }}
-    {{- $url = (replace $name "#" "%23") }}
+    {{- $url = printf "%s/%s" "categories" $name }}
     {{ $count = add $count 1 }}
     {{ if le $count 8 }}
-      <div class="nav_parent{{ if (and (not $children) (eq (trim $url $forwardSlash) (trim $link $forwardSlash))) }} nav_active{{ end}}">
+      <div class="nav_parent{{ if eq (trim (absLangURL $url) $forwardSlash) (trim $link $forwardSlash) }} nav_active{{ end}}">
         <a href='{{ absLangURL "categories" }}/{{ (replace $name "#" "%23") | urlize }}/' class="nav_item" title="{{ $name }}">
           {{ humanize $name }}
-          {{$url}}
         </a>
       </div>
     {{- end }}
