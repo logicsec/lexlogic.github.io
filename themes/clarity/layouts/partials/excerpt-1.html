@@ -21,7 +21,7 @@
                   <a href="{{ .Permalink }}">{{ .Title }}</a>
               </h2>
               <p class="article__excerpt">
-                {{- $summary := truncate 320 .Summary }}
+                {{- $summary := truncate 120 .Summary }}
                 {{- if .Params.summary }}
                   {{- $summary = .Params.summary }}
                 {{- else if .Params.abstract }}
