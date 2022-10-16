@@ -1,13 +1,20 @@
 {{ $count := 0 }}
-
+{{- $link := .context.Permalink }}
+{{- $url := "" }}
+{{- $name := "" }}
+{{- $forwardSlash := "/" }}
+{{- $children := false }}
 {{- $menu := .menu }}
+
 {{range $name, $taxonomy := $menu }}
-      {{ $count = add $count 1 }}
-      {{ if le $count 8 }}
-        <div class="nav_parent">
-          <a href='{{ absLangURL "categories" }}/{{ (replace $name "#" "%23") | urlize }}/' class="nav_item" title="{{ $name }}">
-            {{ humanize $name }}
-          </a>
-        </div>
-      {{- end }}
+    {{- $url = (replace $name "#" "%23") }}
+    {{ $count = add $count 1 }}
+    {{ if le $count 8 }}
+      <div class="nav_parent{{ if (and (not $children) (eq (trim $url $forwardSlash) (trim $link $forwardSlash))) }} nav_active{{ end}}">
+        <a href='{{ absLangURL "categories" }}/{{ (replace $name "#" "%23") | urlize }}/' class="nav_item" title="{{ $name }}">
+          {{ humanize $name }}
+          {{$url}}
+        </a>
+      </div>
+    {{- end }}
 {{- end }}
