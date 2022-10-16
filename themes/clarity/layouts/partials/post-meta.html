@@ -19,7 +19,11 @@
   {{- if $showAuthor }}
     <span>{{ partial "sprite" (dict "icon" "person") }}</span>
     <span class="post_date">
-      {{ .Params.author }}
+      {{- with .Params.author -}}
+        {{- range . }}
+          {{.}}
+        {{- end }}
+      {{- end }}
     </span>
     {{- $scratch.Set "writeSeparator" true }}
   {{- end }}
