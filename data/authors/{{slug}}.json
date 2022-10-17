@@ -1,0 +1,10 @@
+{
+  "authors": [
+    {
+      "name": "Test",
+      "about": "test",
+      "email": "t3st",
+      "image": "/static/images/authors/wallpaper.jpg"
+    }
+  ]
+}
