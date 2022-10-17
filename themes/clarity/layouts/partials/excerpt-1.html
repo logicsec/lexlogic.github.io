@@ -23,7 +23,7 @@
                     <span class="article__minutes">
                     {{ range $index, $name := .Params.categories -}}
                       <a href="{{ (printf "/categories/%s/" $name) | urlize }}" class="post_tag button button_accent">{{ humanize $name | title }}</a>
-                        {{- end }}
+                    {{- end }}
                   </span>
                     <time class="article__date" datetime="2018-11-05T12:01:35+00:00">{{ dateFormat "January 02, 2006"
                         .Date }}

@@ -16,14 +16,25 @@
                 <div class="slide is-active ">{{ else }}
                     <div class="slide ">{{ end }}
                         <a href='{{ $value.Permalink }}' target="_self">
-                            <div class="slide-content">
+                            <div class="slide-content top">
+                                <div class="caption">
+                                    <div class="d-flex align-items-center">
+                                        <div class="article__meta">
+                                            {{ range $index, $name := .Params.categories -}}
+                                                <a href="{{ (printf "/categories/%s/" $name) | urlize }}" class="post_tag button button_accent">{{ humanize $name | title }}</a>
+                                            {{- end }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-content bottom">
                                 <div class="caption">
                                     <div class="title">{{ $value.Title }}</div>
                                     <div class="d-flex align-items-center">
                                         <div class="article__meta">
                                             <span class="article__minutes">
                                                 {{ math.Round (div (countwords
-                                                    .Content) 220.0) }} min read | 
+                                                    .Content) 220.0) }} min read |
                                             </span>
                                             <time class="article__date" datetime="2018-11-05T12:01:35+00:00">{{
                                                 dateFormat "January 02, 2006" $value.Date }}
