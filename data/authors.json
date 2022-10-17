@@ -1,0 +1,14 @@
+{
+  "authors": [
+    {
+      "{{fields.name}}": [
+        {
+          "name": "Paul Knight",
+          "about": "Blogger, Security Lover",
+          "email": "paul@logicsec.io",
+          "image": "/static/images/authors/wallpaper.jpg"
+        }
+      ]
+    }
+  ]
+}
