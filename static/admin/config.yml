@@ -11,7 +11,7 @@ collections:
     label: "Authors"
     folder: "data/authors"
     create: true
-    slug: "{{slug}}"
+    slug: "{{fields.name}}"
     fields:
       - label: Name
         name: name
