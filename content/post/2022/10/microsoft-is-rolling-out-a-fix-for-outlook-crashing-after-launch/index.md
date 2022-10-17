@@ -3,7 +3,7 @@ draft: false
 showRelatedInArticle: true
 featureImageAlt: Description of image
 author:
-  - Paul Knight
+  - paul-knight
 title: Microsoft Is Rolling Out a Fix for Outlook Crashing After Launch
 date: 2022-10-08T12:32:07-04:00
 description: ""
