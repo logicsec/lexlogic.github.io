@@ -4,19 +4,19 @@
       "name": "Paul Knight",
       "about": "I am a security engineer who is passionate about stuff like web technologies and network penetration testing. Few tech that I enjoy working in are Python, Java, Ruby, and PHP. Recently, I have just started doing writeups for Hack the Box! I also moderate the Discord for the Hack the Box Team.",
       "email": "nickmc01@gmail.com",
-      "image": "images/logic.jpg"
+      "image": "/static/images/authors/wallpaper.jpg"
     },
     {
       "name": "Osanda Malith",
       "about": "Security Professional",
       "email": "osanda.malith@gmail.com",
-      "image": "images/wallpaper.jpg"
+      "image": "/static/images/authors/wallpaper.jpg"
     },
     {
       "name": "cboyardeat",
       "about": "Security Professional, Discord",
       "email": "cboyardeat@protonmail.com",
-      "image": "images/wallpaper.jpg"
+      "image": "/static/images/authors/wallpaper.jpg"
     }
   ]
 }
