@@ -4,7 +4,6 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 media_folder: "images"
 public_folder: "images"
-publish_mode: editorial_workflow
 logo_url: https://logicsec.io/logos/logo-dark.png
 collections:
   - name: authors
