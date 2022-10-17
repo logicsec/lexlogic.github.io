@@ -3,7 +3,7 @@ draft: false
 featureImage: images/banner.png
 summary: ""
 author:
-  - Paul Knight
+  - paul-knight
 title: VAmPI the vulnerable API for security testing
 date: 2022-10-02
 description: ""
