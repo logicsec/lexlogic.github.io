@@ -14,7 +14,7 @@ collections:
     files:
       - label: Authors
         name: authors
-        file: data/authors.json
+        file: data/authors.toml
         fields:
           - label: Authors
             name: authors
@@ -22,23 +22,18 @@ collections:
             allow_add: true
             fields:
               - label: Name
-                name: '{{fields.name}}'
-                widget: list
-                allow_add: true
-                fields:
-                  - label: Name
-                    name: name
-                    widget: string
-                  - label: About
-                    name: about
-                    widget: string
-                  - label: Email
-                    name: email
-                    widget: string
-                  - label: Author Image
-                    name: image
-                    widget: image
-                    media_folder: /static/images/authors
+                name: name
+                widget: string
+              - label: About
+                name: about
+                widget: string
+              - label: Email
+                name: email
+                widget: string
+              - label: Author Image
+                name: image
+                widget: image
+                media_folder: /static/images/authors
       - label: Tags
         name: tags
         file: data/tags.json
