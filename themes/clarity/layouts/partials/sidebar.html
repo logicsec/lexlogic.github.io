@@ -110,7 +110,7 @@
           {{/*  {{- $url = trim (absLangURL $url) $forwardSlash }}  */}}
           {{- $url = printf "%s/%s/" $key .Name |  absLangURL}}
           <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/' class="{{ if eq (trim (absLangURL $url) $forwardSlash) (trim $link $forwardSlash) }} accent-background{{ end}} post_tag button button_translucent" title="{{ .Name }}">
-            {{ humanize .Name }}
+            {{ humanize .Name | title }}
           </a>
         {{ end }}
         {{ if gt (len $value.ByCount) $tagsLimit }}
@@ -123,7 +123,7 @@
                 {{- $url = trim (absLangURL $url) $forwardSlash }}
                 {{ $tagsInfo.Add "tagsInfo" (slice .Name .Count)}}
                 <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/' class="{{ if eq $url $link }} accent-background{{ end}} post_tag button button_translucent" data-position={{ .Count }} title="{{ .Name }}">
-                  {{- humanize .Name -}}
+                  {{- humanize .Name | title -}}
                 </a>
               {{ end }}
               <div class="tags_sort"><span title="sort alphabetically">[A~Z]</span><span title="sort by count">[0~9]</span>
