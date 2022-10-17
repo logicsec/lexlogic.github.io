@@ -49,7 +49,7 @@
                         {{ $data := index $authors $name }}
                         {{ $image := strings.TrimPrefix "/static" $data.image }}
                           <div class="article__author">
-                              <a href="/about" aria-label="Logic"><img class="article__author-image lazy loaded"
+                              <a href="#" aria-label="Logic"><img class="article__author-image lazy loaded"
                                       alt="{{ $data.name }}'s Picture" data-ll-status="loaded" src="{{ absURL $image }}">
                                 <span class="article__author-link">{{ $data.name }}</span>
                         
