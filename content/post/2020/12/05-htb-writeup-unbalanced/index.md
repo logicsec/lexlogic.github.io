@@ -2,7 +2,7 @@
 featureImage: images/unbalanced_logo.png
 summary: ""
 author:
-  - Paul Knight
+  - paul-knight
 date: 2021-12-05
 toc: true
 thumbnail: images/unbalanced_logo.png
