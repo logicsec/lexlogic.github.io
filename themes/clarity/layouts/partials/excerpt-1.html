@@ -41,7 +41,9 @@
                   <div class="article__bottom-meta">
                       {{ with .Params.author }}
                         {{ range $i, $n := . -}}
-                          <span class="article__author-link">{{ $n }}</span>
+                          {{ $name := urlize $n}}
+                          {{/*  {{ $data := index .Site.Content.Authors $name }}  */}}
+                          <span class="article__author-link">{{ $name }}</span>
                         {{- end }}
                       {{- end }}
                       <span>in</span>
