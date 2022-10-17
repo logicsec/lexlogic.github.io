@@ -1,4 +1,5 @@
   {{- $params := .Site.Params }}
+  {{- $authors := .Site.Data.authors }}
 
   <li class="post_item">
     <div class="article col col-4 col-d-6 col-t-12 animate">
@@ -12,8 +13,15 @@
           </a>
           <div class="article__content">
               <div class="article__meta">
+                  {{/*  <span class="article__minutes">
+                    {{ range $index, $name := .Params.categories -}}
+                      <a href="{{ (printf "/categories/%s/" $name) | urlize }}" class="">{{ upper $name }}</a>
+                  {{- end }} | 
+                  </span>  */}}
                   <span class="article__minutes">
-                    {{ math.Round (div (countwords .Content) 220.0) }} min read | 
+                    {{ range $index, $name := .Params.categories -}}
+                      <a href="{{ (printf "/categories/%s/" $name) | urlize }}" class="post_tag button button_accent">{{ humanize $name | title }}</a>
+                  {{- end }}
                   </span>
                   <time class="article__date" datetime="2018-11-05T12:01:35+00:00">{{ dateFormat "January 02, 2006" .Date }}</time>
               </div>
@@ -34,25 +42,22 @@
                 {{ end }}
               </p>
               <div class="article__bottom">
-                  <div class="article__author">
-                      <a href="/about" aria-label="Logic"><img class="article__author-image lazy loaded"
-                              alt="{{ $params.author.name }}'s Picture" data-ll-status="loaded" src="{{ absURL $params.author.photo }}"></a>
-                  </div>
-                  <div class="article__bottom-meta">
-                      {{ with .Params.author }}
-                        {{ range $i, $n := . -}}
-                          {{ $name := urlize $n}}
-                          {{/*  {{ $data := (index .Site.Content.Authors $name).Name }}  */}}
-                          <span class="article__author-link">{{ $name }}</span>
+                <div class="article__bottom-meta">
+                  {{ with .Params.author }}
+                    {{ range $i, $n := . -}}
+                        {{ $name := urlize $n}}
+                        {{ $data := index $authors $name }}
+                        {{ $image := strings.TrimPrefix "/static" $data.image }}
+                          <div class="article__author">
+                              <a href="/about" aria-label="Logic"><img class="article__author-image lazy loaded"
+                                      alt="{{ $data.name }}'s Picture" data-ll-status="loaded" src="{{ absURL $image }}">
+                                <span class="article__author-link">{{ $data.name }}</span>
+                        
+                              </a>
+                          </div>
                         {{- end }}
                       {{- end }}
-                      <span>in</span>
-                      <span class="article-tags">
-                          {{ range $index, $name := .Params.categories -}}
-                              <a href="{{ (printf "/categories/%s/" $name) | urlize }}" class="article__tag">{{ upper $name }}</a>
-                          {{- end }}
-                      </span>
-                  </div>
+                    </div>
               </div>
           </div>
       </div>
