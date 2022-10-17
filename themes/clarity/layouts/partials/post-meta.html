@@ -6,17 +6,17 @@
 {{- $scratch := newScratch }}
 {{- $scratch.Set "writeSeparator" false }}
 {{- if $showPostMeta }}
-  <div class="post_meta">
-{{- end }}
-  {{- if $showDate }}
-  <span>{{ partial "sprite" (dict "icon" "calendar") }}</span>
-  <span class="post_date">
+<div class="post_meta">
+    {{- end }}
+    {{- if $showDate }}
+    <span>{{ partial "sprite" (dict "icon" "calendar") }}</span>
+    <span class="post_date">
     {{ .Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) -}}
   </span>
-  {{- $scratch.Set "writeSeparator" true }}
-  {{- end }}
+    {{- $scratch.Set "writeSeparator" true }}
+    {{- end }}
 
-  {{- if $showAuthor }}
+    {{- if $showAuthor }}
     <span>{{ partial "sprite" (dict "icon" "person") }}</span>
     <span class="post_date">
       {{- with .Params.author -}}
@@ -26,28 +26,29 @@
       {{- end }}
     </span>
     {{- $scratch.Set "writeSeparator" true }}
-  {{- end }}
+    {{- end }}
 
-  {{- if $showReadTime }}
+    {{- if $showReadTime }}
     <span class="post_time">{{ if ($scratch.Get "writeSeparator") }} · {{ end }}{{ T "reading_time" . }}</span>
     {{- $scratch.Set "writeSeparator" true }}
-  {{- end }}
-  {{- with .Params.categories -}}
+    {{- end }}
+    {{- with .Params.categories -}}
     <span>
       {{- if ($scratch.Get "writeSeparator") }}&nbsp;· {{ end }}
       {{- range . }}
         {{- $tag := urlize . -}}
-        <a href='{{ absLangURL (printf "categories/%s/" $tag) }}' title="{{ . }}" class="post_tag button button_translucent">
+        <a href='{{ absLangURL (printf "categories/%s/" $tag) }}' title="{{ . }}"
+           class="post_tag button button_translucent">
           {{- . }}
         </a>
       {{- end }}
     </span>
     {{- $scratch.Set "writeSeparator" true }}
-  {{- end }}
-  {{- if $showShare }}
+    {{- end }}
+    {{- if $showShare }}
     <span class="page_only">{{ if ($scratch.Get "writeSeparator") }}&nbsp;·{{ end }}{{ partial "share" . }}</span>
     {{- $scratch.Set "writeSeparator" true }}
-  {{- end }}
-{{- if $showPostMeta }}
-  </div>
+    {{- end }}
+    {{- if $showPostMeta }}
+</div>
 {{- end }}

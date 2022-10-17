@@ -1,44 +1,44 @@
 {{ $pages := .Pages }}
 {{/*  {{ if .IsHome }}  */}}
-<div class="grid-1 wrap content-hero"> 
-  {{ partial "slider" . }}
+<div class="grid-1 wrap content-hero">
+    {{ partial "slider" . }}
 </div>
 {{/*  {{ end }}  */}}
 
 {{ if eq .IsHome false }}
-<div class="grid-1 wrap content-hero"> 
-  <div class="taxonomy-title">
-    <span class="mt-4">{{ humanize .Data.Term | title }}</span>
-  </div>
+<div class="grid-1 wrap content-hero">
+    <div class="taxonomy-title">
+        <span class="mt-4">{{ humanize .Data.Term | title }}</span>
+    </div>
 </div>
 {{ else }}
-  {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-  <div class="grid-1 wrap content-hero"> 
+{{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+<div class="grid-1 wrap content-hero">
     <div class="taxonomy-title">
-      <span class="mt-4">All Posts</span>
-      </div>
-  </div>
+        <span class="mt-4">All Posts</span>
+    </div>
+</div>
 {{ end }}
 
 {{ if eq site.Params.pinFeatured true }}
-  {{ $featured := default 8 site.Params.numberOfPinnedPosts }}
-  {{ $featuredPosts := first $featured (where $pages "Params.featured" true)}}
-  {{ $normalPosts := $pages | symdiff $featuredPosts }}
-  {{ $pages = $featuredPosts | append $normalPosts }}
+{{ $featured := default 8 site.Params.numberOfPinnedPosts }}
+{{ $featuredPosts := first $featured (where $pages "Params.featured" true)}}
+{{ $normalPosts := $pages | symdiff $featuredPosts }}
+{{ $pages = $featuredPosts | append $normalPosts }}
 {{ end }}
 
 
 <div class="grid-inverse wrap content">
-  <div>
-    <ul class="grid-2 posts" id="posts">
-      {{- range (.Paginate $pages).Pages }}
-        {{ partial "excerpt-1" . }}
-        {{/*  {{ partial "excerpt-2" . }}  */}}
-      {{- end }}
-      <li>
-        {{- template "_internal/pagination.html" . }}
-      </li>
-    </ul>
-  </div>
-  {{- partial "sidebar" . }}
+    <div>
+        <ul class="grid-2 posts" id="posts">
+            {{- range (.Paginate $pages).Pages }}
+            {{ partial "excerpt-1" . }}
+            {{/* {{ partial "excerpt-2" . }} */}}
+            {{- end }}
+            <li>
+                {{- template "_internal/pagination.html" . }}
+            </li>
+        </ul>
+    </div>
+    {{- partial "sidebar" . }}
 </div>

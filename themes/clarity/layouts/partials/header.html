@@ -1,21 +1,21 @@
 {{- $params := .Site.Params }}
 {{- $centerLogo := $params.centerLogo }}
 {{ $logo := $params.logo }}
-<header class="nav_header" >
-  <nav class="nav">
-    {{- if $centerLogo }}
-      {{- partialCached "logo" (dict "logo" $logo "class" "nav_hide") }}
-    {{- else }}
-      {{- partialCached "logo" (dict "logo" $logo) }}
-    {{- end }}
-    <div class='nav_body nav_body_{{ default "left" $params.mobileNavigation }}'>
-      {{ $context := . }}
-      {{ $menuData := .Site.Taxonomies.categories }}
-      {{ partial "nav" (dict "context" $context "menu" $menuData) }}
-      {{- if $centerLogo }}
-        {{- partial "logo" (dict "logo" $logo "class" "nav_center") }}
-      {{- end }}
-      {{ partial "follow" . }}
-    </div>
-  </nav>
+<header class="nav_header">
+    <nav class="nav">
+        {{- if $centerLogo }}
+        {{- partialCached "logo" (dict "logo" $logo "class" "nav_hide") }}
+        {{- else }}
+        {{- partialCached "logo" (dict "logo" $logo) }}
+        {{- end }}
+        <div class='nav_body nav_body_{{ default "left" $params.mobileNavigation }}'>
+            {{ $context := . }}
+            {{ $menuData := .Site.Taxonomies.categories }}
+            {{ partial "nav" (dict "context" $context "menu" $menuData) }}
+            {{- if $centerLogo }}
+            {{- partial "logo" (dict "logo" $logo "class" "nav_center") }}
+            {{- end }}
+            {{ partial "follow" . }}
+        </div>
+    </nav>
 </header>

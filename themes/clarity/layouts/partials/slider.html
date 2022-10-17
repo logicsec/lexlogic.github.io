@@ -1,17 +1,20 @@
 <main class="main-content">
-    <section class="slideshow" data-transition="fade" >
+    <section class="slideshow" data-transition="fade">
         <div class="slideshow-inner">
             <div class="slides">
                 {{- $scratch := newScratch }}
-                {{ range $index, $value := first 5 (where (where .Site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "=" true) }}
-                    {{ $scratch.Set "image" .Params.featureImage }}
-                    {{ $image := $scratch.Get "image" }}
-                    {{ $url := $value.Permalink }}
-                    {{ $bg := (printf "%s%s" $url $image) }}
-                    {{- if in $image "https://" }}
-                        {{- $bg = $image }}
-                    {{- end }}
-                    {{ if eq $index 0 }}<div class="slide is-active ">{{ else }}<div class="slide ">{{ end }}
+                {{ range $index, $value := first 5 (where (where .Site.RegularPages "Type" "in"
+                site.Params.mainSections) ".Params.featured" "=" true) }}
+                {{ $scratch.Set "image" .Params.featureImage }}
+                {{ $image := $scratch.Get "image" }}
+                {{ $url := $value.Permalink }}
+                {{ $bg := (printf "%s%s" $url $image) }}
+                {{- if in $image "https://" }}
+                {{- $bg = $image }}
+                {{- end }}
+                {{ if eq $index 0 }}
+                <div class="slide is-active ">{{ else }}
+                    <div class="slide ">{{ end }}
                         <a href='{{ $value.Permalink }}' target="_self">
                             <div class="slide-content">
                                 <div class="caption">
@@ -22,25 +25,30 @@
                                                 {{ math.Round (div (countwords
                                                     .Content) 220.0) }} min read | 
                                             </span>
-                                            <time class="article__date" datetime="2018-11-05T12:01:35+00:00">{{ dateFormat "January 02, 2006" $value.Date }}</time>
+                                            <time class="article__date" datetime="2018-11-05T12:01:35+00:00">{{
+                                                dateFormat "January 02, 2006" $value.Date }}
+                                            </time>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="image-container">
-                                <img src='{{ $bg }}' alt="" class="image" />
+                                <img src='{{ $bg }}' alt="" class="image"/>
                             </div>
                         </a>
                     </div>
-                {{ end }}
-            </div>
-            <div class="sp">
-                {{ range $index, $value := first 5 (where (where .Site.RegularPages "Type" "in" site.Params.mainSections) ".Params.featured" "=" true) }}
-                    {{ if eq $index 0 }}<div class="item is-active">{{ else }}<div class="item">{{ end }}
+                    {{ end }}
+                </div>
+                <div class="sp">
+                    {{ range $index, $value := first 5 (where (where .Site.RegularPages "Type" "in"
+                    site.Params.mainSections) ".Params.featured" "=" true) }}
+                    {{ if eq $index 0 }}
+                    <div class="item is-active">{{ else }}
+                        <div class="item">{{ end }}
                             <span class="icon">{{ $index }}</span>
+                        </div>
+                        {{ end }}
                     </div>
-                {{ end }}
-            </div>
-        </div>
+                </div>
     </section>
 </main>
