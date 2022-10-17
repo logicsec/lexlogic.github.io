@@ -7,7 +7,7 @@ public_folder: "images"
 publish_mode: editorial_workflow
 logo_url: https://logicsec.io/logos/logo-dark.png
 collections:
-  - name: "authors"
+  - name: authors
     label: "Authors"
     folder: "data/authors"
     create: true
