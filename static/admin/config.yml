@@ -22,14 +22,13 @@ collections:
             allow_add: true
             fields:
               - label: Name
-                name: name
+                name: {{fields.name}}
                 widget: list
-                field:
-                  - label: Name
-                    name: name
-                    widget: string 
                 allow_add: true
                 fields:
+                  - label: Name
+                    name: name
+                    widget: string
                   - label: About
                     name: about
                     widget: string
