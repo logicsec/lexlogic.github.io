@@ -85,7 +85,7 @@ collections:
         collection: settings
         value_field: authors.*
         search_fields: [authors.*]
-        display_fields: [authors.*.name]
+        display_fields: [authors.*]
         file: authors
         multiple: true
 
