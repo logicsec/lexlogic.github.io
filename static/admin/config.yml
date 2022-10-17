@@ -12,32 +12,28 @@ collections:
     label: Settings
     label_singular: 'Settings'
     files:
-      - label: Authors
-        name: authors
-        file: data/authors.yml
+      - name: authors
+        label: Authors
+        folder: data/authors/
+        media_folder: ''
+        public_folder: ''
+        format: json
+        allow_add: true
+        slug: "{{name}}"
         fields:
-          - name: authors
-            label: Authors
-            folder: data/authors/
-            media_folder: ''
-            public_folder: ''
-            format: json
-            allow_add: true
-            slug: "{{name}}"
-            fields:
-              - label: Name
-                name: name
-                widget: string
-              - label: About
-                name: about
-                widget: string
-              - label: Email
-                name: email
-                widget: string
-              - label: Author Image
-                name: image
-                widget: image
-                media_folder: /static/images/authors
+          - label: Name
+            name: name
+            widget: string
+          - label: About
+            name: about
+            widget: string
+          - label: Email
+            name: email
+            widget: string
+          - label: Author Image
+            name: image
+            widget: image
+            media_folder: /static/images/authors
           # - label: Authors
           #   name: authors
           #   widget: list
