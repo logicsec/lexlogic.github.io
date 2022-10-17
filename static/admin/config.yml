@@ -9,10 +9,10 @@ logo_url: https://logicsec.io/logos/logo-dark.png
 collections:
   - name: "authors"
     label: "Authors"
-    folder: "content/authors"
+    folder: "data/authors"
     create: true
     slug: "{{fields.name}}"
-    format: json
+    format: yml
     fields:
       - label: Name
         name: name

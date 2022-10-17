@@ -42,7 +42,7 @@
                       {{ with .Params.author }}
                         {{ range $i, $n := . -}}
                           {{ $name := urlize $n}}
-                          {{/*  {{ $data := index .Site.Content.Authors $name }}  */}}
+                          {{/*  {{ $data := (index .Site.Content.Authors $name).Name }}  */}}
                           <span class="article__author-link">{{ $name }}</span>
                         {{- end }}
                       {{- end }}
