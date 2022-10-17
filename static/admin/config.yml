@@ -80,9 +80,9 @@ collections:
         name: author
         widget: relation
         collection: authors
-        value_field: name
-        search_fields: [name]
-        display_fields: [name]
+        value_field: "{{slug}}"
+        search_fields: ['name']
+        display_fields: ["{name}"]
         file: authors
         multiple: true
 
