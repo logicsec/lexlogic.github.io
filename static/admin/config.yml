@@ -22,7 +22,7 @@ collections:
             media_folder: ''
             public_folder: ''
             format: json
-            create: true
+            allow_add: true
             slug: "{{name}}"
             fields:
               - label: Name
