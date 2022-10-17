@@ -3,7 +3,7 @@ draft: false
 featureImage: images/banner.png
 summary: ""
 author:
-  - Paul Knight
+  - paul-knight
 title: Exploring the JWT Attacks Landscape
 date: 2022-10-03
 description: ""
