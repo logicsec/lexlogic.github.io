@@ -7,52 +7,51 @@ public_folder: "images"
 publish_mode: editorial_workflow
 logo_url: https://logicsec.io/logos/logo-dark.png
 collections:
-  - name: settings
-    label: Settings
-    label_singular: 'Settings'
-      - name: "authors"
-        label: "Authors"
-        folder: "data/authors"
-        create: true
-        slug: "{{slug}}"
+  - name: "authors"
+    label: "Authors"
+    folder: "data/authors"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: Name
+        name: name
+        widget: string
+      - label: About
+        name: about
+        widget: string
+      - label: Email
+        name: email
+        widget: string
+      - label: Author Image
+        name: image
+        widget: image
+        media_folder: /static/images/authors
+
+  - label: Tags
+    name: tags
+    file: data/tags.json
+    fields:
+      - label: Tags
+        name: tags
+        widget: list
+        allow_add: true
         fields:
           - label: Name
             name: name
             widget: string
-          - label: About
-            name: about
-            widget: string
-          - label: Email
-            name: email
-            widget: string
-          - label: Author Image
-            name: image
-            widget: image
-            media_folder: /static/images/authors
-      - label: Tags
-        name: tags
-        file: data/tags.json
-        fields:
-          - label: Tags
-            name: tags
-            widget: list
-            allow_add: true
-            fields:
-              - label: Name
-                name: name
-                widget: string
+
+  - label: Categories
+    name: categories
+    file: data/categories.json
+    fields:
       - label: Categories
         name: categories
-        file: data/categories.json
+        widget: list
+        allow_add: true
         fields:
-          - label: Categories
-            name: categories
-            widget: list
-            allow_add: true
-            fields:
-              - label: Name
-                name: name
-                widget: string
+          - label: Name
+            name: name
+            widget: string
 
   - name: 'post'
     label: 'Post'
