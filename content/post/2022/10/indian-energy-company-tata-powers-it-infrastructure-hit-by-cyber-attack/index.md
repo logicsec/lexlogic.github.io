@@ -1,7 +1,7 @@
 ---
 draft: false
 author:
-  - Paul Knight
+  - paul-knight
 title: Indian Energy Company Tata Power's IT Infrastructure Hit By Cyber Attack
 date: 2022-10-16T02:54:26.642Z
 featured: true
