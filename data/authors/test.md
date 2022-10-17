@@ -1,6 +1,0 @@
----
-name: Test
-about: test
-email: test
-image: /static/images/authors/wallpaper.jpg
----
