@@ -12,6 +12,7 @@ collections:
     folder: "content/authors"
     create: true
     slug: "{{fields.name}}"
+    format: json
     fields:
       - label: Name
         name: name
