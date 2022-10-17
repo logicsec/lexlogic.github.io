@@ -39,8 +39,7 @@
                     {{- else if .Params.abstract }}
                     {{ $summary = .Params.abstract }}
                     {{- end }}
-                    {{ if not ( strings.Contains $summary "
-                <p>" ) }}
+                    {{ if not ( strings.Contains $summary "<p>" ) }}
                     {{ $summary | markdownify }}
                     {{ else }}
                     {{ $summary | markdownify }}
