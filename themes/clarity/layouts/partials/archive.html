@@ -1,15 +1,21 @@
 {{ $pages := .Pages }}
-{{ if .IsHome }}
-  {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-  <div class="grid-1 wrap content-hero"> 
-    {{ partial "slider" . }}
-  </div>
-{{ end }}
+{{/*  {{ if .IsHome }}  */}}
+<div class="grid-1 wrap content-hero"> 
+  {{ partial "slider" . }}
+</div>
+{{/*  {{ end }}  */}}
 
 {{ if eq .IsHome false }}
+<div class="grid-1 wrap content-hero"> 
+  <div class="taxonomy-title">
+    <span class="mt-4">{{ humanize .Data.Term | title }}</span>
+  </div>
+</div>
+{{ else }}
+  {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
   <div class="grid-1 wrap content-hero"> 
     <div class="taxonomy-title">
-      <span class="mt-4">{{ humanize .Data.Term | title }}</span>
+      <span class="mt-4">All Posts</span>
       </div>
   </div>
 {{ end }}
