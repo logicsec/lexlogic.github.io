@@ -18,6 +18,7 @@ collections:
         fields:
           - label: Authors
             name: authors
+            identifier_field: name
             widget: list
             allow_add: true
             fields:
