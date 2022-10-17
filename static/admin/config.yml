@@ -23,7 +23,7 @@ collections:
             fields:
               - label: Name
                 name: name
-                widget: string
+                widget: list
                 allow_add: true
                 fields:
                   - label: About
