@@ -24,6 +24,10 @@ collections:
               - label: Name
                 name: name
                 widget: list
+                field:
+                  - label: Name
+                    name: name
+                    widget: string 
                 allow_add: true
                 fields:
                   - label: About
