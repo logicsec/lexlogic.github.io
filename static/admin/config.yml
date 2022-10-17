@@ -22,7 +22,7 @@ collections:
             allow_add: true
             fields:
               - label: Name
-                name: {{fields.name}}
+                name: '{{fields.name}}'
                 widget: list
                 allow_add: true
                 fields:
