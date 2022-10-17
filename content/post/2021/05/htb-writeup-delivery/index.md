@@ -2,7 +2,7 @@
 featureImage: images/delivery_logo.png
 summary: ""
 author:
-  - Paul Knight
+  - paul-knight
 date: 2021-05-22
 toc: true
 thumbnail: images/delivery_logo.png
