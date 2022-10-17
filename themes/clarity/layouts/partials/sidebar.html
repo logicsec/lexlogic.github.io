@@ -90,6 +90,7 @@
       {{- end }}
     </ul>
     {{- $tagsLimit := (default 100 $s.numberOfTagsShown) }}
+    {{- $link := .Permalink }}
     {{- range $key, $value := .Site.Taxonomies }}
     {{- if gt $value 0 }}
     <div>
@@ -101,32 +102,37 @@
       <nav class="tags_nav">
         {{- $onPageTags := $.Page.Params.tags }}
         {{- $slicedTags := ($value.ByCount | first $tagsLimit) }}
+        {{- $url := "" }}
+        {{- $name := "" }}
+        {{- $forwardSlash := "/" }}
+        
         {{- range $slicedTags }}
-        <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/' class="post_tag button button_translucent" title="{{ .Name }}">
-          {{ humanize .Name }}
-          {{/*  <span class="button_tally">{{ .Count }}</span>  */}}
-        </a>
+          {{/*  {{- $url = trim (absLangURL $url) $forwardSlash }}  */}}
+          {{- $url = printf "%s/%s/" $key .Name |  absLangURL}}
+          <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/' class="{{ if eq (trim (absLangURL $url) $forwardSlash) (trim $link $forwardSlash) }} accent-background{{ end}} post_tag button button_translucent" title="{{ .Name }}">
+            {{ humanize .Name }}
+          </a>
         {{ end }}
         {{ if gt (len $value.ByCount) $tagsLimit }}
-        <br>
-        <div class="post_tags_toggle button">{{ T (printf "all_%s" (lower $key)) }}</div>
-        {{- $tagsInfo := newScratch }}
-        <div class="post_tags">
-          <div class="tags_list">
-            {{- range $value.Alphabetical }}
-            {{ $tagsInfo.Add "tagsInfo" (slice .Name .Count)}}
-            <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/' class=" post_tag button button_translucent" data-position={{ .Count }} title="{{ .Name }}">
-              {{- humanize .Name -}}
-              {{/*  <span class="button_tally">{{ .Count }}</span>  */}}
-            </a>
-            {{ end }}
-            <div class="tags_sort"><span title="sort alphabetically">[A~Z]</span><span title="sort by count">[0~9]</span>
+          <br>
+          <div class="post_tags_toggle button">{{ T (printf "all_%s" (lower $key)) }}</div>
+          {{- $tagsInfo := newScratch }}
+          <div class="post_tags">
+            <div class="tags_list">
+              {{- range $value.Alphabetical }}
+                {{- $url = trim (absLangURL $url) $forwardSlash }}
+                {{ $tagsInfo.Add "tagsInfo" (slice .Name .Count)}}
+                <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/' class="{{ if eq $url $link }} accent-background{{ end}} post_tag button button_translucent" data-position={{ .Count }} title="{{ .Name }}">
+                  {{- humanize .Name -}}
+                </a>
+              {{ end }}
+              <div class="tags_sort"><span title="sort alphabetically">[A~Z]</span><span title="sort by count">[0~9]</span>
+              </div>
+              <span class="tags_hide"><svg class="icon">
+              <use xlink:href="#closeme"></use>
+            </svg></span>
             </div>
-            <span class="tags_hide"><svg class="icon">
-            <use xlink:href="#closeme"></use>
-          </svg></span>
           </div>
-        </div>
         {{- end }}
       </nav>
     </div>
