@@ -84,8 +84,8 @@ collections:
         widget: relation
         collection: settings
         value_field: authors.*
-        search_fields: [authors.*]
-        display_fields: [authors.*]
+        search_fields: [authors]
+        display_fields: [authors.*.name]
         file: authors
         multiple: true
 
