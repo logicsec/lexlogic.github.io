@@ -33,7 +33,7 @@ collections:
               - label: Author Image
                 name: image
                 widget: image
-                media_folder: images
+                media_folder: /static/images/authors
       - label: Tags
         name: tags
         file: data/tags.json
