@@ -14,7 +14,7 @@ collections:
     files:
       - label: Authors
         name: authors
-        file: data/authors.toml
+        file: data/authors.yml
         fields:
           - label: Authors
             name: authors
