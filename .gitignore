@@ -1,5 +1,5 @@
 node_modules/
 ${ZDOTDIR:-$HOME}
 .vscode
-/public/
-/resources/_gen/
+public/
+resources/_gen/
