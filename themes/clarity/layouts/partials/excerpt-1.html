@@ -4,13 +4,13 @@
 <li class="post_item">
     <div class="article col col-4 col-d-6 col-t-12 animate">
         <div class="article__inner">
-            {{/* {{- if (eq .Featured true) }}
-            <ion-icon class="featured-post" name="star-outline"></ion-icon>
-            {{ end }} */}}
+<!--            {{- if (eq .Params.Featured true) }}-->
+<!--                <ion-icon class="featured-post" name="star-outline"></ion-icon>-->
+<!--            {{ end }}-->
 
             <a class="article__image" href="{{ .Permalink }}">
                 {{- with .Params.thumbnail }}
-                {{- partial "image" (dict "file" . "alt" $.Title "type" "thumbnail" "Page" $.Page ) }}
+                    {{- partial "image" (dict "file" . "alt" $.Title "type" "thumbnail" "Page" $.Page ) }}
                 {{- end }}
             </a>
             <div class="article__content">

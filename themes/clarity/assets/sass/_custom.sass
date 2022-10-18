@@ -317,3 +317,85 @@
 
 .bottom
     bottom: 0px
+
+.side-items
+  display: grid
+  grid-template-columns: 1fr
+  grid-gap: 25px
+
+.side-item
+  display: flex
+
+  .entry-inner
+    height: 180px
+
+  .entry-image-wrap
+    width: 98px
+    height: 65px
+    margin: 0 13px 0 0
+
+.rtl .side-item .entry-image-wrap
+  margin: 0 0 0 13px
+
+.side-item
+  .entry-inner .entry-image-wrap
+    width: 100%
+    height: 100%
+    margin: 0
+
+  .entry-header:not(.entry-info)
+    flex: 1
+
+  .entry-title
+    font-size: 14px
+
+  .entry-inner
+    .entry-title
+      font-size: 19px
+
+    .entry-meta
+      flex-wrap: wrap
+
+.side3-items
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-gap: 20px
+
+.side3-item
+  display: flex
+  flex-direction: column
+
+  .entry-image-wrap
+    width: 100%
+    height: 90px
+    margin: 0 0 10px
+
+  .entry-title
+    font-size: 14px
+
+.entry-image-wrap, .author-avatar-wrap, .comments .avatar-image-container
+  display: block
+  position: relative
+  overflow: hidden
+  background-color: var(--gray-bg)
+  z-index: 5
+  color: transparent
+
+.entry-image, .author-avatar
+  display: block
+  position: relative
+  width: 100%
+  height: 100%
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat
+  z-index: 1
+  transform-origin: center
+  opacity: 0
+  transition: opacity .35s ease,transform .35s ease
+
+.entry-image.pbt-lazy, .author-avatar.pbt-lazy
+  opacity: 1
+
+.entry-image-wrap:hover .entry-image, .cs:hover .entry-image-wrap .entry-image
+  transform: scale(1.05)
