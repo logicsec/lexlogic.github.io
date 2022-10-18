@@ -2,6 +2,7 @@
 featureImage: images/banner.jpg
 summary: Tens of thousands of cameras have failed to patch a critical,
   11-month-old CVE, leaving thousands of organizations exposed.
+news_post: true
 author:
   - paul-knight
 title: Cybercriminals Are Selling Access to Chinese Surveillance Cameras
