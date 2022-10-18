@@ -1,6 +1,7 @@
 ---
 featureImage: images/ready_logo.png
 summary: ""
+news_post: false
 author:
   - paul-knight
 date: 2021-05-22
