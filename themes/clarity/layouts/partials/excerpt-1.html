@@ -35,29 +35,29 @@
                 <p class="article__excerpt">
                     {{- $summary := truncate 120 .Summary }}
                     {{- if .Params.summary }}
-                    {{- $summary = .Params.summary }}
+                        {{- $summary = .Params.summary }}
                     {{- else if .Params.abstract }}
-                    {{ $summary = .Params.abstract }}
+                        {{ $summary = .Params.abstract }}
                     {{- end }}
                     {{ if not ( strings.Contains $summary "<p>" ) }}
-                    {{ $summary | markdownify }}
+                        {{ $summary | markdownify }}
                     {{ else }}
-                    {{ $summary | markdownify }}
+                        {{ $summary | markdownify }}
                     {{ end }}
                 </p>
                 <div class="article__bottom">
                     <div class="article__bottom-meta">
                         {{ with .Params.author }}
-                        {{ range $i, $n := . -}}
-                        {{ $name := urlize $n}}
-                        {{ $data := index $authors $name }}
-                        {{ $image := strings.TrimPrefix "/static" $data.image }}
-                        <div class="article__author">
-                            <img class="article__author-image lazy loaded"
-                                 alt="{{ $data.name }}'s Picture" data-ll-status="loaded" src="{{ absURL $image }}">
-                            <span class="article__author-link">{{ $data.name }}</span>
-                        </div>
-                        {{- end }}
+                            {{ range $i, $n := . -}}
+                                {{ $name := urlize $n}}
+                                {{ $data := index $authors $name }}
+                                {{ $image := strings.TrimPrefix "/static" $data.image }}
+                                <div class="article__author">
+                                    <img class="article__author-image lazy loaded"
+                                         alt="{{ $data.name }}'s Picture" data-ll-status="loaded" src="{{ absURL $image }}">
+                                    <span class="article__author-link">{{ $data.name }}</span>
+                                </div>
+                            {{- end }}
                         {{- end }}
                     </div>
                 </div>

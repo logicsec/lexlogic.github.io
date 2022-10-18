@@ -12,7 +12,7 @@
                     Featured Posts
                 </div>
             </div>
-            {{- range . }}
+            {{- range first 3 . }}
                 <div class="side-item item-1">
                     <a class="entry-image-wrap sz-1 is-image" href="{{ .Permalink }}" title="{{ .Title }}">
                         <span class="entry-image pbt-lazy" data-src="{{.Permalink}}{{.Params.thumbnail}}" style="background-image:url('{{.RelPermalink}}{{.Params.thumbnail}}')"></span>
@@ -31,29 +31,7 @@
             {{- end }}
         {{- end }}
 
-        <!--Recent Posts-->
-        <div class="title-wrap main-title">
-            <div class="taxonomy-title">
-                Recent Posts
-            </div>
-        </div>
-        {{- $recent := default 8 $s.numberOfRecentPosts }}
-        {{- range first $recent $posts | symdiff $featuredPosts }}
-            <div class="side-item item-1">
-                <a class="entry-image-wrap sz-1 is-image" href="{{ .Permalink }}" title="{{ .Title }}">
-                    <span class="entry-image pbt-lazy" data-src="{{.Permalink}}{{.Params.thumbnail}}" style="background-image:url('{{.RelPermalink}}{{.Params.thumbnail}}')"></span>
-                </a>
-                <div class="entry-header">
-                    <h2 class="entry-title">
-                        <a href="{{ .Permalink }}" title="{{ .Title | markdownify }}">
-                            {{ .Title | markdownify }}
-                        </a>
-                    </h2>
-                    <div class="entry-meta"><time class="published" datetime="2021-08-02T06:32:00-07:00">{{ dateFormat "January 02, 2006"
-                        .Date }}</time></div>
-                </div>
-            </div>
-        {{- end }}
+
 
         {{- $tagsLimit := (default 100 $s.numberOfTagsShown) }}
         {{- $link := .Permalink }}
