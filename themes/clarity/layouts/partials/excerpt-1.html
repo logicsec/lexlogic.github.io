@@ -2,12 +2,8 @@
 {{- $authors := .Site.Data.authors }}
 
 <li class="post_item">
-    <div class="article col col-4 col-d-6 col-t-12 animate">
+    <div class="article animate">
         <div class="article__inner">
-<!--            {{- if (eq .Params.Featured true) }}-->
-<!--                <ion-icon class="featured-post" name="star-outline"></ion-icon>-->
-<!--            {{ end }}-->
-
             <a class="article__image" href="{{ .Permalink }}">
                 {{- with .Params.thumbnail }}
                     {{- partial "image" (dict "file" . "alt" $.Title "type" "thumbnail" "Page" $.Page ) }}

@@ -332,6 +332,7 @@
 
 .side-item
   display: flex
+  margin-bottom: 27px
 
   .entry-inner
     height: 180px
@@ -458,3 +459,76 @@
 
   &:hover
     color: var(--main-color)
+
+.list1-items
+  display: grid
+  grid-template-columns: 1fr
+  grid-gap: 25px
+
+.list1-item
+  display: flex
+
+  .entry-image-wrap
+    width: 235px
+    height: 150px
+    margin: 0 18px 0 0
+
+.rtl .list1-item .entry-image-wrap
+  margin: 0 0 0 18px
+
+.list1-item
+  .entry-header
+    flex: 1
+
+  .entry-title
+    font-size: 21px
+
+  .entry-excerpt
+    font-size: 14px
+    margin: 10px 0 0
+
+  .entry-meta
+    flex-wrap: wrap
+    margin: 10px 0 0
+
+.block1-items
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  align-items: start
+  grid-gap: 25px
+
+  .cs
+    .entry-inner
+      height: 335px
+
+    .entry-image-wrap
+      width: 100%
+      height: 100%
+
+    .entry-title
+      font-size: 21px
+
+    .entry-meta
+      flex-wrap: wrap
+
+.block1-list
+  display: grid
+  grid-template-columns: 1fr
+  grid-gap: 25px
+
+  .block1-item
+    display: flex
+
+  .entry-header
+    flex: 1
+
+  .entry-image-wrap
+    width: 98px
+    height: 65px
+    margin: 0 13px 0 0
+
+.rtl .block1-list .entry-image-wrap
+  margin: 0 0 0 13px
+
+.block1-list .entry-title
+  font-size: 14px

@@ -1,35 +1,16 @@
-<li class="post_item">
-    <div class="excerpt">
-        <div class="excerpt_header">
-            <h3 class="post_link">
-                <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title | markdownify }}</a>
-            </h3>
-            {{ partial "post-meta" . }}
+<div class="side-item item-1">
+    <a class="entry-image-wrap sz-1 is-image" href="{{ .Permalink }}" title="{{ .Title }}">
+        <span class="entry-image pbt-lazy" data-src="{{.Permalink}}{{.Params.thumbnail}}" style="background-image:url('{{.RelPermalink}}{{.Params.thumbnail}}')"></span>
+    </a>
+    <div class="entry-header">
+        <div class="entry-title">
+            <a href="{{ .Permalink }}" title="{{ .Title | markdownify }}">
+                {{ .Title | markdownify }}
+            </a>
         </div>
-        {{- with .Params.thumbnail }}
-        <div class="excerpt_footer partition">
-            <div class="excerpt_thumbnail">
-                {{- partial "image" (dict "file" . "alt" $.Title "type" "thumbnail" "Page" $.Page ) }}
-            </div>
-            {{ else }}
-            <div class="excerpt_footer">
-                {{- end }}
-                <div class="pale">
-                    {{- $summary := truncate 320 .Summary }}
-                    {{- if .Params.summary }}
-                    {{- $summary = .Params.summary }}
-                    {{- else if .Params.abstract }}
-                    {{ $summary = .Params.abstract }}
-                    {{- end }}
-                    {{ if not ( strings.Contains $summary "<p>" ) }}
-                    <p>{{ $summary | markdownify }}</p>
-                    {{ else }}
-                    {{ $summary | markdownify }}
-                    {{ end }}
-                    <br>
-                    {{- $r := T "read_more" }}
-                    <a href="{{ .Permalink }}" title="{{ $r }}" class="excerpt_more button">{{ $r }}</a>
-                </div>
-            </div>
+        <div class="entry-meta">
+            <span class="entry-time mi"><time class="published" datetime="2021-07-31T12:21:00.000-07:00">{{ dateFormat "January 02, 2006"
+            .Date }}</time></span>
         </div>
-</li>
+    </div>
+</div>

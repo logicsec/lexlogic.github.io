@@ -12,15 +12,14 @@
 
 
 <div class="grid-inverse wrap content">
-    <div class="panel">
-
+    <div class="articles panel">
         {{ if eq .IsHome false }}
-        <div class="title-wrap main-title">
-            <div class="taxonomy-title">
-                <span class="mt-4">{{ humanize .Data.Term | title }}</span>
+            <div class="title-wrap main-title">
+                <div class="taxonomy-title">
+                    <span class="mt-4">{{ humanize .Data.Term | title }}</span>
+                </div>
+                <a class="title-link" href="/post">View all</a>
             </div>
-            <a class="title-link" href="/search">View all</a>
-        </div>
         {{ else }}
             {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
             <div class="title-wrap main-title">
@@ -31,13 +30,18 @@
             </div>
         {{ end }}
         <ul class="grid-2 posts" id="posts">
-            {{- range (.Paginate $pages).Pages }}
-                {{ partial "excerpt-1" . }}
+            {{- range $index, $name := (.Paginate $pages).Pages }}
+                {{ if eq $index 0 }}
+                    {{ partial "excerpt-1" . }}
+                {{ end }}
             {{- end }}
-            <li>
-                {{- template "_internal/pagination.html" . }}
-            </li>
-        </ul>
+            <div class="grid-1">
+                {{- range $index, $name := (.Paginate $pages).Pages }}
+                    {{ if ne $index 0 }}
+                        {{ partial "excerpt-2" . }}
+                    {{ end }}
+                {{- end }}
+            </div>
     </div>
     {{- partial "sidebar" . }}
 </div>

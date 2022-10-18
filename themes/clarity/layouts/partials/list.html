@@ -8,12 +8,28 @@
 
 
 <div class="grid-inverse wrap content">
-    <div class="panel">
-        <div class="title-wrap main-title">
-            <div class="taxonomy-title">
-                <span class="mt-4">All Posts</span>
+    <div class="articles panel">
+        {{ if eq .IsHome false }}
+            <div class="title-wrap main-title">
+                <div class="taxonomy-title">
+                    <span class="mt-4">
+                        {{ if .Data.Term }}
+                            {{ humanize .Data.Term | title }}
+                        {{ else }}
+                            All Posts
+                        {{ end }}
+                    </span>
+                </div>
             </div>
-        </div>
+        {{ else }}
+        {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+            <div class="title-wrap main-title">
+                <div class="taxonomy-title">
+                    <span class="mt-4">Latest News</span>
+                </div>
+                <a class="title-link" href="/post">View all</a>
+            </div>
+        {{ end }}
         <ul class="grid-2 posts" id="posts">
             {{- range .Pages }}
                 {{ partial "excerpt-1" . }}
