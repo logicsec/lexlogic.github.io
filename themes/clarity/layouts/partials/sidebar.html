@@ -1,18 +1,17 @@
 {{ $s := site.Params }}
-<aside class="sidebar">
+<aside class="sidebar panel">
     <section class="sidebar_inner">
-        <br>
-
         {{- $posts := where .Site.RegularPages "Type" "in" $s.mainSections }}
         {{- $featured := default 8 $s.numberOfFeaturedPosts }}
         {{- $featuredPosts := first $featured (where $posts "Params.featured" true)}}
 
         <!--Featured Posts-->
         {{- with $featuredPosts }}
-            <h4 class="widget-title title medium bordered">
-                <span class="mt-4"><span class="accent">Featured</span> Posts</span>
-                <span class="border"></span>
-            </h4>
+            <div class="title-wrap main-title">
+                <div class="taxonomy-title">
+                    Featured Posts
+                </div>
+            </div>
             {{- range . }}
                 <div class="side-item item-1">
                     <a class="entry-image-wrap sz-1 is-image" href="{{ .Permalink }}" title="{{ .Title }}">
@@ -33,16 +32,16 @@
         {{- end }}
 
         <!--Recent Posts-->
-        <h4 class="widget-title title medium bordered">
-            <span class="mt-4"><span class="accent">Recent</span> Posts</span>
-            <span class="border"></span>
-        </h4>
+        <div class="title-wrap main-title">
+            <div class="taxonomy-title">
+                Recent Posts
+            </div>
+        </div>
         {{- $recent := default 8 $s.numberOfRecentPosts }}
         {{- range first $recent $posts | symdiff $featuredPosts }}
             <div class="side-item item-1">
                 <a class="entry-image-wrap sz-1 is-image" href="{{ .Permalink }}" title="{{ .Title }}">
                     <span class="entry-image pbt-lazy" data-src="{{.Permalink}}{{.Params.thumbnail}}" style="background-image:url('{{.RelPermalink}}{{.Params.thumbnail}}')"></span>
-                    <!--                        <img class="entry-image pbt-lazy" src="{{.RelPermalink}}{{.Params.thumbnail}}">-->
                 </a>
                 <div class="entry-header">
                     <h2 class="entry-title">
@@ -61,10 +60,11 @@
         {{- range $key, $value := .Site.Taxonomies }}
             {{- if gt $value 0 }}
                 <div>
-                    <h4 class="widget-title title medium bordered">
-                        <span class="mt-4 taxonomy" id="{{ $key }}-section">{{ T $key }}</span>
-                        <span class="border"></span>
-                    </h4>
+                    <div class="title-wrap main-title">
+                        <div class="taxonomy-title">
+                            {{ T $key }}
+                        </div>
+                    </div>
 
                     <nav class="tags_nav">
                         {{- $onPageTags := $.Page.Params.tags }}

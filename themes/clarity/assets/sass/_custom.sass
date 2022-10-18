@@ -299,15 +299,24 @@
   margin-bottom: -5rem
 
 .taxonomy-title
-  font-size: 48px;
-  font-size: 2.6666666667rem;
-  letter-spacing: -1px;
-  line-height: 1.2em !important;
-  line-height: 3.1111111111rem;
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  font-color: #000 !important
-  margin-top: 20px;
+  position: relative;
+  height: 30px;
+  font-size: 15px;
+  color: #16161a;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
+
+  &:after
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background-color: $htb;
+    margin:
 
 .accent-background
   background-color: #D44D5C
@@ -399,3 +408,53 @@
 
 .entry-image-wrap:hover .entry-image, .cs:hover .entry-image-wrap .entry-image
   transform: scale(1.05)
+
+.panel
+    background-color: #fff
+    padding: 35px
+    border-radius: 10px
+
+.title-wrap
+  display: flex
+  justify-content: space-between
+  height: 30px
+  margin: 20px 0 20px
+  border-bottom: 2px solid rgba(155,155,155,0.1)
+
+  >
+    *
+      display: flex
+      align-items: flex-start
+
+    .title
+      position: relative
+      height: 30px
+      font-size: 15px
+      color: var(--widget-title-color)
+      font-weight: 700
+      text-transform: uppercase
+      line-height: 1
+      margin: 0
+
+      &:after
+        position: absolute
+        content: ''
+        left: 0
+        bottom: 0
+        width: 30px
+        height: 2px
+        background-color: var(--widget-dash-color)
+        margin: 0
+
+.rtl .title-wrap > .title:after
+  left: unset
+  right: 0
+
+.title-wrap > .title-link
+  font-size: 13px
+  color: var(--meta-color)
+  line-height: 1
+  font-weight: var(--light-weight)
+
+  &:hover
+    color: var(--main-color)

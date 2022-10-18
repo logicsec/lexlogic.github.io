@@ -3,21 +3,6 @@
     {{ partial "slider" . }}
 </div>
 
-{{ if eq .IsHome false }}
-    <div class="grid-1 wrap content-hero">
-        <div class="taxonomy-title">
-            <span class="mt-4">{{ humanize .Data.Term | title }}</span>
-        </div>
-    </div>
-{{ else }}
-    {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-    <div class="grid-1 wrap content-hero">
-        <div class="taxonomy-title">
-            <span class="mt-4">All Posts</span>
-        </div>
-    </div>
-{{ end }}
-
 {{ if eq site.Params.pinFeatured true }}
     {{ $featured := default 8 site.Params.numberOfPinnedPosts }}
     {{ $featuredPosts := first $featured (where $pages "Params.featured" true)}}
@@ -27,9 +12,23 @@
 
 
 <div class="grid-inverse wrap content">
-    <div>
+    <div class="panel">
+        {{ if eq .IsHome false }}
+        <div class="title-wrap main-title">
+            <div class="taxonomy-title">
+                <span class="mt-4">{{ humanize .Data.Term | title }}</span>
+            </div>
+        </div>
+        {{ else }}
+        {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+        <div class="title-wrap main-title">
+            <div class="taxonomy-title">
+                <span class="mt-4">Latest News</span>
+            </div>
+        </div>
+        {{ end }}
         <ul class="grid-2 posts" id="posts">
-            {{- range (.Paginate $pages).Pages }}
+            {{- range first 4 (.Paginate $pages).Pages }}
                 {{ partial "excerpt-1" . }}
             {{- end }}
             <li>
