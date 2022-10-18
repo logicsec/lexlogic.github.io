@@ -56,6 +56,19 @@ collections:
                 name: name
                 widget: string
 
+      - label: Series
+        name: series
+        file: data/series.json
+        fields:
+          - label: Series
+            name: series
+            widget: list
+            allow_add: true
+            fields:
+              - label: Name
+                name: name
+                widget: string
+
   - name: 'post'
     label: 'Post'
     folder: 'content/post'
@@ -189,4 +202,14 @@ collections:
         search_fields: [categories.*.name]
         display_fields: [categories.*.name]
         file: categories
+        multiple: true
+
+      - label: Series
+        name: series
+        widget: relation
+        collection: settings
+        value_field: series.*.name
+        search_fields: [series.*.name]
+        display_fields: [series.*.name]
+        file: series
         multiple: true

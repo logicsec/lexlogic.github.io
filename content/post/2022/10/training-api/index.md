@@ -12,6 +12,8 @@ usePageBundles: true
 thumbnail: images/banner.png
 shareImage: images/banner.png
 codeMaxLines: 10
+series:
+  - research
 tags:
   - Application Security
   - Vulnerabilities

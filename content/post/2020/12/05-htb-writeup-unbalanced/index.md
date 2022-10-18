@@ -9,7 +9,7 @@ toc: true
 thumbnail: images/unbalanced_logo.png
 codeMaxLines: 10
 series:
-  - htb
+  - hack the box
 title: HTB Writeup - Unbalanced
 description: ""
 usePageBundles: true

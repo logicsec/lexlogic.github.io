@@ -9,7 +9,7 @@ toc: true
 thumbnail: images/delivery_logo.png
 codeMaxLines: 10
 series:
-  - htb
+  - hack the box
 title: HTB Writeup - Delivery
 description: ""
 usePageBundles: true
