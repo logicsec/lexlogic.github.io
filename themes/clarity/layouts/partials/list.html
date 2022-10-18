@@ -1,0 +1,24 @@
+{{ $pages := .Pages }}
+{{ if eq site.Params.pinFeatured true }}
+    {{ $featured := default 8 site.Params.numberOfPinnedPosts }}
+    {{ $featuredPosts := first $featured (where $pages "Params.featured" true)}}
+    {{ $normalPosts := $pages | symdiff $featuredPosts }}
+    {{ $pages = $featuredPosts | append $normalPosts }}
+{{ end }}
+
+
+<div class="grid-inverse wrap content">
+    <div class="panel">
+        <div class="title-wrap main-title">
+            <div class="taxonomy-title">
+                <span class="mt-4">All Posts</span>
+            </div>
+        </div>
+        <ul class="grid-2 posts" id="posts">
+            {{- range .Pages }}
+                {{ partial "excerpt-1" . }}
+            {{- end }}
+        </ul>
+    </div>
+    {{- partial "sidebar" . }}
+</div>
