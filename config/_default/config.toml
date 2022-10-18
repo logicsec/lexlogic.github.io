@@ -16,7 +16,7 @@ DefaultContentLanguage = "en"
 # config/_default/menus/menu.en.toml
 
 [permalinks]
-  posts = '/:year/:month/:title'
+  post = '/:year/:month/:title'
 
 
 [taxonomies]

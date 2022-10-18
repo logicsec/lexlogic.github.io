@@ -58,7 +58,7 @@ collections:
 
   - name: 'post'
     label: 'Post'
-    folder: 'content/posts'
+    folder: 'content/post'
     path: '{{year}}/{{month}}/{{slug}}/index'
     preview_path: post/{{slug}}
     nested:
