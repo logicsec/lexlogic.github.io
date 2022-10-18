@@ -1,5 +1,6 @@
 ---
 draft: false
+news_post: true
 author:
   - paul-knight
 title: Indian Energy Company Tata Power's IT Infrastructure Hit By Cyber Attack
