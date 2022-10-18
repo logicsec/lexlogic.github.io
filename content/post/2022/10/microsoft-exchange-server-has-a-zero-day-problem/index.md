@@ -2,6 +2,7 @@
 featureImage: images/thumbnail.png
 summary: Microsoft confirmed that two unpatched Exchange Server vulnerabilities
   are actively being exmploited by cybercriminals across the globe
+news_post: true
 author:
   - paul-knight
 title: Microsoft Exchange Server Has a Zero-Day Problem
