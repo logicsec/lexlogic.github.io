@@ -12,7 +12,7 @@
                     Featured Posts
                 </div>
             </div>
-            {{- range first 3 . }}
+            {{- range . }}
                 <div class="side-item item-1">
                     <a class="entry-image-wrap sz-1 is-image" href="{{ .Permalink }}" title="{{ .Title }}">
                         <span class="entry-image pbt-lazy" data-src="{{.Permalink}}{{.Params.thumbnail}}" style="background-image:url('{{.RelPermalink}}{{.Params.thumbnail}}')"></span>
