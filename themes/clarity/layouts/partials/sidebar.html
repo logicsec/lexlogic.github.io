@@ -1,5 +1,5 @@
 {{ $s := site.Params }}
-<aside class="sidebar panel">
+<aside class="sidebar">
     <section class="sidebar_inner">
         {{- $posts := where .Site.RegularPages "Type" "in" $s.mainSections }}
         {{- $featured := default 8 $s.numberOfFeaturedPosts }}
@@ -7,28 +7,30 @@
 
         <!--Featured Posts-->
         {{- with $featuredPosts }}
-            <div class="title-wrap main-title">
-                <div class="taxonomy-title">
-                    Featured Posts
-                </div>
-            </div>
-            {{- range . }}
-                <div class="side-item item-1">
-                    <a class="entry-image-wrap sz-1 is-image" href="{{ .Permalink }}" title="{{ .Title }}">
-                        <span class="entry-image pbt-lazy" data-src="{{.Permalink}}{{.Params.thumbnail}}" style="background-image:url('{{.RelPermalink}}{{.Params.thumbnail}}')"></span>
-<!--                        <img class="entry-image pbt-lazy" src="{{.RelPermalink}}{{.Params.thumbnail}}">-->
-                    </a>
-                    <div class="entry-header">
-                        <h2 class="entry-title">
-                            <a href="{{ .Permalink }}" title="{{ .Title | markdownify }}">
-                                {{ .Title | markdownify }}
-                            </a>
-                        </h2>
-                        <div class="entry-meta"><time class="published" datetime="2021-08-02T06:32:00-07:00">{{ dateFormat "January 02, 2006"
-                            .Date }}</time></div>
+            <div class="panel">
+                <div class="title-wrap main-title">
+                    <div class="taxonomy-title">
+                        Featured Posts
                     </div>
                 </div>
-            {{- end }}
+                {{- range . }}
+                    <div class="side-item item-1">
+                        <a class="entry-image-wrap sz-1 is-image" href="{{ .Permalink }}" title="{{ .Title }}">
+                            <span class="entry-image pbt-lazy" data-src="{{.Permalink}}{{.Params.thumbnail}}" style="background-image:url('{{.RelPermalink}}{{.Params.thumbnail}}')"></span>
+    <!--                        <img class="entry-image pbt-lazy" src="{{.RelPermalink}}{{.Params.thumbnail}}">-->
+                        </a>
+                        <div class="entry-header">
+                            <h2 class="entry-title">
+                                <a href="{{ .Permalink }}" title="{{ .Title | markdownify }}">
+                                    {{ .Title | markdownify }}
+                                </a>
+                            </h2>
+                            <div class="entry-meta"><time class="published" datetime="2021-08-02T06:32:00-07:00">{{ dateFormat "January 02, 2006"
+                                .Date }}</time></div>
+                        </div>
+                    </div>
+                {{- end }}
+            </div>
         {{- end }}
 
 
@@ -37,7 +39,7 @@
         {{- $link := .Permalink }}
         {{- range $key, $value := .Site.Taxonomies }}
             {{- if gt $value 0 }}
-                <div>
+                <div class="panel">
                     <div class="title-wrap main-title">
                         <div class="taxonomy-title">
                             {{ T $key }}
