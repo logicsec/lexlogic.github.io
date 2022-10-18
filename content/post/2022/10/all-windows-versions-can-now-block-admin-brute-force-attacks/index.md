@@ -1,5 +1,6 @@
 ---
 draft: false
+news_post: true
 author:
   - paul-knight
 title: All Windows versions can now block admin brute-force attacks
