@@ -2,6 +2,7 @@
 draft: false
 showRelatedInArticle: true
 featureImageAlt: Description of image
+news_post: true
 author:
   - paul-knight
 title: Microsoft Is Rolling Out a Fix for Outlook Crashing After Launch
