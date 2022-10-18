@@ -1,5 +1,6 @@
 ---
 draft: false
+news_post: true
 author:
   - paul-knight
 title: Us Airports Taken Down in Ddos Attacks by Pro Russian Hackers
