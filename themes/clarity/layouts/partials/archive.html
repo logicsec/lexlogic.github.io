@@ -21,7 +21,7 @@
                 <a class="title-link" href="/post">View all</a>
             </div>
         {{ else }}
-            {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+            {{ $pages = where .Site.Pages ".Params.news_post" true }}
             <div class="title-wrap main-title">
                 <div class="taxonomy-title">
                     <span class="mt-4">Latest News</span>
@@ -42,6 +42,7 @@
                     {{ end }}
                 {{- end }}
             </div>
+        </ul>
     </div>
     {{- partial "sidebar" . }}
 </div>
