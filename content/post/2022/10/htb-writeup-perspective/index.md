@@ -5,6 +5,7 @@ author:
   - paul-knight
 title: HTB Writeup - Perspective
 date: 2022-10-19T14:06:14.308Z
+featured: true
 usePageBundles: true
 featureImage: images/perspective.png
 thumbnail: images/perspective.png
