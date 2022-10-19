@@ -4,7 +4,7 @@ baseurl = "https://logicsec.io"  # Include trailing slash
 # title = "Clarity"
 copyright = "Copyright © 2022, Logic; all rights reserved."
 # canonifyurls = true
-paginate = 5
+paginate = 6
 theme = "clarity"
 disqusShortname = "lexlogic"
 

@@ -16,13 +16,14 @@
                         {{ if .Data.Term }}
                             {{ humanize .Data.Term | title }}
                         {{ else }}
-                            All Posts
+                            {{ $pages = where .Site.Pages ".Params.news_post" true }}
+                            All News
                         {{ end }}
                     </span>
                 </div>
             </div>
         {{ else }}
-        {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+            {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
             <div class="title-wrap main-title">
                 <div class="taxonomy-title">
                     <span class="mt-4">Latest News</span>
@@ -31,10 +32,13 @@
             </div>
         {{ end }}
         <ul class="grid-2 posts" id="posts">
-            {{- range .Pages }}
+            {{- range (.Paginate $pages).Pages }}
                 {{ partial "excerpt-1" . }}
             {{- end }}
         </ul>
+        <div class="center">
+            {{- template "_internal/pagination.html" . }}
+        </div>
     </div>
     {{- partial "sidebar" . }}
 </div>
