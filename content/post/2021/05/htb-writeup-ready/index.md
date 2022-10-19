@@ -15,8 +15,7 @@ codeMaxLines: 10
 tags:
   - HackTheBox
   - CTF
-categories:
-  - Education & Training
+categories: Education & Training
 series:
   - hack the box
 aliases:
