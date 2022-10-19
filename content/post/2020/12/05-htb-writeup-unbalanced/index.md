@@ -1,24 +1,24 @@
 ---
-featureImage: images/unbalanced_logo.png
+featureImage: images/unbala-768x344.png
 summary: ""
 news_post: false
 author:
   - paul-knight
-date: 2021-12-05
-toc: true
-thumbnail: images/unbalanced_logo.png
-codeMaxLines: 10
-series:
-  - hack the box
 title: HTB Writeup - Unbalanced
+date: 2021-12-05
 description: ""
+toc: true
 usePageBundles: true
-shareImage: images/unbalanced_logo.png
+thumbnail: images/unbala-768x344.png
+shareImage: images/unbala-768x344.png
+codeMaxLines: 10
 tags:
   - HackTheBox
   - CTF
 categories:
   - Education & Training
+series:
+  - hack the box
 aliases:
   - unbalanced
 ---
