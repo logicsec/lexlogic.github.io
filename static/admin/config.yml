@@ -212,4 +212,5 @@ collections:
         search_fields: [series.*.name]
         display_fields: [series.*.name]
         file: series
-        multiple: true
+        required: false
+        multiple: false
