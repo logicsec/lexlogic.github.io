@@ -17,8 +17,7 @@ showRelatedInArticle: true
 tags:
   - Virus & Malware
   - Supply Chain
-categories:
-  - Cybercrime
+categories: Cybercrime
 ---
 In what appears to be a new trend for cybercrime groups, India's largest integrated power company, Tata Power Ltd., confirmed on Friday that it had been the target of a cyber attack.
 

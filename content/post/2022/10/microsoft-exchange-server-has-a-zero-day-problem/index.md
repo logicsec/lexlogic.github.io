@@ -20,8 +20,7 @@ tags:
   - Microsoft
   - Application Security
   - Vulnerabilities
-categories:
-  - Malware & Threats
+categories: Malware & Threats
 ---
 
 Last week, Microsoft confirmed that two unpatched Exchange Server vulnerabilities are actively being exmploited by cybercriminals across the globe. The vulnerabilities were first discovered by GTSC, a Vietnamese cyber security company, claiming that the vulnerabilites have been in use since August. Both flaws target on-premise Exchange Servers and requires the attacker to be authenticated. Both vulnerabilities can be chained together to create a backdoor back into the server. "The vulnerability turns out to be so critical that it allows the attacker to do RCE [remote code execution] on the compromised system," [the researchers said](https://gteltsc.vn/blog/warning-new-attack-campaign-utilized-a-new-0day-rce-vulnerability-on-microsoft-exchange-server-12715.html). 

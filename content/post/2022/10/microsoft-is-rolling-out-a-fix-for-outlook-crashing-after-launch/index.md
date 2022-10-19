@@ -20,8 +20,7 @@ figurePositionShow: true
 tags:
   - Microsoft
   - Office 365
-categories:
-  - Systems & Technology
+categories: Systems & Technology
 ---
 
 Microsoft has finally been able to push out a fix for a known issue with Outlook causing the application to freeze and crash for Microsoft 365 users immediately after opening. 

@@ -18,8 +18,7 @@ showRelatedInArticle: true
 tags:
   - Windows
   - Identity & Access Management
-categories:
-  - Security Strategy
+categories: Security Strategy
 ---
 Microsoft said today that IT administrators may set up group policies to automatically prevent brute force attacks against local administrator accounts on any Windows system that is currently receiving security updates. 
 

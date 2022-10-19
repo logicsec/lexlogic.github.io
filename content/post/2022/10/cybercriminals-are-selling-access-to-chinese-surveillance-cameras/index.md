@@ -18,8 +18,7 @@ codeMaxLines: 10
 tags:
   - Vulnerabilities
   - Application Security
-categories:
-  - Cybercrime
+categories: Cybercrime
 aliases:
   - chineese-cameras
 ---

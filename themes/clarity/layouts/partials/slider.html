@@ -20,9 +20,7 @@
                                 <div class="caption">
                                     <div class="d-flex align-items-center">
                                         <div class="article__meta">
-                                            {{ range $index, $name := .Params.categories -}}
-                                                <a href="{{ (printf "/categories/%s/" $name) | urlize }}" class="post_tag button button_accent">{{ humanize $name | title }}</a>
-                                            {{- end }}
+                                                <a href="{{ (printf "/categories/%s/" .Params.categories) | urlize }}" class="post_tag button button_accent">{{ humanize .Params.categories | title }}</a>
                                         </div>
                                     </div>
                                 </div>

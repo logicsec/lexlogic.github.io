@@ -1,83 +1,23 @@
 {{ $s := site.Params }}
+{{ $p := .Params }}
 <aside class="sidebar">
     <section class="sidebar_inner">
         {{- $posts := where .Site.RegularPages "Type" "in" $s.mainSections }}
         {{- $featured := default 8 $s.numberOfFeaturedPosts }}
-        {{- $featuredPosts := first $featured (where $posts "Params.featured" true)}}
+        {{- $featuredPosts := first $featured (where $posts "Params.categories" $p.categories )}}
 
         <!--Featured Posts-->
         {{- with $featuredPosts }}
-            <div class="panel">
+            <div class="panel fixed">
                 <div class="title-wrap main-title">
                     <div class="taxonomy-title">
-                        Featured Posts
+                        {{ $p.categories }}
                     </div>
                 </div>
                 {{- range .  | first 4 }}
                     {{ partial "excerpt-2" . }}
                 {{- end }}
             </div>
-        {{- end }}
-
-
-
-        {{- $tagsLimit := (default 100 $s.numberOfTagsShown) }}
-        {{- $link := .Permalink }}
-        {{- range $key, $value := .Site.Taxonomies }}
-            {{- if gt $value 0 }}
-                <div class="panel">
-                    <div class="title-wrap main-title">
-                        <div class="taxonomy-title">
-                            {{ T $key }}
-                        </div>
-                    </div>
-
-                    <nav class="tags_nav">
-                        {{- $onPageTags := $.Page.Params.tags }}
-                        {{- $slicedTags := ($value.ByCount | first $tagsLimit) }}
-                        {{- $url := "" }}
-                        {{- $name := "" }}
-                        {{- $forwardSlash := "/" }}
-
-                        {{- range $slicedTags }}
-                            {{- $url = printf "%s/%s/" $key .Name | absLangURL}}
-                            <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/'
-                               class="{{ if eq (trim (absLangURL $url) $forwardSlash) (trim $link $forwardSlash) }} accent-background{{ end}} post_tag button button_translucent"
-                               title="{{ .Name }}">
-                                {{ humanize .Name | title }}
-                            </a>
-                        {{ end }}
-
-                        {{ if gt (len $value.ByCount) $tagsLimit }}
-                            <br>
-                            <div class="post_tags_toggle button">{{ T (printf "all_%s" (lower $key)) }}</div>
-                            {{- $tagsInfo := newScratch }}
-                            <div class="post_tags">
-                                <div class="tags_list">
-                                    {{- range $value.Alphabetical }}
-                                        {{- $url = trim (absLangURL $url) $forwardSlash }}
-                                        {{ $tagsInfo.Add "tagsInfo" (slice .Name .Count)}}
-                                        <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/'
-                                           class="{{ if eq $url $link }} accent-background{{ end}} post_tag button button_translucent"
-                                           data-position={{ .Count }} title="{{ .Name }}">
-                                            {{- humanize .Name | title -}}
-                                        </a>
-                                    {{ end }}
-                                    <div class="tags_sort">
-                                        <span title="sort alphabetically">[A~Z]</span>
-                                        <span title="sort by count">[0~9]</span>
-                                    </div>
-                                    <span class="tags_hide">
-                                        <svg class="icon">
-                                          <use xlink:href="#closeme"></use>
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                        {{- end }}
-                    </nav>
-                </div>
-            {{- end }}
         {{- end }}
     </section>
 </aside>

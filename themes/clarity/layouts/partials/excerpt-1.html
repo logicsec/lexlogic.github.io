@@ -11,16 +11,10 @@
             </a>
             <div class="article__content">
                 <div class="article__meta">
-                    {{/* <span class="article__minutes">
-                    {{ range $index, $name := .Params.categories -}}
-                      <a href="{{ (printf "/categories/%s/" $name) | urlize }}" class="">{{ upper $name }}</a>
-                    {{- end }} |
-                  </span> */}}
+
                     <span class="article__minutes">
-                    {{ range $index, $name := .Params.categories -}}
-                      <a href="{{ (printf "/categories/%s/" $name) | urlize }}" class="post_tag button button_accent">{{ humanize $name | title }}</a>
-                    {{- end }}
-                  </span>
+                      <a href="{{ (printf "/categories/%s/" .Params.categories ) | urlize }}" class="post_tag button button_accent">{{ humanize .Params.categories | title }}</a>
+                    </span>
                     <time class="article__date" datetime="2018-11-05T12:01:35+00:00">{{ dateFormat "January 02, 2006"
                         .Date }}
                     </time>

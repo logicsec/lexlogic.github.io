@@ -15,8 +15,7 @@ figurePositionShow: true
 showRelatedInArticle: true
 tags:
   - Application Security
-categories:
-  - Education & Training
+categories: Education & Training
 series:
   - hack the box
 ---

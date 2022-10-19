@@ -18,8 +18,7 @@ tags:
   - Application Security
   - Vulnerabilities
   - Identity & Access Management
-categories:
-  - Education & Training
+categories: Education & Training
 aliases:
   - vampi
 ---

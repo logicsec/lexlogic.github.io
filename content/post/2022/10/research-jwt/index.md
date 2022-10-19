@@ -17,11 +17,10 @@ tags:
   - Vulnerabilities
   - Application Security
   - Identity & Access Management
-categories:
-  - Education & Training
+categories: Education & Training
 series:
   - research
-aliases:
+aliases: 
   - chineese-cameras
 ---
 

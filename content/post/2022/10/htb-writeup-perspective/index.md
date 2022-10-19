@@ -17,8 +17,7 @@ showRelatedInArticle: true
 tags:
   - Application Security
   - Vulnerabilities
-categories:
-  - Education & Training
+categories: Education & Training
 series:
   - hack the box
 ---

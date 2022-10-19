@@ -21,8 +21,7 @@ tags:
   - Cyberwarfare
   - Tracking & Law Enforcement
   - Network Security
-categories:
-  - Cybercrime
+categories: Cybercrime
 ---
 
 A well-known, pro-Russian hacking group called 'KillNet' has claimed that a large-scale, distributed denial-of-service (DDoS) attack is being conducted against several major airports in the US, causing them to be unaccessible. 

@@ -21,7 +21,7 @@
     <span class="post_date">
       {{- with .Params.author -}}
         {{- range . }}
-          {{.}}
+          {{ humanize . | title }}
         {{- end }}
       {{- end }}
     </span>
@@ -29,25 +29,22 @@
     {{- end }}
 
     {{- if $showReadTime }}
-    <span class="post_time">{{ if ($scratch.Get "writeSeparator") }} · {{ end }}{{ T "reading_time" . }}</span>
-    {{- $scratch.Set "writeSeparator" true }}
+      <span class="post_time">{{ if ($scratch.Get "writeSeparator") }} · {{ end }}{{ T "reading_time" . }}</span>
+      {{- $scratch.Set "writeSeparator" true }}
     {{- end }}
-    {{- with .Params.categories -}}
+
     <span>
       {{- if ($scratch.Get "writeSeparator") }}&nbsp;· {{ end }}
-      {{- range . }}
-        {{- $tag := urlize . -}}
-        <a href='{{ absLangURL (printf "categories/%s/" $tag) }}' title="{{ . }}"
+        <a href='{{ absLangURL "categories/"}}{{.Params.categories | urlize }}' title="{{ .Params.categories }}"
            class="post_tag button button_translucent">
-          {{- . }}
+          {{ .Params.categories }}
         </a>
-      {{- end }}
     </span>
+
     {{- $scratch.Set "writeSeparator" true }}
-    {{- end }}
     {{- if $showShare }}
-    <span class="page_only">{{ if ($scratch.Get "writeSeparator") }}&nbsp;·{{ end }}{{ partial "share" . }}</span>
-    {{- $scratch.Set "writeSeparator" true }}
+      <span class="page_only">{{ if ($scratch.Get "writeSeparator") }}&nbsp;·{{ end }}{{ partial "share" . }}</span>
+      {{- $scratch.Set "writeSeparator" true }}
     {{- end }}
     {{- if $showPostMeta }}
 </div>
