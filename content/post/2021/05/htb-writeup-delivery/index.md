@@ -1,5 +1,5 @@
 ---
-featureImage: images/erjpa2iwmaarwte.jpg
+featureImage: images/delivery.png
 summary: ""
 news_post: false
 author:
@@ -9,8 +9,8 @@ date: 2021-05-22
 description: ""
 toc: true
 usePageBundles: true
-thumbnail: images/erjpa2iwmaarwte.jpg
-shareImage: images/erjpa2iwmaarwte.jpg
+thumbnail: images/delivery.png
+shareImage: images/delivery.png
 codeMaxLines: 10
 tags:
   - HackTheBox
