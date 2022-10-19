@@ -21,13 +21,7 @@ categories:
 series:
   - hack the box
 ---
-Perspective is an insane difficulty Windows machine that focuses on the exploitation of ASP.NET web\
-applications and badly implemented cryptography. Initial access is obtained by reading the application\
-web.config file via a Server-Side Include, which is possible due to a weak filter on file upload. Having\
-retrieved the application machineKey , a new session cookie can be forged to gain administrative rights and access a restricted area, where SSRF can be exploited to access an internal encryption API which uses a weak RC4 implementation, resulting in the decryption of the ViewStateUserKey . Remote command\
-execution is then achieved via deserialisation of a malicious ViewState that can be forged using the obtained application keys. Finally, a padding oracle attack on an internal staging application running with\
-administrative privileges allows to inject OS commands in an encrypted POST parameter, resulting in the\
-elevation of privileges.
+Perspective is an insane difficulty Windows machine that focuses on the exploitation of ASP.NET web applications and badly implemented cryptography. Initial access is obtained by reading the application web.config file via a Server-Side Include, which is possible due to a weak filter on file upload. Having retrieved the application machineKey , a new session cookie can be forged to gain administrative rights and access a restricted area, where SSRF can be exploited to access an internal encryption API which uses a weak RC4 implementation, resulting in the decryption of the ViewStateUserKey . Remote command execution is then achieved via deserialization of a malicious ViewState that can be forged using the obtained application keys. Finally, a padding oracle attack on an internal staging application running with administrative privileges allows to inject OS commands in an encrypted POST parameter, resulting in the elevation of privileges.
 
 ## **Information Gathering on Perspective Machine**
 
