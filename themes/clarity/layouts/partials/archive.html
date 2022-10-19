@@ -6,7 +6,7 @@
 <div class="grid-inverse wrap content">
     <div class="grid-1">
         <div class="articles panel">
-            {{ $pages = where .Site.Pages ".Params.news_post" true }}
+            {{ $pages = where .Site.Pages ".Params.news_post" true | first 5 }}
             <div class="title-wrap main-title">
                 <div class="taxonomy-title">
                     <span class="mt-4">Latest News</span>
