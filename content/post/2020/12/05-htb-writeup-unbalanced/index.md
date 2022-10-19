@@ -1,5 +1,5 @@
 ---
-featureImage: images/unbala-768x344.png
+featureImage: images/unbalanced.png
 summary: ""
 news_post: false
 author:
@@ -9,8 +9,8 @@ date: 2021-12-05
 description: ""
 toc: true
 usePageBundles: true
-thumbnail: images/unbala-768x344.png
-shareImage: images/unbala-768x344.png
+thumbnail: images/unbalanced.png
+shareImage: images/unbalanced.png
 codeMaxLines: 10
 tags:
   - HackTheBox
