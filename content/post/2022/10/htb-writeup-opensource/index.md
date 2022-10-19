@@ -4,7 +4,7 @@ news_post: false
 author:
   - paul-knight
 title: HTB Writeup - OpenSource
-date: 2022-10-19T14:28:43.259Z
+date: 2022-10-12T14:28:43.259Z
 usePageBundles: true
 featureImage: images/opensource.png
 thumbnail: images/opensource.png
