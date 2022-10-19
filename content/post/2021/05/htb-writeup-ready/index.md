@@ -1,24 +1,24 @@
 ---
-featureImage: images/ready_logo.png
+featureImage: images/card.png
 summary: ""
 news_post: false
 author:
   - paul-knight
-date: 2021-05-22
-toc: true
-thumbnail: images/ready_logo.png
-codeMaxLines: 10
-series:
-  - hack the box
 title: HTB Writeup - Ready
+date: 2021-05-22
 description: ""
+toc: true
 usePageBundles: true
-shareImage: images/ready_logo.png
+thumbnail: images/card.png
+shareImage: images/card.png
+codeMaxLines: 10
 tags:
   - HackTheBox
   - CTF
 categories:
   - Education & Training
+series:
+  - hack the box
 aliases:
   - Ready
 ---
