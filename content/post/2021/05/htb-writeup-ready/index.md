@@ -1,5 +1,5 @@
 ---
-featureImage: images/card.png
+featureImage: images/ready.png
 summary: ""
 news_post: false
 author:
@@ -9,8 +9,8 @@ date: 2021-05-22
 description: ""
 toc: true
 usePageBundles: true
-thumbnail: images/card.png
-shareImage: images/card.png
+thumbnail: images/ready.png
+shareImage: images/ready.png
 codeMaxLines: 10
 tags:
   - HackTheBox
