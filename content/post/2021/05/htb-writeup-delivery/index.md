@@ -1,24 +1,24 @@
 ---
-featureImage: images/delivery_logo.png
+featureImage: images/erjpa2iwmaarwte.jpg
 summary: ""
 news_post: false
 author:
   - paul-knight
-date: 2021-05-22
-toc: true
-thumbnail: images/delivery_logo.png
-codeMaxLines: 10
-series:
-  - hack the box
 title: HTB Writeup - Delivery
+date: 2021-05-22
 description: ""
+toc: true
 usePageBundles: true
-shareImage: images/delivery_logo.png
+thumbnail: images/erjpa2iwmaarwte.jpg
+shareImage: images/erjpa2iwmaarwte.jpg
+codeMaxLines: 10
 tags:
   - HackTheBox
   - CTF
 categories:
   - Education & Training
+series:
+  - hack the box
 aliases:
   - Delivery
 ---
