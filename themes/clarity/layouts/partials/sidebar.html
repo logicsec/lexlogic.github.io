@@ -13,7 +13,7 @@
                         Featured Posts
                     </div>
                 </div>
-                {{- range . }}
+                {{- range .  | first 4 }}
                     {{ partial "excerpt-2" . }}
                 {{- end }}
             </div>
