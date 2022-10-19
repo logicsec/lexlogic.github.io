@@ -202,7 +202,7 @@ collections:
         search_fields: [categories.*.name]
         display_fields: [categories.*.name]
         file: categories
-        multiple: true
+        multiple: false
 
       - label: Series
         name: series
