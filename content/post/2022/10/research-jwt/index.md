@@ -7,20 +7,20 @@ author:
 title: Exploring the JWT Attacks Landscape
 date: 2022-10-03
 description: ""
-featured: true
+featured: false
 toc: true
 usePageBundles: true
 thumbnail: images/banner.png
 shareImage: images/banner.png
 codeMaxLines: 10
-series:
-  - research
 tags:
   - Vulnerabilities
   - Application Security
   - Identity & Access Management
 categories:
   - Education & Training
+series:
+  - research
 aliases:
   - chineese-cameras
 ---
