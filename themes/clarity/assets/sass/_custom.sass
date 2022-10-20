@@ -535,3 +535,329 @@
 
 .fixed
   position: fixed
+
+
+.sidebar
+  > .widget
+    display: flex
+    flex-direction: column
+    background-color: var(--widget-bg)
+    padding: 20px
+    border-radius: var(--radius)
+    box-shadow: var(--widget-shadow)
+
+  .widget.is-ad
+    background-color: transparent
+    padding: 0
+    border-radius: 0
+    box-shadow: none
+
+    > .widget-title
+      display: none
+
+  ul.social-icons
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 5px
+
+  .social-icons
+    li
+      display: block
+      margin: 0
+
+    a
+      display: flex
+      align-items: center
+      justify-content: space-between
+      height: 34px
+      font-size: 16px
+      color: #fff
+      font-weight: 400
+      overflow: hidden
+
+    .rss a, .email a, .external-link a
+      font-size: 18px
+
+    a:before
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-shrink: 0
+      height: 100%
+      width: 34px
+      background-color: rgba(255, 255, 255, 0.08)
+
+    span
+      font-size: 14px
+      padding: 0 10px
+
+    a:hover
+      opacity: .9
+
+  .social
+  a:before
+    display: block
+    font-family: 'Font Awesome 5 Brands'
+    font-style: normal
+    font-weight: 400
+
+  .rss a:before, .share a:before, .email a:before, .external-link a:before
+    content: '\e0e5'
+    font-family: 'Material Icons Round'
+
+  .share a:before
+    content: '\e80d'
+
+  .email a:before
+    content: '\e0be'
+
+  .external-link a:before
+    content: '\e89e'
+
+.sb-a .google a, .sb-h .google a:hover
+  background-color: #1a73e8
+
+.sb-a .blogger a, .sb-h .blogger a:hover
+  background-color: #ff5722
+
+.sb-a .apple a, .sb-h .apple a:hover
+  background-color: #333
+
+.sb-a .amazon a, .sb-h .amazon a:hover
+  background-color: #fe9800
+
+.sb-a .microsoft a, .sb-h .microsoft a:hover
+  background-color: #0067B8
+
+.sb-a
+  .facebook a, .facebook-f a
+    background-color: #3b5999
+
+.sb-h
+  .facebook a:hover, .facebook-f a:hover
+    background-color: #3b5999
+
+.sb-a .twitter a, .sb-h .twitter a:hover
+  background-color: #00acee
+
+.sb-a .youtube a, .sb-h .youtube a:hover
+  background-color: #f50000
+
+.sb-a .instagram a, .sb-h .instagram a:hover
+  background: linear-gradient(15deg, #ffb13d, #dd277b, #4d5ed4)
+
+.sb-a
+  .pinterest a, .pinterest-p a
+    background-color: #ca2127
+
+.sb-h
+  .pinterest a:hover, .pinterest-p a:hover
+    background-color: #ca2127
+
+.sb-a .dribbble a, .sb-h .dribbble a:hover
+  background-color: #ea4c89
+
+.sb-a .linkedin a, .sb-h .linkedin a:hover
+  background-color: #0077b5
+
+.sb-a .tumblr a, .sb-h .tumblr a:hover
+  background-color: #365069
+
+.sb-a .twitch a, .sb-h .twitch a:hover
+  background-color: #6441a5
+
+.sb-a .rss a, .sb-h .rss a:hover
+  background-color: #ffc200
+
+.sb-a .skype a, .sb-h .skype a:hover
+  background-color: #00aff0
+
+.sb-a .stumbleupon a, .sb-h .stumbleupon a:hover
+  background-color: #eb4823
+
+.sb-a .vk a, .sb-h .vk a:hover
+  background-color: #4a76a8
+
+.sb-a .stack-overflow a, .sb-h .stack-overflow a:hover
+  background-color: #f48024
+
+.sb-a .github a, .sb-h .github a:hover
+  background-color: #24292e
+
+.sb-a .soundcloud a, .sb-h .soundcloud a:hover
+  background: linear-gradient(#ff7400, #ff3400)
+
+.sb-a .behance a, .sb-h .behance a:hover
+  background-color: #191919
+
+.sb-a .digg a, .sb-h .digg a:hover
+  background-color: #1b1a19
+
+.sb-a .delicious a, .sb-h .delicious a:hover
+  background-color: #0076e8
+
+.sb-a .codepen a, .sb-h .codepen a:hover
+  background-color: #000
+
+.sb-a .flipboard a, .sb-h .flipboard a:hover
+  background-color: #f52828
+
+.sb-a .reddit a, .sb-h .reddit a:hover
+  background-color: #ff4500
+
+.sb-a .whatsapp a, .sb-h .whatsapp a:hover
+  background-color: #3fbb50
+
+.sb-a .messenger a, .sb-h .messenger a:hover
+  background-color: #0084ff
+
+.sb-a .snapchat a, .sb-h .snapchat a:hover
+  background-color: #ffe700
+
+.sb-a .telegram a, .sb-h .telegram a:hover
+  background-color: #179cde
+
+.sb-a .steam a, .sb-h .steam a:hover
+  background: linear-gradient(5deg, #0d89bc, #112c5b, #0d1c47)
+
+.sb-a .discord a, .sb-h .discord a:hover
+  background-color: #7289da
+
+.sb-a .quora a, .sb-h .quora a:hover
+  background-color: #b92b27
+
+.sb-a .tiktok a, .sb-h .tiktok a:hover
+  background-color: #fe2c55
+
+.sb-a .share a, .sb-h .share a:hover
+  background-color: var(--meta-color)
+
+.sb-a .email a, .sb-h .email a:hover
+  background-color: #888
+
+.sb-a .external-link a, .sb-h .external-link a:hover
+  background-color: var(--title-color)
+
+.sc-a .blogger a, .sc-h .blogger a:hover
+  color: #1a73e8
+
+.sc-a .blogger a, .sc-h .blogger a:hover
+  color: #ff5722
+
+.sc-a .apple a, .sc-h .apple a:hover
+  color: #333
+
+.sc-a .amazon a, .sc-h .amazon a:hover
+  color: #fe9800
+
+.sc-a .microsoft a, .sc-h .microsoft a:hover
+  color: #0067B8
+
+.sc-a
+  .facebook a, .facebook-f a
+    color: #3b5999
+
+.sc-h
+  .facebook a:hover, .facebook-f a:hover
+    color: #3b5999
+
+.sc-a .twitter a, .sc-h .twitter a:hover
+  color: #00acee
+
+.sc-a .youtube a, .sc-h .youtube a:hover
+  color: #f50000
+
+.sc-a .instagram a, .sc-h .instagram a:hover
+  color: #dd277b
+
+.sc-a
+  .pinterest a, .pinterest-p a
+    color: #ca2127
+
+.sc-h
+  .pinterest a:hover, .pinterest-p a:hover
+    color: #ca2127
+
+.sc-a .dribbble a, .sc-h .dribbble a:hover
+  color: #ea4c89
+
+.sc-a .linkedin a, .sc-h .linkedin a:hover
+  color: #0077b5
+
+.sc-a .tumblr a, .sc-h .tumblr a:hover
+  color: #365069
+
+.sc-a .twitch a, .sc-h .twitch a:hover
+  color: #6441a5
+
+.sc-a .rss a, .sc-h .rss a:hover
+  color: #ffc200
+
+.sc-a .skype a, .sc-h .skype a:hover
+  color: #00aff0
+
+.sc-a .stumbleupon a, .sc-h .stumbleupon a:hover
+  color: #eb4823
+
+.sc-a .vk a, .sc-h .vk a:hover
+  color: #4a76a8
+
+.sc-a .stack-overflow a, .sc-h .stack-overflow a:hover
+  color: #f48024
+
+.sc-a .github a, .sc-h .github a:hover
+  color: #24292e
+
+.sc-a .soundcloud a, .sc-h .soundcloud a:hover
+  color: #ff7400
+
+.sc-a .behance a, .sc-h .behance a:hover
+  color: #191919
+
+.sc-a .digg a, .sc-h .digg a:hover
+  color: #1b1a19
+
+.sc-a .delicious a, .sc-h .delicious a:hover
+  color: #0076e8
+
+.sc-a .codepen a, .sc-h .codepen a:hover
+  color: #000
+
+.sc-a .flipboard a, .sc-h .flipboard a:hover
+  color: #f52828
+
+.sc-a .reddit a, .sc-h .reddit a:hover
+  color: #ff4500
+
+.sc-a .whatsapp a, .sc-h .whatsapp a:hover
+  color: #3fbb50
+
+.sc-a .messenger a, .sc-h .messenger a:hover
+  color: #0084ff
+
+.sc-a .snapchat a, .sc-h .snapchat a:hover
+  color: #ffe700
+
+.sc-a .telegram a, .sc-h .telegram a:hover
+  color: #179cde
+
+.sc-a .steam a, .sc-h .steam a:hover
+  color: #112c5b
+
+.sc-a .discord a, .sc-h .discord a:hover
+  color: #7289da
+
+.sc-a .quora a, .sc-h .quora a:hover
+  color: #b92b27
+
+.sc-a .tiktok a, .sc-h .tiktok a:hover
+  color: #fe2c55
+
+.sc-a .share a, .sc-h .share a:hover
+  color: var(--meta-color)
+
+.sc-a .email a, .sc-h .email a:hover
+  color: #888
+
+.sc-a .external-link a, .sc-h .external-link a:hover
+  color: var(--title-color)

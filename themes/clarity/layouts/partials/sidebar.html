@@ -5,6 +5,29 @@
         {{- $featured := default 8 $s.numberOfFeaturedPosts }}
         {{- $featuredPosts := first $featured (where $posts "Params.featured" true)}}
 
+
+        <div class="panel">
+            <div class="title-wrap main-title">
+                <div class="taxonomy-title">
+                    Follow Us
+                </div>
+            </div>
+            <div class="widget-content">
+                <ul class="social-icons social sb-a">
+                    <li class="github">
+                        <a alt="github" class="fa-github btn" data-side="true" href="https://github.com/lexlogic" title="github">
+                            <span class="text">Github</span>
+                        </a>
+                    </li>
+                    <li class="linkedin">
+                        <a alt="linkedin" class="fa-linkedin btn" data-side="true" href="https://www.linkedin.com/in/nicholiknight/" title="linkedin">
+                            <span class="text">LinkedIn</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         <!--Featured Posts-->
         {{- with $featuredPosts }}
             <div class="panel">
