@@ -7,11 +7,11 @@ function slideshowSwitch(slideshow, index, auto) {
     var slides = slideshow.find('.slide');
     var pages = slideshow.find('.sp');
     var activeSlide = slides.filter('.is-active');
-    var activeSlideImage = activeSlide.find('.image-container');
+    var activeSlideImage = activeSlide.find('.article__image');
     var newSlide = slides.eq(index);
-    var newSlideImage = newSlide.find('.image-container');
+    var newSlideImage = newSlide.find('.article__image');
     var newSlideContent = newSlide.find('.slide-content');
-    var newSlideElements = newSlide.find('.caption > *');
+    var newSlideElements = newSlide.find('.article__inner > *');
     if (newSlide.is(activeSlide)) return;
 
     newSlide.addClass('is-new');
