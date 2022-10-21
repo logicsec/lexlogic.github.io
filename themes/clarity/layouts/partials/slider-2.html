@@ -13,44 +13,45 @@
                 {{- $bg = $image }}
                 {{- end }}
                 {{ if eq $index 0 }}
-                <div class="slide is-active ">{{ else }}
-                    <div class="slide ">{{ end }}
-                        <a href='{{ $value.Permalink }}' target="_self">
+                    <div class="slide is-active ">{{ else }}
+                        <div class="slide ">{{ end }}
 
-                            <div class="slide-content top">
-                                <div class="caption">
-                                    <div class="d-flex align-items-center">
-                                        <div class="article__meta">
-                                                <a href="{{ (printf "/categories/%s/" .Params.categories) | urlize }}" class="post_tag button button_accent">{{ humanize .Params.categories | title }}</a>
+                                <div class="slide-content top">
+                                    <div class="caption">
+                                        <div class="d-flex align-items-center">
+                                            <div class="article__meta">
+                                                    <a href="{{ (printf "/categories/%s/" .Params.categories) | urlize }}" class="post_tag button button_accent">{{ humanize .Params.categories | title }}</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="slide-content bottom">
-                                <div class="caption">
-                                    <div class="title">{{ $value.Title }}</div>
-                                    <div class="d-flex align-items-center">
-                                        <div class="article__meta">
-                                            <span class="article__minutes">
-                                                {{ math.Round (div (countwords
-                                                    .Content) 220.0) }} min read |
-                                            </span>
-                                            <time class="article__date" datetime="2018-11-05T12:01:35+00:00">{{
-                                                dateFormat "January 02, 2006" $value.Date }}
-                                            </time>
+                                <div class="slide-content bottom">
+                                    <div class="caption">
+                                        <a href='{{ $value.Permalink }}' target="_self">
+                                            <div class="title">{{ $value.Title }}</div>
+                                        </a>
+                                        <div class="d-flex align-items-center">
+                                            <div class="article__meta">
+                                                <span class="article__minutes">
+                                                    {{ math.Round (div (countwords
+                                                        .Content) 220.0) }} min read |
+                                                </span>
+                                                <time class="article__date" datetime="2018-11-05T12:01:35+00:00">{{
+                                                    dateFormat "January 02, 2006" $value.Date }}
+                                                </time>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="image-container">
-                                <img src='{{ $bg }}' alt="" class="image"/>
-                            </div>
-                        </a>
+                                <a href='{{ $value.Permalink }}' target="_self">
+                                    <div class="image-container">
+                                        <img src='{{ $bg }}' alt="" class="image"/>
+                                    </div>
+                                </a>
+                        </div>
+                        {{ end }}
                     </div>
-                    {{ end }}
-                </div>
                 <div class="sp">
                     {{ range $index, $value := first 5 (where (where .Site.RegularPages "Type" "in"
                     site.Params.mainSections) ".Params.featured" "=" true) }}
