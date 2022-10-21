@@ -5,7 +5,7 @@ backend:
 media_folder: "images"
 public_folder: "images"
 logo_url: https://logicsec.io/logos/logo-dark.png
-editorial_workflow: true
+publish_mode: editorial_workflow
 collections:
   - name: authors
     label: "Authors"
