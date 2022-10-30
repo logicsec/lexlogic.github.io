@@ -25,7 +25,7 @@
           {{ $name := urlize $n}}
           {{ $data := index $authors $name }}
           {{ $image := strings.TrimPrefix "/static" $data.image }}
-          {{ humanize $name | title }}
+          {{ humanize $data.name | title }}
         {{- end }}
       {{- end }}
     </span>
