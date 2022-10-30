@@ -1,6 +1,7 @@
 {{- $showShare := ne (.Param "showshare") false }}
 {{- $showDate := ne (.Param "showdate") false }}
 {{- $showAuthor := ne (.Param "author") false }}
+{{- $authors := .Site.Data.authors }}
 {{- $showReadTime := ne (.Param "showreadtime") false }}
 {{- $showPostMeta := or ($showShare) ($showDate) ($showReadTime) (isset .Params "tags") }}
 {{- $scratch := newScratch }}
@@ -20,8 +21,11 @@
     <span>{{ partial "sprite" (dict "icon" "person") }}</span>
     <span class="post_date">
       {{- with .Params.author -}}
-        {{- range . }}
-          {{ humanize . | title }}
+        {{ range $i, $n := . -}}
+          {{ $name := urlize $n}}
+          {{ $data := index $authors $name }}
+          {{ $image := strings.TrimPrefix "/static" $data.image }}
+          {{ humanize $name | title }}
         {{- end }}
       {{- end }}
     </span>
