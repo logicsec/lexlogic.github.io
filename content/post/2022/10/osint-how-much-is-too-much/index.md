@@ -7,9 +7,9 @@ title: "OSINT: How much is too much"
 date: 2022-10-30T17:26:16.295Z
 featured: true
 usePageBundles: true
-featureImage: images/5-effective-social-engineering-elicitation-techniques-1-.webp
-thumbnail: images/5-effective-social-engineering-elicitation-techniques-1-.webp
-shareImage: images/5-effective-social-engineering-elicitation-techniques-1-.webp
+featureImage: images/pentest-background.jpg
+thumbnail: images/pentest-background.jpg
+shareImage: images/pentest-background.jpg
 codeLineNumbers: true
 codeMaxLines: 10
 figurePositionShow: true
