@@ -3,7 +3,7 @@ draft: false
 news_post: false
 author:
   - pz
-title: OSINT..... How much is too much
+title: "OSINT: How much is too much"
 date: 2022-10-30T17:26:16.295Z
 featured: true
 usePageBundles: true
