@@ -20,6 +20,7 @@ tags:
   - Tracking & Law Enforcement
   - Risk Management
 categories: Risk & Compliance
+series: ethics in security
 ---
 In my former life, I paid my bills working as a covert police officer. This sounds a bit flippant, but it took years of hard work, horrific experiences, death, and destruction, witnessing pain and suffering, and a lot of petrol station food but the results were, I became an actor in a soap opera where the next episode could well be your swan song.
 
