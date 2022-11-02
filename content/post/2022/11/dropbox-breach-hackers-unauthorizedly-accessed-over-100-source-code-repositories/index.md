@@ -3,8 +3,7 @@ draft: false
 news_post: true
 author:
   - paul-knight
-title: "Dropbox Breach: Hackers Unauthorizedly Accessed Over 100 Source Code
-  Repositories"
+title: "Dropbox Breach: Hackers Accessed Over 100 Source Code Repositories"
 date: 2022-11-02T13:30:45.252Z
 featured: true
 usePageBundles: true
