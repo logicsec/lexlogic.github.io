@@ -5,7 +5,7 @@ author:
   - paul-knight
 title: All Windows versions can now block admin brute-force attacks
 date: 2022-10-12T00:48:28.268Z
-featured: true
+featured: false
 usePageBundles: true
 featureImage: images/windows.jpg
 featureImageCap: ""
