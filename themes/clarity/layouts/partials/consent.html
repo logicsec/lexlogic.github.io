@@ -10,32 +10,22 @@
             autoclear_cookies: true,                   // default: false
             page_scripts: true,                        // default: false
 
-            // mode: 'opt-in'                          // default: 'opt-in'; value: 'opt-in' or 'opt-out'
-            // delay: 0,                               // default: 0
-            // auto_language: '',                      // default: null; could also be 'browser' or 'document'
-            autorun: true,                          // default: true
-            // force_consent: false,                   // default: false
-            // hide_from_bots: false,                  // default: false
-            // remove_cookie_tables: false             // default: false
-            // cookie_name: 'cc_cookie',               // default: 'cc_cookie'
-            // cookie_expiration: 182,                 // default: 182 (days)
-            // cookie_necessary_only_expiration: 182   // default: disabled
-            // cookie_domain: location.hostname,       // default: current domain
-            // cookie_path: '/',                       // default: root
-            // cookie_same_site: 'Lax',                // default: 'Lax'
-            // use_rfc_cookie: false,                  // default: false
-            // revision: 0,                            // default: 0
-
             onFirstAction: function(user_preferences, cookie){
                 // callback triggered only once on the first accept/reject action
             },
 
             onAccept: function (cookie) {
-                // callback triggered on the first accept/reject action, and after each page load
+                if (cc.allowedCategory('analytics')) {
+                    window.dispatchEvent(new CustomEvent('cc:enabledAnalytics'));
+                }
             },
 
             onChange: function (cookie, changed_categories) {
-                // callback triggered when user changes preferences after consent has already been given
+                if (changedCategories.includes('analytics')) {
+                    if(cc.allowedCategory('analytics')){
+                        window.dispatchEvent(new CustomEvent('cc:enabledAnalytics'));
+                    }
+                }
             },
 
             languages: {
