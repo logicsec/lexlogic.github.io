@@ -1,6 +1,6 @@
 {{- with .Site.Params.ga_analytics }}
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
-<script>
+<script data-cookiecategory="analytics" async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script data-cookiecategory="analytics">
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
