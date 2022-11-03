@@ -864,16 +864,16 @@
 
 #cookie-notice
   font-size: 0.75rem;
-  padding: 0.5rem 1rem
-  display: none
-  text-align: center
-  position: fixed
-  bottom: 0
-  width: 100%
-  background: rgba(29, 40, 53, 0.95);
-  border-top: 3px solid rgb(211, 80, 95);
-  color: #fff
-  z-index: 9999
+  padding: 0.5rem 1rem;
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  width: 550px;
+  background: rgba(29,40,53,0.95);
+  border-top: 3px solid #d3505f;
+  color: #fff;
+  z-index: 9999;
+  right: 30px;
 
   a
     padding: 0.2rem 0.8rem;
@@ -884,6 +884,9 @@
 
 @media (max-width: 767px)
   #cookie-notice
+    width: 100%
+    text-align: center;
+
     span
       display: block
       padding-top: 3px
