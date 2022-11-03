@@ -1,6 +1,7 @@
 {{- with .Site.Params.ga_analytics }}
-<script data-cookiecategory="analytics" async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
-<script data-cookiecategory="analytics">
+<script data-cookiecategory="analytics" type="text/plain" async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script type="text/plain" data-cookiecategory="analytics">
+    const cc = CookieConsent;
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
