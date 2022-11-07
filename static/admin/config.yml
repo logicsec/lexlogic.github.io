@@ -43,6 +43,11 @@ collections:
               - label: Name
                 name: name
                 widget: string
+              - label: Color
+                name: color
+                widget: color
+                enableAlpha: true
+                allowInput: true
 
       - label: Categories
         name: categories
