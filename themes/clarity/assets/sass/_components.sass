@@ -10,9 +10,6 @@
   display: flex
   justify-content: space-between
   @include content
-  &_active
-    background-color: rgba(255,255,255,0.12)
-    border-radius: 10px
   &, &_body
   &_icon
     width: 0.7rem
@@ -28,46 +25,59 @@
     width: 100%
     z-index: 99
     left: 0
-    border-bottom: 3px solid $htb
+    //border-bottom: 3px solid $htb
   &_item
-    padding: 0.5rem 1rem
-    display: inline-flex
+    position: relative
+    display: flex
     align-items: center
-    color: #fff 
-    font-size: 14px
+    justify-content: left
+    padding: 10px 15px
+    outline-width: 0
+    transition: all .3s ease-out
 
+  &_child
     &:hover
-      color: #a4b1cd
+      color: #ffffff !important
+      text-decoration: none
+      background: $htb
 
   &_sub
-    background: linear-gradient(to right,#115fb3,#115fb3 18%,#0e82cf 56%,#0e82cf 60%,#0e82cf 63%,#1563b6 79.8%,#115fb3)
-    width: 100%
     left: 0
-    position: relative
-    z-index: 20
-    top: 64px;
+    position: absolute
     transition: height 0.3s ease-in-out
-    height: 80px;
+    height: 0
     overflow: hidden
-    padding: 0.96rem 0 0
-    font-size: 11px
-    display: flex
+    display: inline-block !important
+    top: 100%
+    min-width: 100%
+    z-index: 1001
+    background: white
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15)
+
+    @media screen and (max-width: $mobile-menu-breakpoint)
+      color: #fff !important
+      background: transparent
+      box-shadow: none
+      &:hover
+        background: #000 !important
 
   &_parent
     position: relative
     display: flex
     align-items: center
-    margin: 0.25rem 0
-    // border-radius: 0.5rem
-
-  &_open
-    background-color: #115fb3
+    margin: 0 1rem
+    padding: 10px
+    @media screen and (min-width: $mobile-menu-breakpoint)
+      color: #fff !important
+      background: transparent
+      &:hover
+        color: #ffffff
+        text-decoration: none
+        background: $htb !important
 
   &_open + &_sub &_child
-    padding-top: 0px
-    padding-bottom: 0.5rem
     z-index: 3
-    color: var(--text)
+    font-size: 15px
     & + a
       @media screen and (min-width: $mobile-menu-breakpoint)
         padding-top: 0
@@ -81,16 +91,11 @@
     padding-bottom: 0.5rem
     @media screen and (min-width: $mobile-menu-breakpoint)
       color: var(--text)
-      top: calc(100% - 4px)
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-      border-top: .5rem solid #115fb3;
-      border-left: 1px solid rgba(0,0,0,.15);
-      border-right: 1px solid rgba(0,0,0,.15);
-      border-bottom: 1px solid rgba(0,0,0,.15);
-      margin-top: 0;
-      padding: 2rem 2rem;
-      width: 100%;
+      border-top-left-radius: 0
+      border-top-right-radius: 0
+      border: 1px solid rgba(0,0,0,.15)
+      width: 100%
+      right: 2rem
       
     
     &::after
@@ -103,7 +108,7 @@
     @media screen and (min-width: $mobile-menu-breakpoint)
       background: #fff
       width: auto
-      min-width: 40rem !important
+      min-width: 15rem !important
       white-space: nowrap;
   &_open &_icon
     transform: rotate(180deg)
