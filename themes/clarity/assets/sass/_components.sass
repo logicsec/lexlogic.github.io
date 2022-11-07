@@ -50,7 +50,8 @@
     min-width: 100%
     z-index: 1001
     background: white
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15)
+    border-radius: 10px
+    margin-top: 10px
 
     @media screen and (max-width: $mobile-menu-breakpoint)
       color: #fff !important
@@ -89,8 +90,6 @@
     padding-bottom: 0.5rem
     @media screen and (min-width: $mobile-menu-breakpoint)
       color: var(--text)
-      border-top-left-radius: 0
-      border-top-right-radius: 0
       border: 1px solid rgba(0,0,0,.15)
       width: 100%
       right: 2rem
@@ -117,6 +116,7 @@
     z-index: 5
     transition: background 0.3s ease-out
     margin: 0
+    font-weight: 400
 
   &_brand
     img
