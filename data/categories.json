@@ -1,37 +1,48 @@
 {
   "categories": [
     {
-      "name": "Malware & Threats"
+      "name": "Malware & Threats",
+      "color": "#392f5a"
     },
     {
-      "name": "Cybercrime"
+      "name": "Cybercrime",
+      "color": "#9dd9d2"
     },
     {
-      "name": "Mobile & Wireless"
+      "name": "Mobile & Wireless",
+      "color": "#cfbff7"
     },
     {
-      "name": "Risk & Compliance"
+      "name": "Risk & Compliance",
+      "color": "#cfb1b7"
     },
     {
-      "name": "Security Architecture"
+      "name": "Security Architecture",
+      "color": "#7494ea"
     },
     {
-      "name": "Security Strategy"
+      "name": "Security Strategy",
+      "color": "#7fb800"
     },
     {
-      "name": "ICS & OT"
+      "name": "ICS & OT",
+      "color": "#9b1d20"
     },
     {
-      "name": "IoT Security"
+      "name": "IoT Security",
+      "color": "#5b8266"
     },
     {
-      "name": "Education & Training"
+      "name": "Education & Training",
+      "color": "#fa824c"
     },
     {
-      "name": "Systems & Technology"
+      "name": "Systems & Technology",
+      "color": "#33658a"
     },
     {
-      "name": "Social Engineering"
+      "name": "Social Engineering",
+      "color": "#FF8552"
     }
   ]
 }
