@@ -22,7 +22,7 @@ fontsDir = "fonts/" # without a leading forward slash
 fallBackOgImage = "images/thumbnail.png"
 
 # Logo images
-logo = "logos/logo.png"
+logo = "logos/logo-dark.png"
 dark_logo = "logos/logo-dark.png"
 
 # center logo on navbar

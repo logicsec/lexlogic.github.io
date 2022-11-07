@@ -6,7 +6,6 @@
   top: -0.5rem
   left: 1rem
 .nav
-  color: $haze
   display: flex
   justify-content: space-between
   @include content
@@ -19,13 +18,12 @@
   &_body
     display: flex
   &_header
-    background: rgba(29,40,53,.95)
     padding: 0 1.5rem
-    position: fixed
+    position: relative
     width: 100%
     z-index: 99
     left: 0
-    //border-bottom: 3px solid $htb
+    border-bottom: 1px solid #e4e4e4
   &_item
     position: relative
     display: flex
@@ -37,7 +35,7 @@
 
   &_child
     &:hover
-      color: #ffffff !important
+      color: var(--text) !important
       text-decoration: none
       background: $htb
 
@@ -68,10 +66,10 @@
     margin: 0 1rem
     padding: 10px
     @media screen and (min-width: $mobile-menu-breakpoint)
-      color: #fff !important
+      color: var(--text) !important
       background: transparent
       &:hover
-        color: #ffffff
+        color: #fff !important
         text-decoration: none
         background: $htb !important
 
@@ -157,8 +155,7 @@
   @include content
 
 .footer
-  border-top: 3px solid $htb
-  background: rgba(29,40,53,0.95)
+  border-top: 1px solid #e4e4e4;
   margin-top: 2rem
   font-size: 0.9rem
   &_inner
@@ -168,11 +165,10 @@
     position: relative
 
 .button
-  background-color: $theme
+  background-color: $accent
   color: $light
   display: inline-flex
   padding: 0.5rem 1.5rem
-  border: 1px solid $theme
   border-radius: 0.5rem
   font-size: 0.9rem
   align-items: center
@@ -189,9 +185,8 @@
     margin-bottom: 1.33rem
     border-radius: 1.5rem
   &:hover, &:focus
-    background-color: darken($theme, 20%)
+    background-color: darken($accent, 20%)
     color: $light
-    border: 1px solid darken($theme, 20%)
 
   &_translucent
     background-color: rgba(29,40,53,0.95)
@@ -262,7 +257,6 @@
         overflow-y: auto
       &_toggle
         margin-top: 0.5rem
-        margin-left: 0.5rem
         cursor: pointer
   &_tag, &_share
     margin: 0.2rem
@@ -360,7 +354,7 @@
     &_sort
       font-size: 1rem
       color: var(--light)
-      background: var(--theme)
+      background: $accent
       position: absolute
       top: 1.5rem
       left: 1.5rem
@@ -534,8 +528,11 @@
   justify-content: flex-end
   font-size: 8px !important
   svg
-    fill: $haze
+    fill: var(--text)
     margin-left: 0.75rem
+
+    &:hover
+      fill: $htb
 
 figcaption
   font-style: italic

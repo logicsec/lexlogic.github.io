@@ -7,7 +7,9 @@
       padding: 15px !important
   
   .nav
-    // padding-bottom: 2rem
+    color: var(--text) !important
+    &_item
+      color: var(--text) !important
     &, &_body
       flex-direction: column
     &_body
@@ -16,7 +18,7 @@
       max-width: 16.5rem
       top: 0
       bottom: 0
-      background-color: rgba(29,40,53,1)
+      background-color: white
       transition: transform 0.3s var(--easing)
       &_right
         transform: translateX(100vw)
@@ -39,7 +41,7 @@
       align-items: center
       svg
         width: 1.25rem
-        fill: var(--light)
+        fill: var(--text)
         height: 1.25rem
         display: none
         &:first-child
@@ -55,8 +57,6 @@
       width: calc(100% - 3rem)
       padding-left: 0
 
-    &_item
-      padding: 5px 15px
     &_parent
       display: grid
       grid-template-columns: 0fr 0fr
