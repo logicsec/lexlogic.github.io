@@ -5,6 +5,7 @@
 {{- $forwardSlash := "/" }}
 {{- $children := false }}
 {{- $menu := .menu }}
+{{- $categories := .data.categories }}
 
 <div class="nav_parent{{ if eq (trim (absLangURL $url) $forwardSlash) (trim $link $forwardSlash) }} nav_active{{ end}}">
     <i class="material-icons medium"> home </i>
@@ -21,9 +22,16 @@
         {{range $name, $taxonomy := $menu }}
             {{- $url = printf "%s/%s" "categories" $name }}
             {{ $count = add $count 1 }}
+            {{- $color := "" }}
             {{ if le $count 8 }}
-                <div class="nav_child nav_item">
-                    <i class="material-icons small"> radio_button_unchecked </i>
+                {{range $categories }}
+                    {{$category := .}}
+                    {{ range $category }}
+                        {{- $categoryName := .name | urlize }}
+                        {{ if eq $categoryName $name }}{{ $color = .color }}{{ end }}
+                    {{- end }}
+                {{- end }}
+                <div class="nav_child nav_item" style="border-left: .3rem solid {{$color}}">
                     <a href='{{ absLangURL "categories" }}/{{ (replace $name "#" "%23") | urlize }}/' class="nav_item"
                        title="{{ $name }}">
                         {{ humanize $name | title }}

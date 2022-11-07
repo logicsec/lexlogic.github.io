@@ -10,8 +10,9 @@
         {{- end }}
         <div class='nav_body nav_body_{{ default "left" $params.mobileNavigation }}'>
             {{ $context := . }}
+            {{ $data := .Site.Data }}
             {{ $menuData := .Site.Taxonomies.categories }}
-            {{ partial "nav" (dict "context" $context "menu" $menuData) }}
+            {{ partial "nav" (dict "context" $context "menu" $menuData "data" $data) }}
             {{- if $centerLogo }}
             {{- partial "logo" (dict "logo" $logo "class" "nav_center") }}
             {{- end }}

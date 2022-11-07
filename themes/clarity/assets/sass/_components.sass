@@ -5,6 +5,11 @@
   border-right: 0.33rem solid transparent
   top: -0.5rem
   left: 1rem
+
+.sub_item
+  transition: all .4s ease-in-out
+  &:hover
+    transform: translateY(-50%) rotate(45deg)
 .nav
   display: flex
   justify-content: space-between
@@ -50,7 +55,6 @@
     min-width: 100%
     z-index: 1001
     background: white
-    border-radius: 10px
     margin-top: 10px
 
     @media screen and (max-width: $mobile-menu-breakpoint)
@@ -87,10 +91,8 @@
     height: initial
     z-index: 999
     overflow: initial
-    padding-bottom: 0.5rem
     @media screen and (min-width: $mobile-menu-breakpoint)
       color: var(--text)
-      border: 1px solid rgba(0,0,0,.15)
       width: 100%
       right: 2rem
       
