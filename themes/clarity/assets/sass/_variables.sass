@@ -29,6 +29,7 @@ $accent: #D44D5C
 html
   --color-mode: 'lit'
   --light: #fff
+  --dim: hsla(0,0%,100%,0.07)
   --dark: #000
   --bg: #111927
   --haze: #f2f2f2
@@ -66,6 +67,7 @@ html
     --choice-bg: var(--haze)
   @mixin darkmode
     --light: hsla(0,0%,100%,0.87)
+    --dim: hsla(0,0%,100%,0.07)
     --color-mode: 'dim'
     --text: var(--light)
     --accent: var(--bubble)
@@ -77,8 +79,6 @@ html
     --table-border: var(--code-bg)
     --footer-bg: var(--bg)
     --post-bg: var(--translucent-light)
-    *
-      // box-shadow: none !important
 
   &[data-mode="dim"]
     @include darkmode
