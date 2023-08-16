@@ -43,6 +43,10 @@
     {
       "name": "Social Engineering",
       "color": "#FF8552"
+    },
+    {
+      "name": "Artificial Intelligence",
+      "color": "#20a790"
     }
   ]
 }
