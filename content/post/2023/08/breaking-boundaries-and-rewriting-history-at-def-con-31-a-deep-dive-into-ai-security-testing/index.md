@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 news_post: false
 author:
   - paul-knight
@@ -8,16 +8,16 @@ title: "Breaking Boundaries and Rewriting History at DEF CON 31: A Deep Dive
 date: 2023-08-16T15:15:32.999Z
 featured: true
 usePageBundles: true
-featureImage: /images/thumbnail.jpg
-thumbnail: /images/thumbnail.jpg
-shareImage: /images/thumbnail.jpg
+featureImage: images/02dnoo4qzoexsfteosc3why-3.fit_lim.v1683219099.jpg
+thumbnail: images/02dnoo4qzoexsfteosc3why-3.fit_lim.v1683219099.jpg
+shareImage: images/02dnoo4qzoexsfteosc3why-3.fit_lim.v1683219099.jpg
 codeLineNumbers: true
 codeMaxLines: 10
 figurePositionShow: true
 showRelatedInArticle: true
 tags:
-  - Vulnerabilities
-categories: Risk & Compliance
+  - Artificial Inteligence
+categories: Artificial Intelligence
 ---
 Attending DEF CON 31 was more than just an event on my calendar—it was an experience that brought me face-to-face with the intricate world of artificial intelligence. As someone keen on understanding the depths of technology, this was the perfect opportunity to challenge and interact with some of the most cutting-edge AI systems available.
 
