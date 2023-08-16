@@ -1,103 +1,140 @@
 {
   "tags": [
     {
-      "name": "Vulnerabilities"
+      "name": "Vulnerabilities",
+      "color": "#000000"
     },
     {
-      "name": "Email Security"
+      "name": "Email Security",
+      "color": "#000000"
     },
     {
-      "name": "Virus & Malware"
+      "name": "Virus & Malware",
+      "color": "#000000"
     },
     {
-      "name": "Threat Intelligence"
+      "name": "Threat Intelligence",
+      "color": "#000000"
     },
     {
-      "name": "Cyberwarfare"
+      "name": "Cyberwarfare",
+      "color": "#000000"
     },
     {
-      "name": "Fraud & Identity Theft"
+      "name": "Fraud & Identity Theft",
+      "color": "#000000"
     },
     {
-      "name": "Phishing"
+      "name": "Phishing",
+      "color": "#000000"
     },
     {
-      "name": "Tracking & Law Enforcement"
+      "name": "Tracking & Law Enforcement",
+      "color": "#000000"
     },
     {
-      "name": "Mobile Security"
+      "name": "Mobile Security",
+      "color": "#000000"
     },
     {
-      "name": "Wireless Security"
+      "name": "Wireless Security",
+      "color": "#000000"
     },
     {
-      "name": "Risk Management"
+      "name": "Risk Management",
+      "color": "#000000"
     },
     {
-      "name": "Compliance"
+      "name": "Compliance",
+      "color": "#000000"
     },
     {
-      "name": "Privacy"
+      "name": "Privacy",
+      "color": "#000000"
     },
     {
-      "name": "Supply Chain"
+      "name": "Supply Chain",
+      "color": "#000000"
     },
     {
-      "name": "Cloud Security"
+      "name": "Cloud Security",
+      "color": "#000000"
     },
     {
-      "name": "Identity & Access Management"
+      "name": "Identity & Access Management",
+      "color": "#000000"
     },
     {
-      "name": "Data Protection"
+      "name": "Data Protection",
+      "color": "#000000"
     },
     {
-      "name": "Network Security"
+      "name": "Network Security",
+      "color": "#000000"
     },
     {
-      "name": "Application Security"
+      "name": "Application Security",
+      "color": "#000000"
     },
     {
-      "name": "Disaster Recovery"
+      "name": "Disaster Recovery",
+      "color": "#000000"
     },
     {
-      "name": "Incident Response"
+      "name": "Incident Response",
+      "color": "#000000"
     },
     {
-      "name": "Microsoft"
+      "name": "Microsoft",
+      "color": "#000000"
     },
     {
-      "name": "Apple"
+      "name": "Apple",
+      "color": "#000000"
     },
     {
-      "name": "Google"
+      "name": "Google",
+      "color": "#000000"
     },
     {
-      "name": "Facebook"
+      "name": "Facebook",
+      "color": "#000000"
     },
     {
-      "name": "Office 365"
+      "name": "Office 365",
+      "color": "#000000"
     },
     {
-      "name": "Windows"
+      "name": "Windows",
+      "color": "#000000"
     },
     {
-      "name": "Android"
+      "name": "Android",
+      "color": "#000000"
     },
     {
-      "name": "iOS"
+      "name": "iOS",
+      "color": "#000000"
     },
     {
-      "name": "MacOS"
+      "name": "MacOS",
+      "color": "#000000"
     },
     {
-      "name": "iPadOS"
+      "name": "iPadOS",
+      "color": "#000000"
     },
     {
-      "name": "CTF"
+      "name": "CTF",
+      "color": "#000000"
     },
     {
-      "name": "HackTheBox"
+      "name": "HackTheBox",
+      "color": "#000000"
+    },
+    {
+      "name": "Artificial Inteligence",
+      "color": "#34bcc0"
     }
   ]
 }
