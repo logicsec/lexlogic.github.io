@@ -10,9 +10,6 @@
             font-family: Arial, sans-serif;
             color: #FFFFFF;
             background-color: #121212;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
             overflow: hidden;
         }
@@ -20,16 +17,23 @@
         .container {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            padding: 50px;
+            justify-content: center;
+            padding: 0 10%;
+            height: 100%;
         }
 
-        .content {
-            max-width: 600px;
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .logo img {
+            height: 40px;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 4rem;
             font-weight: 700;
             line-height: 1.2;
         }
@@ -41,35 +45,33 @@
         p {
             font-size: 1.25rem;
             margin: 20px 0;
+            max-width: 500px;
         }
 
         .input-container {
             display: flex;
-            gap: 10px;
             margin-top: 20px;
         }
 
         input[type="email"] {
-            padding: 10px 15px;
+            padding: 15px;
             font-size: 1rem;
             border: none;
-            border-radius: 4px;
+            border-radius: 30px;
             outline: none;
+            flex: 1;
         }
 
         button {
-            padding: 10px 20px;
+            padding: 15px 30px;
             font-size: 1rem;
-            color: #FFF;
-            background-color: #4CAF50;
+            color: #121212;
+            background-color: #FFFFFF;
             border: none;
-            border-radius: 4px;
+            border-radius: 30px;
             cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #45A049;
+            margin-left: 10px;
+            font-weight: bold;
         }
 
         .pattern {
@@ -78,24 +80,26 @@
             top: 0;
             width: 50%;
             height: 100%;
-            background: url('pattern.png') no-repeat center center/cover;
-            opacity: 0.1;
+            background: url('https://b4e.com/wp-content/themes/vault-v2/assets/pattern.svg') no-repeat center center/cover;
+            opacity: 0.2;
         }
+
     </style>
 </head>
 <body>
+    <div class="logo">
+        <img src="images/logo-light.png" alt="Logo">
+    </div>
     <div class="container">
-        <div class="content">
-            <h1>
-                Experts in <span>Software Engineering</span>
-            </h1>
-            <p>
-                We specialize in building innovative software solutions for CRMs and legal clients. Our secure, efficient, and tailored systems empower businesses to thrive.
-            </p>
-            <div class="input-container">
-                <input type="email" placeholder="Email address">
-                <button>Register</button>
-            </div>
+        <h1>
+            A Fortress for <span>Your Digital Assets</span>
+        </h1>
+        <p>
+            We specialize in building innovative software solutions for CRMs and legal clients. Our secure, efficient, and tailored systems empower businesses to thrive.
+        </p>
+        <div class="input-container">
+            <input type="email" placeholder="Email address">
+            <button>Register</button>
         </div>
     </div>
     <div class="pattern"></div>
