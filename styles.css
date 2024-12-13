@@ -770,7 +770,7 @@ main.content {
 .intro .flex {
     width: calc(50% - 100px);
     height: 100%;
-    padding: 0 100px 100px 0
+    padding: 0 100px 200px 0;
 }
 
 @media only screen and (max-width: 1200px) {
