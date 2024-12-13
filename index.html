@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Software Engineering Company</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             color: #FFFFFF;
-            background-color: #1B1E27;
+            background-color: #121212;
             height: 100vh;
             overflow: hidden;
         }
@@ -21,10 +23,7 @@
             padding: 0 10%;
             height: 100%;
             position: relative;
-        }
-
-        .intro h2 {
-            max-width: 500px;
+            z-index: 1;
         }
 
         .flex {
@@ -34,23 +33,21 @@
         }
 
         h2 {
-            font-family: 'FT Polar', sans-serif;
-            font-style: normal;
-            font-size: 80px;
-            line-height: 80px;
-            font-weight: bold;
-            color: #A6B9BE;
-            margin-bottom: 35px;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
         }
 
         h2 strong {
-            color: #FCF9F7;
+            color: #FFFFFF;
         }
 
         .paragraph {
             font-size: 1.25rem;
             margin: 20px 0;
             max-width: 500px;
+            line-height: 1.5;
         }
 
         .newsletter {
@@ -97,22 +94,32 @@
             height: 100%;
             background: url('https://b4e.com/wp-content/themes/vault-v2/assets/pattern.svg') no-repeat center center;
             background-size: cover;
+            z-index: 0;
         }
 
         .logo {
-            width: 204px;
-            height: 33px;
-            margin-left: auto;
-            margin-right: auto;
-            position: fixed;
-            top: 100px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 50;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
         }
 
         .logo img {
             width: 150px;
+        }
+
+        [data-aos] {
+            opacity: 0;
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        [data-aos].aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        [data-aos="fade-up"] {
+            transform: translateY(20px);
         }
     </style>
 </head>
@@ -138,5 +145,9 @@
         </div>
     </div>
     <div class="pattern"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
