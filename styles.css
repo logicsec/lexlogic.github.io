@@ -198,7 +198,7 @@ input {
 }
 
 .shape {
-    background: url(../../assets/shape.svg);
+    background: url(https://b4e.com/wp-content/themes/vault-v2/assets/shape.svg);
     background-size: cover;
     position: absolute;
     bottom: calc(-50vw + 2px);
