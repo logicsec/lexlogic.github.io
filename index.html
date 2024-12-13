@@ -14,46 +14,54 @@
             overflow: hidden;
         }
 
-        .container {
+        .intro {
             display: flex;
             flex-direction: column;
             justify-content: center;
             padding: 0 10%;
             height: 100%;
+            position: relative;
         }
 
-        .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
+        .flex {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
-        .logo img {
-            height: 40px;
-        }
-
-        h1 {
-            font-size: 4rem;
+        h2 {
+            font-size: 3.5rem;
             font-weight: 700;
             line-height: 1.2;
+            margin: 0;
         }
 
-        h1 span {
-            color: #4CAF50;
+        h2 strong {
+            color: #FFFFFF;
         }
 
-        p {
+        .paragraph {
             font-size: 1.25rem;
             margin: 20px 0;
             max-width: 500px;
         }
 
-        .input-container {
-            display: flex;
-            margin-top: 20px;
+        .newsletter {
+            margin-top: 30px;
         }
 
-        input[type="email"] {
+        .newsletter span {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .newsletter form {
+            display: flex;
+            align-items: center;
+        }
+
+        .newsletter input[type="email"] {
             padding: 15px;
             font-size: 1rem;
             border: none;
@@ -62,7 +70,7 @@
             flex: 1;
         }
 
-        button {
+        .newsletter input[type="submit"] {
             padding: 15px 30px;
             font-size: 1rem;
             color: #121212;
@@ -80,26 +88,40 @@
             top: 0;
             width: 50%;
             height: 100%;
-            background: url('https://b4e.com/wp-content/themes/vault-v2/assets/pattern.svg') no-repeat center center/cover;
-            opacity: 0.2;
+            background: url('https://b4e.com/wp-content/themes/vault-v2/assets/pattern.svg') no-repeat center center;
+            background-size: cover;
         }
 
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .logo img {
+            width: 150px;
+        }
     </style>
 </head>
 <body>
     <div class="logo">
-        <img src="images/logo-light.png" alt="Logo">
+        <img src="images/logo-light.png" alt="Company Logo">
     </div>
-    <div class="container">
-        <h1>
-            A Fortress for <span>Your Digital Assets</span>
-        </h1>
-        <p>
-            We specialize in building innovative software solutions for CRMs and legal clients. Our secure, efficient, and tailored systems empower businesses to thrive.
-        </p>
-        <div class="input-container">
-            <input type="email" placeholder="Email address">
-            <button>Register</button>
+    <div class="intro">
+        <div class="flex column bottom bring-to-front">
+            <div data-aos="fade-up" data-aos-duration="600">
+                <h2><p>A <strong>dedicated partner</strong> for your software needs.</p></h2>
+                <div class="paragraph">
+                    <strong><p class="p1">We specialize in building CRM solutions and legal software to streamline your business operations and enhance efficiency.</p></strong>
+                </div>
+            </div>
+            <div class="newsletter" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300" data-aos-offset="-300">
+                <span>Stay updated</span>
+                <form action="#" method="post">
+                    <input type="email" placeholder="Email address" name="EMAIL" required>
+                    <input type="submit" value="Register">
+                </form>
+            </div>
         </div>
     </div>
     <div class="pattern"></div>
