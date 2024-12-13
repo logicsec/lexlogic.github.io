@@ -3,90 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LexLogic - Custom Software Development</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Software Engineering Company</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #FFFFFF;
+            background-color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 50px;
+        }
+
+        .content {
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 span {
+            color: #4CAF50;
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin: 20px 0;
+        }
+
+        .input-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        input[type="email"] {
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #FFF;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45A049;
+        }
+
+        .pattern {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: url('pattern.png') no-repeat center center/cover;
+            opacity: 0.1;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/logo-dark.png" alt="LexLogic">
-            </div>
-            <div class="nav-center">
-                <div class="nav-links">
-                    <a href="#product">PRODUCT</a>
-                    <a href="#company">COMPANY</a>
-                    <a href="#buy">BUY</a>
-                    <a href="#contact">CONTACT</a>
-                </div>
-            </div>
-            <div class="nav-actions">
-                <div class="language">
-                    <span>EN</span>
-                    <span class="arrow">↓</span>
-                </div>
-                <a href="#try" class="try-now">TRY NOW<span class="arrow">→</span></a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <h1>Custom Software<br>Development to<br>transform your<br>business.</h1>
-        </section>
-        <div class="hero-footer">
-            <div class="hero-description">
-                <p>Advanced development solutions</p>
-                <p>to improve speed, reduce complexity,</p>
-                <p>and provide full visibility.</p>
-            </div>
-            <a href="#request" class="request-trial">REQUEST FREE TRIAL<span class="arrow">→</span></a>
-        </div>
-    </main>
-    <section class="about-section">
-        <div class="about-header">
-            <span>Aleya Model</span>
-        </div>
-        <div class="about-content">
-            <div class="section-intro">
-                <h2>How we transform<br>your business with<br>technology</h2>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-info">
-                        <h3>AI-Powered Solutions</h3>
-                        <p>Leveraging cutting-edge artificial intelligence to create intelligent software that adapts to your business needs and automates complex processes.</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="service-type">ARTIFICIAL INTELLIGENCE</span>
-                        <span class="service-number">01</span>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-info">
-                        <h3>Blockchain Technology</h3>
-                        <p>Building secure, decentralized applications and smart contracts that bring transparency and trust to your digital transactions and operations.</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="service-type">BLOCKCHAIN DEVELOPMENT</span>
-                        <span class="service-number">02</span>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-info">
-                        <h3>Machine Learning</h3>
-                        <p>Creating predictive systems and data-driven solutions that help your business make smarter decisions and uncover valuable insights.</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="service-type">MACHINE LEARNING</span>
-                        <span class="service-number">03</span>
-                    </div>
-                </div>
+    <div class="container">
+        <div class="content">
+            <h1>
+                Experts in <span>Software Engineering</span>
+            </h1>
+            <p>
+                We specialize in building innovative software solutions for CRMs and legal clients. Our secure, efficient, and tailored systems empower businesses to thrive.
+            </p>
+            <div class="input-container">
+                <input type="email" placeholder="Email address">
+                <button>Register</button>
             </div>
         </div>
-    </section>
-    <script src="script.js"></script>
+    </div>
+    <div class="pattern"></div>
 </body>
 </html>
